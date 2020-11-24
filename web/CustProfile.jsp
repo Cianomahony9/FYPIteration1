@@ -35,7 +35,7 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
                         
                         <tr>
                         <td>Telephone</td>
-                        <td><input type="text" name="telephone" id="telephone"></td>
+                        <td><input type="text" name="telephone" id="telephone" maxlength="10"></td>  <%-- --%>
                         </tr>
                         
                           <tr>
@@ -45,7 +45,11 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
                         
                           <tr>
                         <td>Eircode</td>
-                        <td><input type="text" name="eircode" id="eircode"></td>
+                        <td><input type="text" name="eircode" id="eircode"maxlength="7"></td> <%-- --%>
+                        </tr>
+                          <tr>
+                        <td>County</td>
+                        <td><input type="text" name="county" id="county"></td>
                         </tr>
                         
                           <tr>
@@ -54,12 +58,9 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
                         </tr>
                         
                           <tr>
-                        <td>County</td>
-                        <td><input type="text" name="county" id="county"></td>
+                        <td>Password</td>
+                        <td><input type="password" name="password" id="password"></td>
                         </tr>
-                        
-                        
-                        
                         
                         <tr>
                             <td>

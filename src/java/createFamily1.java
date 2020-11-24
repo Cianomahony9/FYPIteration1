@@ -15,15 +15,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author Cian
- * 
- * Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
  */
-public class create extends HttpServlet {
+public class createFamily1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,24 +36,18 @@ public class create extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String fname = request.getParameter("fname");
-            String lname = request.getParameter("lname");
-            int telephone = Integer.parseInt(request.getParameter("telephone"));  //***//
-            String address = request.getParameter("address");
-            String eircode = request.getParameter("eircode");
-            String email = request.getParameter("email");
-            String county = request.getParameter("county");
-            String password = request.getParameter("password");
+            String familyname =request.getParameter("familyname");
             
-            DbCon db = new DbCon();
-            Connection con = db.getCon();
+            dbCreateFamCon db = new dbCreateFamCon();
+            Connection concreatefam =db.getCreateFamCon();
             
-            Statement stmt = con.createStatement();
-            stmt.executeUpdate("insert into profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
-            out.println("data inserted");
-            
-    }   catch (SQLException ex) {
-            Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);
+            Statement stmt = concreatefam.createStatement();
+            stmt.executeUpdate("CREATE TABLE " + familyname + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
+       
+         out.println("success");
+         
+        } catch (SQLException ex) {
+            Logger.getLogger(createFamily1.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -101,4 +92,3 @@ public class create extends HttpServlet {
     }// </editor-fold>
 
 }
-

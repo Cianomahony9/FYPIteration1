@@ -15,20 +15,20 @@ import java.util.logging.Logger;
  *
  * @author Cian
  */
-public class DbFamCon {
-    Connection confam;
-    public Connection getFamCon()
+public class dbCreateFamCon {
+    Connection concreatefam;
+    public Connection getCreateFamCon()
     {
-        try {
+         try {
             Class.forName("com.mysql.jdbc.Driver");
-           confam=  DriverManager.getConnection("jdbc:mysql://localhost:3306/customer?useSSL=false","root","OmahonyCian@98");
+           concreatefam=  DriverManager.getConnection("jdbc:mysql://localhost:3306/customer?useSSL=false","root","OmahonyCian@98");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DbFamCon.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(dbCreateFamCon.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(DbFamCon.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(dbCreateFamCon.class.getName()).log(Level.SEVERE, null, ex);
         }
     
  
-       return confam; 
+       return concreatefam; 
     }
 }

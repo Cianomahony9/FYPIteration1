@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Cian
  */
-public class createfamily extends HttpServlet {
+public class insertFamilyServ extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,20 +37,21 @@ public class createfamily extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-         String familyname = request.getParameter("familyname");
-            String familyheadname = request.getParameter("familyheadname");
-             String familyaddress = request.getParameter("familyaddress");
-            String familyheademail = request.getParameter("familyheademail");
-     
-            DbFamCon db = new DbFamCon();
-            Connection confam = db.getFamCon();
+            String familyname1 =request.getParameter("familyname1");
+            String name = request.getParameter("name");
+            String height = request.getParameter("height");
+            String weight = request.getParameter("weight");
+            String insideleg = request.getParameter("insideleg");
+            String armlength = request.getParameter("armlength");
             
-            Statement stmt = confam.createStatement();
-            stmt.executeUpdate("insert into familyprofile (familyname,familyheadname,familyaddress,familyheademail) values('"+familyname+"','"+familyheadname+"','"+familyaddress+"','"+familyheademail+"')");
+            DbConInsertFam db = new DbConInsertFam();
+            Connection coninsertfam = db.getConInsertFam();
             
-            }   catch (SQLException ex) {
-            Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);
-        
+            Statement stmt = coninsertfam.createStatement();
+              stmt.executeUpdate("insert into " + familyname1 + "(name,familyname,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
+            out.println("data inserted");
+        } catch (SQLException ex) {
+            Logger.getLogger(insertFamilyServ.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

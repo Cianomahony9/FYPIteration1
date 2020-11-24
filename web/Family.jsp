@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Family
-    Created on : 22-Nov-2020, 20:23:28
+    Document   : createfamily2
+    Created on : 24-Nov-2020, 14:15:57
     Author     : Cian
 --%>
 
@@ -9,44 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Create Family</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <body>
-         <form  action="createfamily" method="POST">
-                  
-                <table width="400px" Border="1">
-                    <tr>
-                        <td colspan="2"><h1>Create Family Profile</h1></td>
-                    </tr>
+        <form action="createFamily1" method="POST">
+            <pre>
+                <input type="text" name="familyname1" placeholder="Family Name"/>
                 
-                    <tr>
-                        <td>Family Name</td>
-                        <td><input type="text" name="familyname" id="familyname"></td>
-                    </tr>
-                    <tr>
-                        <td>Family Head Name</td>
-                        <td><input type="text" name="familyheadname" id="familyheadname"></td>
-                        </tr>
-                        
-                          <tr>
-                        <td>Family Address</td>
-                        <td><input type="text" name="familyaddress" id="familyaddress"></td>
-                        </tr>
-                 
-                          <tr>
-                        <td>Family Head Email</td>
-                        <td><input type="text" name="familyheademail" id="familyheademail"></td>
-                        </tr>
-                        
-                        
-                        <tr>
-                            <td>
-                                <input type="Submit" value="Create Family Profile"></td>
-                                
-                        </tr>
-                </table>
+                <input  type ="Submit" value="insert"/>
+                    <a href="/FYPCian/InsertFamily.jsp">Insert Profile to Family </a>
+            </pre>
+            
+            
         </form>
-    </body>
     </body>
 </html>

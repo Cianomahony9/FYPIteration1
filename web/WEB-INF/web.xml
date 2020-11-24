@@ -5,16 +5,32 @@
         <servlet-class>create</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>createfamily</servlet-name>
-        <servlet-class>createfamily</servlet-class>
+        <servlet-name>retrievefamily</servlet-name>
+        <servlet-class>retrievefamily</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>createFamily1</servlet-name>
+        <servlet-class>createFamily1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>insertFamilyServ</servlet-name>
+        <servlet-class>insertFamilyServ</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>create</servlet-name>
         <url-pattern>/create</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>createfamily</servlet-name>
-        <url-pattern>/createfamily</url-pattern>
+        <servlet-name>retrievefamily</servlet-name>
+        <url-pattern>/retrievefamily</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createFamily1</servlet-name>
+        <url-pattern>/createFamily1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>insertFamilyServ</servlet-name>
+        <url-pattern>/insertFamilyServ</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
