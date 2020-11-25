@@ -36,13 +36,15 @@ public class createFamily1 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String familyname =request.getParameter("familyname");
+            String familyname1 =request.getParameter("familyname1");
             
             dbCreateFamCon db = new dbCreateFamCon();
             Connection concreatefam =db.getCreateFamCon();
             
+            
+            
             Statement stmt = concreatefam.createStatement();
-            stmt.executeUpdate("CREATE TABLE " + familyname + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
+            stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
        
          out.println("success");
          

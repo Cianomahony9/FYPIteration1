@@ -5,10 +5,6 @@
         <servlet-class>create</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>retrievefamily</servlet-name>
-        <servlet-class>retrievefamily</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>createFamily1</servlet-name>
         <servlet-class>createFamily1</servlet-class>
     </servlet>
@@ -16,13 +12,17 @@
         <servlet-name>insertFamilyServ</servlet-name>
         <servlet-class>insertFamilyServ</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>retrieveFamily</servlet-name>
+        <servlet-class>retrieveFamily</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>searchBike</servlet-name>
+        <servlet-class>searchBike</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>create</servlet-name>
         <url-pattern>/create</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>retrievefamily</servlet-name>
-        <url-pattern>/retrievefamily</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>createFamily1</servlet-name>
@@ -31,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>insertFamilyServ</servlet-name>
         <url-pattern>/insertFamilyServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>retrieveFamily</servlet-name>
+        <url-pattern>/retrieveFamily</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchBike</servlet-name>
+        <url-pattern>/searchBike</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

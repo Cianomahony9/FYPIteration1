@@ -20,6 +20,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author Cian
+ * 
+ * 
+ * Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
+ * 
  */
 public class insertFamilyServ extends HttpServlet {
 
@@ -37,8 +41,15 @@ public class insertFamilyServ extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+            //start modify 
+            
+            
+            // declaring variables to be inputted to db 
+            
             String familyname1 =request.getParameter("familyname1");
             String name = request.getParameter("name");
+            String gender = request.getParameter("gender");
             String height = request.getParameter("height");
             String weight = request.getParameter("weight");
             String insideleg = request.getParameter("insideleg");
@@ -48,10 +59,11 @@ public class insertFamilyServ extends HttpServlet {
             Connection coninsertfam = db.getConInsertFam();
             
             Statement stmt = coninsertfam.createStatement();
-              stmt.executeUpdate("insert into " + familyname1 + "(name,familyname,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
+              stmt.executeUpdate("insert into " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
             out.println("data inserted");
         } catch (SQLException ex) {
             Logger.getLogger(insertFamilyServ.class.getName()).log(Level.SEVERE, null, ex);
+            //end modify 
         }
     }
 

@@ -14,11 +14,15 @@ import java.util.logging.Logger;
 /**
  *
  * @author Cian
+ * 
+ * Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
  */
+         //start of modify 
+
 public class DbConRetrieveFam {
     
     Connection conretrievefam;
-    
+               
     public Connection getConRetrieveFam()
     //DB connection 
             {
@@ -33,5 +37,7 @@ public class DbConRetrieveFam {
     
  
        return conretrievefam; 
+       
+       //end of modify 
     }
 }

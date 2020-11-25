@@ -39,9 +39,12 @@ public class create extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+            
+            // start of modify
             String fname = request.getParameter("fname");
             String lname = request.getParameter("lname");
-            int telephone = Integer.parseInt(request.getParameter("telephone"));  //***//
+            int telephone = Integer.parseInt(request.getParameter("telephone"));  //*   https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet**//
             String address = request.getParameter("address");
             String eircode = request.getParameter("eircode");
             String email = request.getParameter("email");
@@ -58,7 +61,7 @@ public class create extends HttpServlet {
     }   catch (SQLException ex) {
             Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        //end of modify 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

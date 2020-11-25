@@ -3,7 +3,7 @@
     Created on : 22-Nov-2020, 20:27:03
     Author     : Cian
 
-Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
+*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 --%>
 
 
@@ -14,14 +14,17 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Create Profile</title>
+        <title>Bikes4U.ie</title>    
     </head>
     <body>
-         <form  action="create" method="POST">
+    <center>                     <%-- begin modify code --%>
+        
+        <form  action="create" method="POST">     <%-- create is link to servlet --%>
                   
                 <table width="400px" Border="1">
+                    <h1>Bikes4U.ie</h1>
                     <tr>
-                        <td colspan="2"><h1>Create Profile</h1></td>
+                        <td colspan="2"><center><h1>Create Profile</h1></center></td>
                     </tr>
                 
                     <tr>
@@ -35,7 +38,7 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
                         
                         <tr>
                         <td>Telephone</td>
-                        <td><input type="text" name="telephone" id="telephone" maxlength="10"></td>  <%-- --%>
+                        <td><input type="text" name="telephone" id="telephone" maxlength="10"></td>  <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
                         </tr>
                         
                           <tr>
@@ -45,7 +48,7 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
                         
                           <tr>
                         <td>Eircode</td>
-                        <td><input type="text" name="eircode" id="eircode"maxlength="7"></td> <%-- --%>
+                        <td><input type="text" name="eircode" id="eircode"maxlength="7"></td> <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
                         </tr>
                           <tr>
                         <td>County</td>
@@ -64,12 +67,13 @@ Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
                         
                         <tr>
                             <td>
-                                <input type="Submit" value="Create Profile"></td>
+                        <center><input type="Submit" value="Create Profile"></center></td>
                             <td>
-                            <a href="/FYPCian/Family.jsp">Create Family Profile</a>
+                            <center><a href="/FYPCian/Family.jsp">Create Family Profile</a></center>
                             </td>
                         </tr>
                 </table>
         </form>
+    </center>           <%-- End modify code --%>
     </body>
 </html>
