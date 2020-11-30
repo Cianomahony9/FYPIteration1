@@ -53,19 +53,22 @@ public class searchBike extends HttpServlet {
             DbConSearch db = new DbConSearch();
             Connection consearch = db.getConSearch();
             
-             ////**** code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  ***
-               //start of modify 
+           
+          // orginal code modifed from here and used alongside below link https://stackoverflow.com/questions/24229442/print-the-data-in-resultset-along-with-columnnames 
             
+             ////edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
             
+             //code below was supported by classmate Joe Murphy walked me through problem output statement link above give 
+            //Start of modify
              Statement stmt = consearch.createStatement();
              ResultSet myRs = stmt.executeQuery("SELECT * FROM bikes WHERE framesize <='"+insideleg +"'AND saddletohandle <='"+armlength+"'");   // problems solved from stack overflow  https://stackoverflow.com/questions/9192781/having-a-mysql-error-unknown-column-where-clause
             
-                myRs.next();
+             while(   myRs.next()){
                 String bikename = myRs.getString("bikename");
                 
                 String type = myRs.getString("type");
             
-                String framesize = myRs.getString("framesize");
+                String framesize = myRs.getString("framesize");                                // varialbes for results 
                 
                 String saddletohandle = myRs.getString("saddletohandle");
                 
@@ -74,11 +77,11 @@ public class searchBike extends HttpServlet {
                 String location = myRs.getString("location");
                 
                  
-                 //*** code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
+                 //code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
                 //start of modify 
                 //Print Table
                  out.print("<center><table width=25% border=1><center>");
-                 out.print("<center><h1>Recommened Bike:</h1></center>");
+                 out.print("<center><h1>Recommended Bike:</h1></center>");
 
                  out.print("<center");
                  out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
@@ -104,7 +107,7 @@ public class searchBike extends HttpServlet {
                 out.print("<center>");
                 
                 //end of modify 
-                
+             }
                  
         } catch (SQLException ex) {
             Logger.getLogger(searchBike.class.getName()).log(Level.SEVERE, null, ex);

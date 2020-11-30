@@ -59,8 +59,8 @@ public class insertFamilyServ extends HttpServlet {
             Connection coninsertfam = db.getConInsertFam();
             
             Statement stmt = coninsertfam.createStatement();
-              stmt.executeUpdate("insert into " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
-            out.println("data inserted");
+              stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
+            out.println("Profile Inserted");
         } catch (SQLException ex) {
             Logger.getLogger(insertFamilyServ.class.getName()).log(Level.SEVERE, null, ex);
             //end modify 

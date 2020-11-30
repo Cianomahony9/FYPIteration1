@@ -40,11 +40,11 @@ public class create extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
+            // start of modify 
             
-            // start of modify
             String fname = request.getParameter("fname");
             String lname = request.getParameter("lname");
-            int telephone = Integer.parseInt(request.getParameter("telephone"));  //*   https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet**//
+            int telephone = Integer.parseInt(request.getParameter("telephone"));  //code acqired and modified from stack overflow  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
             String address = request.getParameter("address");
             String eircode = request.getParameter("eircode");
             String email = request.getParameter("email");
@@ -55,13 +55,14 @@ public class create extends HttpServlet {
             Connection con = db.getCon();
             
             Statement stmt = con.createStatement();
-            stmt.executeUpdate("insert into profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
-            out.println("data inserted");
+            stmt.executeUpdate("INSERT INTO profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
+            out.println("Profile Inserted");
             
     }   catch (SQLException ex) {
             Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);
+            //end of modify
         }
-        //end of modify 
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

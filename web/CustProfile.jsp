@@ -19,7 +19,7 @@
     <body>
     <center>                     <%-- begin modify code --%>
         
-        <form  action="create" method="POST">     <%-- create is link to servlet --%>
+         <form  action="create" method="POST">
                   
                 <table width="400px" Border="1">
                     <h1>Bikes4U.ie</h1>
@@ -29,40 +29,40 @@
                 
                     <tr>
                         <td>First Name</td>
-                        <td><input type="text" name="fname" id="fname"></td>
+                        <td><input type="text" name="fname" ></td>
                     </tr>
                     <tr>
                         <td>Last Name</td>
-                        <td><input type="text" name="lname" id="lname"></td>
+                        <td><input type="text" name="lname" ></td>
                         </tr>
                         
                         <tr>
                         <td>Telephone</td>
-                        <td><input type="text" name="telephone" id="telephone" maxlength="10"></td>  <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
+                        <td><input type="text" name="telephone"  maxlength="10"></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                         
                           <tr>
                         <td>Address</td>
-                        <td><input type="text" name="address" id="address"></td>
+                        <td><input type="text" name="address" ></td>
                         </tr>
                         
                           <tr>
                         <td>Eircode</td>
-                        <td><input type="text" name="eircode" id="eircode"maxlength="7"></td> <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
+                        <td><input type="text" name="eircode" maxlength="7"></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                           <tr>
                         <td>County</td>
-                        <td><input type="text" name="county" id="county"></td>
+                        <td><input type="text" name="county" ></td>
                         </tr>
                         
                           <tr>
                         <td>Email</td>
-                        <td><input type="text" name="email" id="email"></td>
+                        <td><input type="text" name="email" ></td>
                         </tr>
                         
                           <tr>
                         <td>Password</td>
-                        <td><input type="password" name="password" id="password"></td>
+                        <td><input type="password" name="password" ></td>
                         </tr>
                         
                         <tr>

@@ -21,36 +21,36 @@
                     </tr>
                 
                     <tr>
-                        <td>Family Name</td>
-                        <td><input type="text" name="familyname1" id="familyname1"></td>
+                        <td><h1>Family Name</h1></td>
+                        <td><input type="text" name="familyname1" ></td>
                     </tr>
                     <tr>
                         <td>First Name</td>
-                        <td><input type="text" name="name" id="name"></td>
+                        <td><input type="text" name="name" ></td>
                     </tr>
                     
                     <tr>
                         <td>Gender</td>
-                        <td><input type="text" name="gender" id="gender"maxlength="7"></td>   <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
+                        <td><input type="text" name="gender" maxlength="7"></td>   <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                     <tr>
                         <td>Height</td>
-                        <td><input type="text" name="height" id="height"maxlength="8"></td>   <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
+                        <td><input type="text" name="height" maxlength="8"></td>   <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp-servlet --%>
                         </tr>
                         
                         <tr>
                         <td>Weight</td>
-                        <td><input type="text" name="weight" id="weight" maxlength="5"></td>   <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
+                        <td><input type="text" name="weight"  maxlength="5"></td>   <%--  max lenght condition acquired and modified from https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                         
                           <tr>
                         <td>Inside Leg Length</td>
-                        <td><input type="text" name="insideleg" id="insideleg"></td>
+                        <td><input type="text" name="insideleg" ></td>
                         </tr>
                         
                           <tr>
                         <td>Arm Length</td>
-                        <td><input type="text" name="armlength" id="armlength"maxlength="4"></td>  <%--  max lenght condition acquired and modified from  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet  --%>
+                        <td><input type="text" name="armlength" maxlength="4"></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                        
                         <tr>

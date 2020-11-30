@@ -23,10 +23,10 @@ import java.util.logging.Logger;
     //start of modify 
 public class DbCon {
     Connection con;
-    public Connection getCon()
+    public Connection getCon()  //get method to be called in servlet 
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver"); //db path 
            con=  DriverManager.getConnection("jdbc:mysql://localhost:3306/customer?useSSL=false","root","OmahonyCian@98"); //   "useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DbCon.class.getName()).log(Level.SEVERE, null, ex);

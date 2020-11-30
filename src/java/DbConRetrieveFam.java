@@ -23,12 +23,12 @@ public class DbConRetrieveFam {
     
     Connection conretrievefam;
                
-    public Connection getConRetrieveFam()
+    public Connection getConRetrieveFam()  //get method to be called in servlet 
     //DB connection 
             {
         try {
-            Class.forName("com.mysql.jdbc.Driver"); 
-           conretrievefam =  DriverManager.getConnection("jdbc:mysql://localhost:3306/customer?useSSL=false","root","OmahonyCian@98");
+            Class.forName("com.mysql.jdbc.Driver"); //db path 
+           conretrievefam =  DriverManager.getConnection("jdbc:mysql://localhost:3306/customer?useSSL=false","root","OmahonyCian@98");  //   "useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DbConRetrieveFam.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

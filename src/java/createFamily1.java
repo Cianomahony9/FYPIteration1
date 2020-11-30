@@ -36,6 +36,10 @@ public class createFamily1 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+           // code acquired and modified from Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
+            
+            //start of modify 
             String familyname1 =request.getParameter("familyname1");
             
             dbCreateFamCon db = new dbCreateFamCon();
@@ -43,15 +47,20 @@ public class createFamily1 extends HttpServlet {
             
             
             
+            
+            
             Statement stmt = concreatefam.createStatement();
+            
+             //create statement swtiched and varialbe gathered inserted to get table name 
+            
             stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
-       
-         out.println("success");
+            //End
+         out.println("Family Created");
          
         } catch (SQLException ex) {
             Logger.getLogger(createFamily1.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        //end of modify 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
