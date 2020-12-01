@@ -47,6 +47,11 @@ public class searchBike extends HttpServlet {
             String insideleg = request.getParameter("insideleg");
             
             String armlength= request.getParameter("armlength");
+            
+            String name = request.getParameter("name");
+            
+            String familyname = request.getParameter("familyname");
+            
              //end of modify 
      // connecting to db
             
@@ -81,7 +86,7 @@ public class searchBike extends HttpServlet {
                 //start of modify 
                 //Print Table
                  out.print("<center><table width=25% border=1><center>");
-                 out.print("<center><h1>Recommended Bike:</h1></center>");
+                 out.print("<center><h1>Recommended Bike For:"+name+" "+familyname+ "</h1></center>");
 
                  out.print("<center");
                  out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
@@ -100,6 +105,25 @@ public class searchBike extends HttpServlet {
                  
                  
                  out.print("<tr><th><t1>Location</t1> <td>"+location+"</td> </th></tr>");
+                 
+                 
+                  out.print("<form action = 'Order.jsp'>");
+                 out.print("<input type ='hidden' name='name' value ='"+name+"'>");
+                 
+                  out.print("<input type ='hidden' name='familyname' value ='"+familyname+"'>");
+                 
+                  out.print("<input type ='hidden' name='framesize' value ='"+framesize+"'>");
+                  
+                 out.print("<input type ='hidden' name='bikename' value ='"+bikename+"'>");
+                 
+                 out.print("<input type ='hidden' name='price' value ='"+price+"'>");
+                 
+                   out.print("<input type ='hidden' name='framesize' value ='"+price+"'>");
+                   
+                  out.print("<input type ='hidden' name='location' value ='"+location+"'>");
+                  
+                  out.print("<td><input type='submit' value='Add To Order'></td>");
+                   out.close();
                  
                  
           

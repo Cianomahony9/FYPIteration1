@@ -105,6 +105,9 @@ public class retrieveFamily extends HttpServlet {
                   // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/   
                   
                  out.print("<form action = 'searchBike'>");
+                 out.print("<input type ='hidden' name='name' value ='"+name+"'>");
+                 out.print("<input type ='hidden' name='familyname' value ='"+familyname+"'>");
+                 
                  out.print("<input type ='hidden' name='insideleg' value ='"+insideleg+"'>");
                   out.print("<input type ='hidden' name='armlength' value ='"+armlength+"'>");
                   out.print("<td><input type='submit' value='Search Bike'></td>");
