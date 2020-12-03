@@ -118,11 +118,11 @@ public class searchBike extends HttpServlet {
                  
                  out.print("<input type ='hidden' name='price' value ='"+price+"'>");
                  
-                   out.print("<input type ='hidden' name='framesize' value ='"+price+"'>");
-                   
+                  out.print("<input type ='hidden' name='type' value ='"+type+"'>");
+                 
                   out.print("<input type ='hidden' name='location' value ='"+location+"'>");
                   
-                  out.print("<td><input type='submit' value='Add To Order'></td>");
+                  out.print("<td><input type='submit' value='Create Order'></td>");
                    out.close();
                  
                  

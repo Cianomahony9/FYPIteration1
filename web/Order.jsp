@@ -18,7 +18,11 @@
     <body>
         
         
-        <%  String name = request.getParameter("name");
+        <% 
+            
+            String name = request.getParameter("name");
+            
+            String type= request.getParameter("type");
             
             String familyname= request.getParameter("familyname");
             
@@ -26,10 +30,37 @@
             
              String framesize = request.getParameter("framesize");
             
+             
+                  request.setCharacterEncoding("UTF-8");
             String price = request.getParameter("price");
             
             String location = request.getParameter("location");
             
+            
+            
+           /// Creating Dates
+              //code acquired and modified from  https://stackoverflow.com/questions/16982056/how-to-get-the-date-7-days-earlier-date-from-current-date-in-java
+              //  used with https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
+             //https://www.programiz.com/java-programming/examples/add-two-dates
+             
+              DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+               
+               Date colldate = new Date();
+               String todate = dateFormat.format(colldate);
+                
+                
+                Calendar calcollect = Calendar.getInstance();
+                Calendar calorder  = Calendar.getInstance();
+                
+                
+                            calcollect.add(Calendar.DATE, +5);
+                            Date colldate1 = calcollect.getTime();
+                            String fromdate = dateFormat.format(colldate1);
+                            
+                           calorder.add(Calendar.DATE,+0);
+                           Date orderdate = calorder.getTime();
+                           String fromdate1 = dateFormat.format(orderdate);
+           
             
             out.print("<center><table width=25% border=1><center>");
                  out.print("<center><h1>Order Summary:</h1></center>");
@@ -37,34 +68,53 @@
                  out.print("<center");
                  out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
                  
+                  out.print("<tr><th><t1>Bike Type</t1> <td>"+type+"</td> </th></tr>");
+                 
                   out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"</td> </th></tr>");
                  
                  out.print("<tr><th><t1>Price</t1> <td>"+price+"</td> </th></tr>");
                  
                  
                  out.print("<tr><th><t1>Location</t1> <td>"+location+"</td> </th></tr>");
+                 
+                  out.println("<tr><th><t1>Order On</t1> <td>"+ dateFormat.format(orderdate) + "</td> </th></tr>");
+                 
+                  out.println("<tr><th><t1>Collection On</t1> <td>"+ dateFormat.format(colldate1) + "</td> </th></tr>");
+                 
+                 out.print("<form action = 'createOrder'>");
+                            out.print("<input type ='hidden' name='name' value ='"+name+"'>");
+                        
+                 
+                             out.print("<input type ='hidden' name='familyname' value ='"+familyname+"'>");
+                 
+                             out.print("<input type ='hidden' name='framesize' value ='"+framesize+"'>");
+                             
+                             out.print("<input type ='hidden' name='type' value ='"+type+"'>");
+                  
+                             out.print("<input type ='hidden' name='bikename' value ='"+bikename+"'>");
+                 
+                             out.print("<input type ='hidden' name='price' value ='"+price+"'>");
+                
+                             out.print("<input type ='hidden' name='location' value ='"+location+"'>");
+                  
+                           //  out.print("<input type ='hidden' name='collection' value ='"+ dateFormat.format(todate1)+"'>");
+                          
+                                
+                             
+                             out.print("<td><input type='submit' value='Confirm Order'></td>");
+                             out.close();
+                             
+                             
+                 
                   out.print("</table>");
                 out.print("<center>");
                 
-                
-                //code acquired and modified from  https://stackoverflow.com/questions/16982056/how-to-get-the-date-7-days-earlier-date-from-current-date-in-java
-              //  used with https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
-               DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-               
-               Date date = new Date();
-               String todate = dateFormat.format(date);
+              
                 
                 
-                Calendar cal = Calendar.getInstance();
-                            cal.add(Calendar.DATE, +5);
-                            Date todate1 = cal.getTime();
-                            String fromdate = dateFormat.format(todate1);
+              
                             
-                            // 
-                            out.println("Order Ready For Collection On  "+ dateFormat.format(todate1) + " From " +location);
-                            
-                            
-           
+                           
             
                 
         %>
@@ -73,6 +123,6 @@
                     
                     
        
-    </center>
+    
     
 </html>
