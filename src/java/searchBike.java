@@ -25,6 +25,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class searchBike extends HttpServlet {
 
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -101,11 +103,17 @@ public class searchBike extends HttpServlet {
                   out.print("<tr><th><t1>Saddle to HandleBar length</t1>  <td>"+saddletohandle+"</td> </th></tr>");
                 
                  
-                 out.print("<tr><th><t1>Price</t1> <td>"+price+"</td> </th></tr>");
+                 out.print("<tr><th><t1>Price</t1> <td>€"+price+"</td> </th></tr>");
                  
                  
                  out.print("<tr><th><t1>Location</t1> <td>"+location+"</td> </th></tr>");
                  
+               
+                 
+                 
+                 
+                 
+                 // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
                  
                   out.print("<form action = 'Order.jsp'>");
                  out.print("<input type ='hidden' name='name' value ='"+name+"'>");
@@ -129,6 +137,9 @@ public class searchBike extends HttpServlet {
           
                 out.print("</table>");
                 out.print("<center>");
+                
+                
+                
                 
                 //end of modify 
              }

@@ -13,6 +13,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -42,6 +43,9 @@ public class createOrder extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
            
             
+              // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
+                  
+            
               String name = request.getParameter("name");
             
              String familyname = request.getParameter("familyname");
@@ -52,30 +56,37 @@ public class createOrder extends HttpServlet {
             
              String framesize = request.getParameter("framesize");
             
-             // String price = request.getParameter("price");
+             String price = request.getParameter("price");
             
              String location = request.getParameter("location");
              
-             int ordernumber = 88;
-             int price = 22;
+                       
+             // code acquired and modified from https://stackoverflow.com/questions/30447879/how-to-generate-random-number-in-netbeans
+             Random random = new Random();
+             int ordernumber;
+              for(int counter=1; counter<=1;counter++){
+               ordernumber = 1000+random.nextInt(8000);  // range of number 
+       
+             
+             
+             
              
              /// Creating Dates
               //code acquired and modified from  https://stackoverflow.com/questions/16982056/how-to-get-the-date-7-days-earlier-date-from-current-date-in-java
               //  used with https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
-             //https://www.programiz.com/java-programming/examples/add-two-dates
              
-              DateFormat dateFormat = new SimpleDateFormat("dd-MM-YYYY");
+              DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
                
                Date colldate = new Date();
                String todate = dateFormat.format(colldate);
+               
                
                 Calendar calcollect = Calendar.getInstance();
                 
                             calcollect.add(Calendar.DATE, +5);
                             Date colldate1 = calcollect.getTime();
-                            String fromdate = dateFormat.format(colldate1);
-                           // Date colldate1 = format.parse(colldate1);
-                            
+                            String datecollection = dateFormat.format(colldate1);
+                         
                             
                              Date orderdate = new Date();
                           String todate1 = dateFormat.format(orderdate); 
@@ -83,7 +94,7 @@ public class createOrder extends HttpServlet {
                          Calendar calorder  = Calendar.getInstance();
                            calorder.add(Calendar.DATE,-0);
                            Date orderdate1 = calorder.getTime();
-                           String fromdate1 = dateFormat.format(orderdate1);
+                          String dateorder = dateFormat.format(orderdate1);
                            
          
             
@@ -95,26 +106,29 @@ public class createOrder extends HttpServlet {
                         Connection conorder =db.getConOrder();
             
             
-            
+           // Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             
             
             Statement stmt = conorder.createStatement();
-               stmt.executeUpdate("INSERT INTO orderdetails (ordernumber,orderdate,collectiondate,custfname,custlname,bikename,bikelocation,bikeprice,framesize) values('"+ordernumber+"','"+orderdate1+"','"+colldate1+"','"+name+"','"+familyname+"','"+bikename+"','"+location+"','"+price+"','"+framesize+"')");            
+               stmt.executeUpdate("INSERT INTO orderdetails (ordernumber,orderdate,collectiondate,custfname,custlname,bikename,bikelocation,bikeprice,framesize) values('"+ordernumber+"','"+dateorder+"','"+datecollection+"','"+name+"','"+familyname+"','"+bikename+"','"+location+"','"+price+"','"+framesize+"')");            
                            
                         
           
                
+                 //code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
+                //start of modify 
+                //Print Table
+                           
                      
-                     //,orderdate,collectiondate
-               //,DATE('"+orderdate+"''dd-MM-yyyy'),DATE('"+colldate1+"''dd-MM-yyyy'))
-               
+              
             
             out.print("<center><table width=25% border=1><center>");
                  out.print("<center><h1>Order Confirmation:</h1></center>");
                 out.print("<center><h2>"+name+" " +familyname+ "</h2></center>");
                  out.print("<center");
                  
-    
+                 out.print("<tr><th><t1>Order Number</t1> <td>"+ordernumber+"</td> </th></tr>");
+                 
                  out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
                  
                  out.print("<tr><th><t1>Bike Type</t1> <td>"+type+"</td> </th></tr>");
@@ -122,7 +136,7 @@ public class createOrder extends HttpServlet {
                  
                   out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"</td> </th></tr>");
                  
-                 out.print("<tr><th><t1>Price</t1> <td>"+price+"</td> </th></tr>");
+                 out.print("<tr><th><t1>Price</t1> <td>€"+price+"</td> </th></tr>");
                  
                  
                  out.print("<tr><th><t1>Collection Location</t1> <td>"+location+"</td> </th></tr>");
@@ -137,12 +151,12 @@ public class createOrder extends HttpServlet {
                   out.print("</table>");
                 out.print("<center>");
             
-            
-        } catch (SQLException ex) {
+              
+              }
+              }  catch (SQLException ex) {
             Logger.getLogger(createOrder.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -182,4 +196,4 @@ public class createOrder extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
+    }

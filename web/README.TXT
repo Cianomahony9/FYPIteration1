@@ -1,4 +1,4 @@
-
+*****Iteration 1******
 the Student declares that except where duly acknowledged, this project is entirely his/her own work
 
 Cian O'Mahony 117436194
@@ -75,3 +75,63 @@ Modifications : inserted my variable into get parameter
 
 W3schools-  https://www.w3schools.com/tags/att_input_maxlength.asp
 modification: inserted own value
+
+
+
+
+
+
+
+*** Iteration 2 ***
+
+the Student declares that except where duly acknowledged, this project is entirely his/her own work
+
+Cian O'Mahony 117436194
+
+1.Code Generation Tools 
+N/a
+
+2.Third Party Components 
+
+Stack Overflow 
+CC BY-SA 4.0 license 
+
+code for random number generator acquired and modified from https://stackoverflow.com/questions/30447879/how-to-generate-random-number-in-netbeans
+
+code for outputting date acquired and modified from https://stackoverflow.com/questions/16982056/how-to-get-the-date-7-days-earlier-date-from-current-date-in-java
+
+troubleshooting Date output format  https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
+
+searching db for with output https://stackoverflow.com/questions/24229442/print-the-data-in-resultset-along-with-columnnames 
+
+passing integer through get.parameter https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
+
+Geeks for Geeks
+Apache 2.0 License
+BSD
+GPL
+MIT
+
+ code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/ 
+
+
+3.Modified Third Parties
+
+
+Geeks for Geeks - https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/ 
+Modification : insert own varibles into hidden values-- insert own servlet name into form action -- change value of output -- change string variables for request.getParameters 
+
+Stack Overflow - https://stackoverflow.com/questions/30447879/how-to-generate-random-number-in-netbeans
+Modification : changed variable name to own variable -- changed range of random numbers to 8000 starting from 1000
+
+Stack Overflow - https://stackoverflow.com/questions/16982056/how-to-get-the-date-7-days-earlier-date-from-current-date-in-java
+Modification : changed date format --changed date variable names -- changed added days from minus to plus 5 --changed string variable names 
+
+Stack Overflow - https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
+Modification :  "dd/mm/yy" format used to format date output on webpage and write to db 
+
+Stack Overflow - https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
+Modification : inserted own variable to parameter 
+
+Stack Overflow - https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR1sRNKtwsIHp2lm5c0z4eCHoB6hqH-UbldX-GKcwzBRVLAx5upnfCUEVRE
+Modifications : inserted my variables -- changed name for second output -- added my own SQL statement to Resultset -- use of Statement with create my con

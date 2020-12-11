@@ -68,9 +68,9 @@
                         <tr>
                             <td>
                         <center><input type="Submit" value="Create Profile"></center></td>
-                            <td>
-                            <center><a href="/FYPCian/Family.jsp">Create Family Profile</a></center>
-                            </td>
+                           <td>
+                          <%--  <center><a href="/FYPCian/Family.jsp">Create Family Profile</a></center>  --%>
+                            </td> 
                         </tr>
                 </table>
         </form>

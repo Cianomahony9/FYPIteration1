@@ -27,6 +27,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class insertFamilyServ extends HttpServlet {
 
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -60,7 +62,8 @@ public class insertFamilyServ extends HttpServlet {
             
             Statement stmt = coninsertfam.createStatement();
               stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
-            out.println("Profile Inserted");
+            out.println("<h1>Profile For "+name+" Inserted into "+familyname1+"</h1>");
+            out.print("<a href=\"/FYPCian/RetrieveFamily.jsp\">Search Bike For Family</a>");
         } catch (SQLException ex) {
             Logger.getLogger(insertFamilyServ.class.getName()).log(Level.SEVERE, null, ex);
             //end modify 

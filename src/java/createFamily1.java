@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Cian
  */
+
 public class createFamily1 extends HttpServlet {
 
     /**
@@ -55,8 +56,8 @@ public class createFamily1 extends HttpServlet {
             
             stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
             //End
-         out.println("Family Created");
-         
+         out.println("<h1>Family Created For "+familyname1+"</h1>");
+         out.print("<a href=\"/FYPCian/InsertFamily.jsp\">Insert Profile To Family</a>");
         } catch (SQLException ex) {
             Logger.getLogger(createFamily1.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -28,7 +28,7 @@
                     </tr>
                 
                     <td> <center><input  type ="Submit" value="insert"/> </center> </td>   <%-- submit values to servlet --%>
-                    <td> <center> <a href="/FYPCian/InsertFamily.jsp">Insert Profile to Family </a> </center></td>  <%-- go to insert family page --%>
+                <%--   <td> <center> <a href="/FYPCian/InsertFamily.jsp">Insert Profile to Family </a> </center></td>  <%-- go to insert family page --%>
                     
             
         </form>

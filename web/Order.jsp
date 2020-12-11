@@ -17,9 +17,13 @@
     </head>
     <body>
         
+     
         
         <% 
             
+            
+              // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
+                  
             String name = request.getParameter("name");
             
             String type= request.getParameter("type");
@@ -41,9 +45,9 @@
            /// Creating Dates
               //code acquired and modified from  https://stackoverflow.com/questions/16982056/how-to-get-the-date-7-days-earlier-date-from-current-date-in-java
               //  used with https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
-             //https://www.programiz.com/java-programming/examples/add-two-dates
+            
              
-              DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+              DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
                
                Date colldate = new Date();
                String todate = dateFormat.format(colldate);
@@ -61,6 +65,11 @@
                            Date orderdate = calorder.getTime();
                            String fromdate1 = dateFormat.format(orderdate);
            
+                           
+                            //code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
+                //start of modify 
+                //Print Table
+                           
             
             out.print("<center><table width=25% border=1><center>");
                  out.print("<center><h1>Order Summary:</h1></center>");
@@ -72,7 +81,7 @@
                  
                   out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"</td> </th></tr>");
                  
-                 out.print("<tr><th><t1>Price</t1> <td>"+price+"</td> </th></tr>");
+                 out.print("<tr><th><t1>Price</t1> <td>€"+price+"</td> </th></tr>");
                  
                  
                  out.print("<tr><th><t1>Location</t1> <td>"+location+"</td> </th></tr>");
@@ -81,7 +90,20 @@
                  
                   out.println("<tr><th><t1>Collection On</t1> <td>"+ dateFormat.format(colldate1) + "</td> </th></tr>");
                  
-                 out.print("<form action = 'createOrder'>");
+                  
+                  
+                  out.print("<center><table width=25% border=1><center>");
+                 out.print("<center><h1>Payment:</h1></center>");
+                 
+                 out.print("<tr><th><t1>Name On Card</t1> <td><input type=text ></td> </th></tr>");
+                 out.print("<tr><th><t1>Card Number</t1> <td><input type=text maxlength=16 ></td> </th></tr>");
+                 out.print("<tr><th><t1>Expiry</t1> <td><input type=text maxlength=5 ></td> </th></tr>");
+                  out.print("<tr><th><t1>CVC</t1> <td><input type=text maxlength=3 ></td> </th></tr>");
+                  
+                
+                  // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
+                  
+                  out.print("<form action = 'createOrder'>");
                             out.print("<input type ='hidden' name='name' value ='"+name+"'>");
                         
                  
@@ -97,20 +119,22 @@
                 
                              out.print("<input type ='hidden' name='location' value ='"+location+"'>");
                   
-                           //  out.print("<input type ='hidden' name='collection' value ='"+ dateFormat.format(todate1)+"'>");
                           
+                         
                                 
                              
                              out.print("<td><input type='submit' value='Confirm Order'></td>");
                              out.close();
                              
                              
-                 
                   out.print("</table>");
                 out.print("<center>");
                 
               
-                
+                out.print("<center><table width=25% border=1><center>");
+                 out.print("<center><h1>Payment:</h1></center>");
+                 
+                 out.print("<tr><th><t1>Card Number</t1> <td></td> </th></tr>");
                 
               
                             
@@ -118,6 +142,10 @@
             
                 
         %>
+    
+  
+    
+    
     </body>
            
                     

@@ -24,6 +24,10 @@
         <servlet-name>createOrder</servlet-name>
         <servlet-class>createOrder</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>searchOrder</servlet-name>
+        <servlet-class>searchOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>create</servlet-name>
         <url-pattern>/create</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>createOrder</servlet-name>
         <url-pattern>/createOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchOrder</servlet-name>
+        <url-pattern>/searchOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

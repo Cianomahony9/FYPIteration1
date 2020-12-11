@@ -25,6 +25,8 @@ import javax.swing.JOptionPane;
  */
 public class create extends HttpServlet {
 
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -56,7 +58,8 @@ public class create extends HttpServlet {
             
             Statement stmt = con.createStatement();
             stmt.executeUpdate("INSERT INTO profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
-            out.println("Profile Inserted");
+            out.println("<h1>Profile Created for "+fname+"</h1>");
+            out.print("<a href=\"/FYPCian/index.html\">Home</a>");
             
     }   catch (SQLException ex) {
             Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);

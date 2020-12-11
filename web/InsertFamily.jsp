@@ -56,7 +56,7 @@
                         <tr>
                             <td>
                         <center> <input type="Submit" value="Insert Profile"> </center>  </td>
-                        <td>  <center><a href="/FYPCian/RetrieveFamily.jsp">Retrieve Family </a> </center> </td>
+                       <%-- <td>  <center><a href="/FYPCian/RetrieveFamily.jsp">Retrieve Family </a> </center> </td>  --%>
                         </tr>
                 </table>
         </form>
