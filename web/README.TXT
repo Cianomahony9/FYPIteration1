@@ -135,3 +135,22 @@ Modification : inserted own variable to parameter
 
 Stack Overflow - https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR1sRNKtwsIHp2lm5c0z4eCHoB6hqH-UbldX-GKcwzBRVLAx5upnfCUEVRE
 Modifications : inserted my variables -- changed name for second output -- added my own SQL statement to Resultset -- use of Statement with create my con
+
+
+
+
+
+
+
+Iteration 3 
+the Student declares that except where duly acknowledged, this project is entirely his/her own work
+
+Cian O'Mahony 117436194
+
+1.Code Generation Tools 
+N/a
+
+2.Third Party Components 
+Bootstrap
+licence within file Boostrap Licence
+

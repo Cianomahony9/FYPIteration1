@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.DbConOrderSearch;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -39,20 +40,23 @@ public class searchOrder extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
            
-            
+            // Begin Modify code
+            //pulling data from searchOrder jsp
             int ordernumber = Integer.parseInt(request.getParameter("ordernumber"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
              
+            // databse connection method 
             DbConOrderSearch db = new DbConOrderSearch();
             Connection conordersearch = db.getConOrderSearch();
             
+            // Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             
            // resultset  code modifed from here and used alongside below link https://stackoverflow.com/questions/24229442/print-the-data-in-resultset-along-with-columnnames 
             
              ////edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
             
-            
+            // sql statement to output search 
             Statement stmt = conordersearch.createStatement();
-                ResultSet myRs2 = stmt.executeQuery("SELECT ordernumber, orderdate,collectiondate, custfname, custlname, bikename, bikelocation, bikeprice, framesize FROM orderdetails WHERE ordernumber ="+ordernumber);
+                ResultSet myRs2 = stmt.executeQuery("SELECT * FROM orderdetails WHERE ordernumber ="+ordernumber);
             
                 while (myRs2.next() ){
                     String orderdate = myRs2.getString("orderdate");
@@ -61,15 +65,15 @@ public class searchOrder extends HttpServlet {
                     
                     String custfname = myRs2.getString("custfname");
                     
-                     String custlname = myRs2.getString("custlname");
+                    String custlname = myRs2.getString("custlname");
                     
-                     String bikename = myRs2.getString("bikename");
+                    String bikename = myRs2.getString("bikename");
                       
-                     String bikelocation = myRs2.getString("bikelocation");
+                    String bikelocation = myRs2.getString("bikelocation");
                      
-                      String bikeprice = myRs2.getString("bikeprice");
+                    String bikeprice = myRs2.getString("bikeprice");
                       
-                       String framesize = myRs2.getString("framesize");
+                    String framesize = myRs2.getString("framesize");
                        
                       
                        // output list 
@@ -91,16 +95,12 @@ public class searchOrder extends HttpServlet {
                      out.print(" <tr><th><a href=\"/FYPCian/index.html\">Return To Home</a></th></tr>");
                         out.print("</body></center>");
                       
-                      
-                    
-                    
-                    
-                    
+                   
                 }
             } catch (SQLException ex) {
             Logger.getLogger(searchOrder.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        //end of modify
             
       
     }

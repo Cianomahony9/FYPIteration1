@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.DbCon;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -15,19 +16,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
-
 /**
- *
- * @author Cian
- * 
- * Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
- */
+*
+* @author Cian
+* 
+* Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
+*/
 public class create extends HttpServlet {
-
-    
-    
-    /**
+/**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
@@ -42,24 +38,37 @@ public class create extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            // start of modify 
-            
+            // Begin Modify code
+            // take data from custProfile jsp page 
+           
             String fname = request.getParameter("fname");
+            
             String lname = request.getParameter("lname");
+            
             int telephone = Integer.parseInt(request.getParameter("telephone"));  //code acqired and modified from stack overflow  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
+            
             String address = request.getParameter("address");
+            
             String eircode = request.getParameter("eircode");
+            
             String email = request.getParameter("email");
+            
             String county = request.getParameter("county");
+            
             String password = request.getParameter("password");
+            
+            //database connection method
             
             DbCon db = new DbCon();
             Connection con = db.getCon();
+            
+            // sql statement to insert data above
             
             Statement stmt = con.createStatement();
             stmt.executeUpdate("INSERT INTO profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
             out.println("<h1>Profile Created for "+fname+"</h1>");
             out.print("<a href=\"/FYPCian/index.html\">Home</a>");
+       
             
     }   catch (SQLException ex) {
             Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.DbConSearch;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -45,7 +46,7 @@ public class searchBike extends HttpServlet {
             // hidden value from retrieve family servlet 
               
                // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/ 
-              //start of modify 
+             // Begin Modify code
             String insideleg = request.getParameter("insideleg");
             
             String armlength= request.getParameter("armlength");
@@ -55,7 +56,7 @@ public class searchBike extends HttpServlet {
             String familyname = request.getParameter("familyname");
             
              //end of modify 
-     // connecting to db
+     // connection to database method
             
             DbConSearch db = new DbConSearch();
             Connection consearch = db.getConSearch();
@@ -67,10 +68,12 @@ public class searchBike extends HttpServlet {
             
              //code below was supported by classmate Joe Murphy walked me through problem output statement link above give 
             //Start of modify
+            //sql to output data 
              Statement stmt = consearch.createStatement();
-             ResultSet myRs = stmt.executeQuery("SELECT * FROM bikes WHERE framesize <='"+insideleg +"'AND saddletohandle <='"+armlength+"'");   // problems solved from stack overflow  https://stackoverflow.com/questions/9192781/having-a-mysql-error-unknown-column-where-clause
+             ResultSet myRs = stmt.executeQuery("SELECT * FROM bikes WHERE framesize <='"+insideleg+"'AND saddletohandle <='"+armlength+"'");   // problems solved from stack overflow  https://stackoverflow.com/questions/9192781/having-a-mysql-error-unknown-column-where-clause
             
-             while(   myRs.next()){
+           
+             while(myRs.next()){
                 String bikename = myRs.getString("bikename");
                 
                 String type = myRs.getString("type");
@@ -83,12 +86,14 @@ public class searchBike extends HttpServlet {
                 
                 String location = myRs.getString("location");
                 
-                 
+                //Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo 
+                
                  //code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
                 //start of modify 
                 //Print Table
+                //output results
                  out.print("<center><table width=25% border=1><center>");
-                 out.print("<center><h1>Recommended Bike For:"+name+" "+familyname+ "</h1></center>");
+                 out.print("<center><h1>Recommended Bike For:"+name+" "+familyname+"</h1></center>");
 
                  out.print("<center");
                  out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
@@ -109,11 +114,8 @@ public class searchBike extends HttpServlet {
                  out.print("<tr><th><t1>Location</t1> <td>"+location+"</td> </th></tr>");
                  
                
-                 
-                 
-                 
-                 
                  // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
+                 //hidden values to send to order jsp
                  
                   out.print("<form action = 'Order.jsp'>");
                  out.print("<input type ='hidden' name='name' value ='"+name+"'>");
@@ -133,14 +135,9 @@ public class searchBike extends HttpServlet {
                   out.print("<td><input type='submit' value='Create Order'></td>");
                    out.close();
                  
-                 
-          
                 out.print("</table>");
                 out.print("<center>");
-                
-                
-                
-                
+               
                 //end of modify 
              }
                  

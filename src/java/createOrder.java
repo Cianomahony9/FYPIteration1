@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.DbConOrder;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -42,10 +43,10 @@ public class createOrder extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
            
-            
+            // Begin Modify code
               // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
                   
-            
+            // pulling data from Order jsp page
               String name = request.getParameter("name");
             
              String familyname = request.getParameter("familyname");
@@ -62,6 +63,7 @@ public class createOrder extends HttpServlet {
              
                        
              // code acquired and modified from https://stackoverflow.com/questions/30447879/how-to-generate-random-number-in-netbeans
+             // random number generator to create order numbers 
              Random random = new Random();
              int ordernumber;
               for(int counter=1; counter<=1;counter++){
@@ -76,20 +78,13 @@ public class createOrder extends HttpServlet {
               //  used with https://stackoverflow.com/questions/34544341/i-need-to-print-only-the-date-dd-mm-yyyy-but-now-am-getting-dd-mm-yyyy-and-t
              
               DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
-               
-               Date colldate = new Date();
-               String todate = dateFormat.format(colldate);
-               
-               
+          
                 Calendar calcollect = Calendar.getInstance();
                 
                             calcollect.add(Calendar.DATE, +5);
                             Date colldate1 = calcollect.getTime();
                             String datecollection = dateFormat.format(colldate1);
                          
-                            
-                             Date orderdate = new Date();
-                          String todate1 = dateFormat.format(orderdate); 
               
                          Calendar calorder  = Calendar.getInstance();
                            calorder.add(Calendar.DATE,-0);
@@ -99,13 +94,13 @@ public class createOrder extends HttpServlet {
          
             
                            
-                           //db connection + SQL Statement 
+                           //db connection get method 
                            
                            
                            DbConOrder db = new DbConOrder();
                         Connection conorder =db.getConOrder();
             
-            
+            //sql statement to insert data 
            // Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             
             
@@ -120,11 +115,10 @@ public class createOrder extends HttpServlet {
                 //Print Table
                            
                      
-              
-            
-            out.print("<center><table width=25% border=1><center>");
+              // output results 
+                 out.print("<center><table width=25% border=1><center>");
                  out.print("<center><h1>Order Confirmation:</h1></center>");
-                out.print("<center><h2>"+name+" " +familyname+ "</h2></center>");
+                 out.print("<center><h2>"+name+" " +familyname+ "</h2></center>");
                  out.print("<center");
                  
                  out.print("<tr><th><t1>Order Number</t1> <td>"+ordernumber+"</td> </th></tr>");
@@ -134,7 +128,7 @@ public class createOrder extends HttpServlet {
                  out.print("<tr><th><t1>Bike Type</t1> <td>"+type+"</td> </th></tr>");
                  
                  
-                  out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"</td> </th></tr>");
+                 out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"</td> </th></tr>");
                  
                  out.print("<tr><th><t1>Price</t1> <td>€"+price+"</td> </th></tr>");
                  
@@ -155,6 +149,7 @@ public class createOrder extends HttpServlet {
               }
               }  catch (SQLException ex) {
             Logger.getLogger(createOrder.class.getName()).log(Level.SEVERE, null, ex);
+            //end of modify
         }
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

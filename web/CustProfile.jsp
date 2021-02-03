@@ -3,66 +3,83 @@
     Created on : 22-Nov-2020, 20:27:03
     Author     : Cian
 
-*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
+
 --%>
 
-
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+Theory by TEMPLATED
+templated.co @templatedco
+Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+Modifications include change navbar size, colour, headings and links , changed footer copyright 
+-->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bikes4U.ie</title>    
-    </head>
-    <body>
-    <center>                     <%-- begin modify code --%>
-        
+	<head>
+	      <meta charset="utf-8" />
+	      <meta name="viewport" content="width=device-width, initial-scale=1" />
+	      <link rel="stylesheet" href="/FYPCian/css/main.css" />
+	</head>
+	<body class="subpage">
+         <!-- Header -->
+		<header id="header"> <!-- Begin Modify code -->
+			<div class="inner">
+			<a href="index.html" class="logo">Bikes4U.ie</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="BikeShops.jsp">View Bike Shops</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+                  
+<!-- sending inputted data to the create servlet to send to database  *** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo *** -->
          <form  action="create" method="POST">
                   
                 <table width="400px" Border="1">
-                    <h1>Bikes4U.ie</h1>
+                    
                     <tr>
                         <td colspan="2"><center><h1>Create Profile</h1></center></td>
                     </tr>
                 
                     <tr>
-                        <td>First Name</td>
-                        <td><input type="text" name="fname" ></td>
+                        
+                        <td><input type="text" name="fname" placeholder="First Name" ></td>
                     </tr>
                     <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" name="lname" ></td>
+                        
+                        <td><input type="text" name="lname" placeholder ="Last Name" ></td>
                         </tr>
                         
                         <tr>
-                        <td>Telephone</td>
-                        <td><input type="text" name="telephone"  maxlength="10"></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                        
+                        <td><input type="text" name="telephone"  maxlength="10" placeholder = "Telephone Number"></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                         
                           <tr>
-                        <td>Address</td>
-                        <td><input type="text" name="address" ></td>
+                        
+                        <td><input type="text" name="address" placeholder = "Address" ></td>
                         </tr>
                         
                           <tr>
-                        <td>Eircode</td>
-                        <td><input type="text" name="eircode" maxlength="7"></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                        
+                        <td><input type="text" name="eircode" maxlength="7" placeholder = "Eircode"></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                           <tr>
-                        <td>County</td>
-                        <td><input type="text" name="county" ></td>
+                       
+                        <td><input type="text" name="county" placeholder = "County"></td>
                         </tr>
                         
                           <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="email" ></td>
+                        
+                        <td><input type="text" name="email" placeholder = "Email Address" ></td>
                         </tr>
                         
                           <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" ></td>
+                        
+                        <td><input type="password" name="password" placeholder = "Password" ></td>
                         </tr>
                         
                         <tr>
@@ -73,7 +90,25 @@
                             </td> 
                         </tr>
                 </table>
-        </form>
-    </center>           <%-- End modify code --%>
-    </body>
+        </form>  
+    <!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Bikes4U.ie.
+						</div>
+						
+					</div> <!-- end modify -->
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/FYPCian/js/jquery.min.js"></script>
+			<script src="/FYPCian/js/skel.min.js"></script>
+			<script src="/FYPCian/js/util.js"></script>
+			<script src="/FYPCian/js/main.js"></script>
+
+	</body>
 </html>
+

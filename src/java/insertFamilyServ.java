@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.DbConInsertFam;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
@@ -44,22 +45,30 @@ public class insertFamilyServ extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            //start modify 
+           // Begin Modify code
             
             
-            // declaring variables to be inputted to db 
+            // declaring variables from InsertFamily jsp to be inputted to db 
             
             String familyname1 =request.getParameter("familyname1");
+            
             String name = request.getParameter("name");
+            
             String gender = request.getParameter("gender");
+            
             String height = request.getParameter("height");
+            
             String weight = request.getParameter("weight");
+            
             String insideleg = request.getParameter("insideleg");
+            
             String armlength = request.getParameter("armlength");
             
+            //database connection method 
             DbConInsertFam db = new DbConInsertFam();
             Connection coninsertfam = db.getConInsertFam();
             
+            //sql statement to input into database
             Statement stmt = coninsertfam.createStatement();
               stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
             out.println("<h1>Profile For "+name+" Inserted into "+familyname1+"</h1>");

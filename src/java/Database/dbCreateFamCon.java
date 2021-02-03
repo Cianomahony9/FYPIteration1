@@ -1,3 +1,5 @@
+package Database;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,7 +22,7 @@ import java.util.logging.Logger;
 
 
 
-   //start of modify
+  // Begin Modify code
 public class dbCreateFamCon {
     Connection concreatefam;
     public Connection getCreateFamCon()  //get method to be called in servlet 

@@ -1,7 +1,8 @@
 <%-- 
-    Document   : SearchOrder
-    Created on : 07-Dec-2020, 11:37:36
+    Document   : SearchAdminCust
+    Created on : 21-Jan-2021, 13:45:21
     Author     : Cian
+*** Form Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,9 +12,10 @@ Theory by TEMPLATED
 templated.co @templatedco
 Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 
-Modifications include changing navabar size and colour, inserted own titles and links, changed footer copyright
+Modifications : Changed boarder colour, inserted own links to navbar and changed titles, inserted form to body,changed table column names, changed footer copyright text to own website
 
 -->
+
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -34,24 +36,30 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
-                  
-        <!-- data sent to servlet to search db -->
-         <form action="searchOrder"method="POST">
-            
+                
+                
+       <center>
+           <!-- data taken and sent to jsp page to search database -->
+        <form action="SearchAdminCustResult.jsp"method="POST">
              <table width="400px" Border="1">
                  <tr>
-                        <td colspan="2"><center><h1>Search Order</h1></center></td> 
+                        <td colspan="2"><center><h1>Search Customer</h1></center></td> 
                     </tr>
                     
                     <tr>
-                        <td>Enter Your Order Number</td>
-                        <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
-                     </tr>
+                        <td>Enter Customer Family Name</td>
+                        <td><input type="text" name="customername" placeholder="Family Name"></td>
+                       
+                    </tr>
            
                     <td><center><input type="Submit" value="search"/></center></td>
-            </table>
+              
+             </table>
         </form>
-    <!-- Footer -->
+    </center>
+    
+    
+   <!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
 					<div class="flex">
@@ -71,6 +79,3 @@ Modifications include changing navabar size and colour, inserted own titles and 
 
 	</body>
 </html>
-
-
-

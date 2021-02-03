@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.dbCreateFamCon;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -19,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author Cian
+ * 
+ *  Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
  */
 
 public class createFamily1 extends HttpServlet {
@@ -40,15 +43,18 @@ public class createFamily1 extends HttpServlet {
             
            // code acquired and modified from Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             
-            //start of modify 
+            // Begin Modify code
+            // take variable from  family jsp and create table name 
             String familyname1 =request.getParameter("familyname1");
+            
+            // database connection method 
             
             dbCreateFamCon db = new dbCreateFamCon();
             Connection concreatefam =db.getCreateFamCon();
             
             
             
-            
+            // sql statement to create table with name inputted
             
             Statement stmt = concreatefam.createStatement();
             
@@ -58,6 +64,7 @@ public class createFamily1 extends HttpServlet {
             //End
          out.println("<h1>Family Created For "+familyname1+"</h1>");
          out.print("<a href=\"/FYPCian/InsertFamily.jsp\">Insert Profile To Family</a>");
+        
         } catch (SQLException ex) {
             Logger.getLogger(createFamily1.class.getName()).log(Level.SEVERE, null, ex);
         }

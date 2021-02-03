@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Database.DbConRetrieveFam;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -41,10 +42,13 @@ public class retrieveFamily extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
            
          // Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
-           //start modify 
+         // Begin Modify code
             
+            //data pulled from retreiveFamily jsp 
             String familyname1 = request.getParameter("familyname1"); 
         
+            
+            // database connection method 
             DbConRetrieveFam db = new DbConRetrieveFam();
             Connection conretrievefam = db.getConRetrieveFam();
           
@@ -54,10 +58,11 @@ public class retrieveFamily extends HttpServlet {
              ////edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
             
              //code below was supported by classmate Joe Murphy who gave me link above due to problem outputting result 
+            //sql to output data 
              Statement stmt = conretrievefam.createStatement();
             for(int i=1; i<10;i++){
-                ResultSet myRs1 = stmt.executeQuery("SELECT name, familyname, gender, height, weight, insideleg, armlength FROM "+familyname1+" WHERE user_id ="+i);
-                //end 
+                ResultSet myRs1 = stmt.executeQuery("SELECT * FROM "+familyname1+" WHERE familyname ='"+familyname1+"'AND user_id ='"+i+"'");
+                
               while(  myRs1.next()){
                 String name = myRs1.getString("name");
                 
@@ -73,13 +78,13 @@ public class retrieveFamily extends HttpServlet {
               
                 String armlength = myRs1.getString("armlength");
                 
-                //end modify
+              
                 
                 
                 //code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
-                //start of modify 
-                //Print Table
                 
+                //Print Table
+           
               out.print("<center><table width=25% border=1><center>");
                  out.print("<center><h1>Family Result:"+familyname+"</h1></center>");
 
@@ -120,7 +125,6 @@ public class retrieveFamily extends HttpServlet {
                 out.print("<center>");
             }
             }
-            //end of modify
             
         } catch (SQLException ex) {
             Logger.getLogger(retrieveFamily.class.getName()).log(Level.SEVERE, null, ex);
