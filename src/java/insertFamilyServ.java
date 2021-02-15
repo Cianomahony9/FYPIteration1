@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -71,8 +72,22 @@ public class insertFamilyServ extends HttpServlet {
             //sql statement to input into database
             Statement stmt = coninsertfam.createStatement();
               stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
-            out.println("<h1>Profile For "+name+" Inserted into "+familyname1+"</h1>");
-            out.print("<a href=\"/FYPCian/RetrieveFamily.jsp\">Search Bike For Family</a>");
+          //  out.println("<h1>Profile For "+name+" Inserted into "+familyname1+"</h1>");
+          //  out.print("<a href=\"/FYPCian/RetrieveFamily.jsp\">Search Bike For Family</a>");
+              
+               // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+            
+       
+          out.println("<script type=\"text/javascript\">");
+            out.println("alert('Inserted Profile for "+name+" to Family "+familyname1+"');");
+            out.println("</script>");
+            
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open insertfamily.jsp
+                 
+            RequestDispatcher rd =request.getRequestDispatcher("InsertFamily.jsp");
+            rd.include(request, response);
+        
+        
         } catch (SQLException ex) {
             Logger.getLogger(insertFamilyServ.class.getName()).log(Level.SEVERE, null, ex);
             //end modify 

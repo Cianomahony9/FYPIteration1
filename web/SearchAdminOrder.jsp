@@ -42,6 +42,7 @@ code for database connection and output sourced and modified from https://www.yo
     
 <html>
 	<head>
+            <title>Bikes4U.ie</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/FYPCian/css/main.css" />

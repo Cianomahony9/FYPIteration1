@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -62,19 +63,36 @@ public class create extends HttpServlet {
             DbCon db = new DbCon();
             Connection con = db.getCon();
             
-            // sql statement to insert data above
             
-            Statement stmt = con.createStatement();
+            
+            
+            
+            
+            // sql statement to insert data above
+             Statement stmt = con.createStatement();
             stmt.executeUpdate("INSERT INTO profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
-            out.println("<h1>Profile Created for "+fname+"</h1>");
-            out.print("<a href=\"/FYPCian/index.html\">Home</a>");
+          // out.println("<h1>Profile Created for "+fname+"</h1>");
+            //out.print("<a href=\"/FYPCian/index.html\">Home</a>");
+            
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+            
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Profile for "+fname+" Created');");
+            out.println("</script>");
+            
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open custprofile.jsp
+                 
+                
+            RequestDispatcher rd =request.getRequestDispatcher("CustProfile.jsp");
+            rd.include(request, response);
        
             
     }   catch (SQLException ex) {
             Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);
             //end of modify
         }
-        
+    
+     
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

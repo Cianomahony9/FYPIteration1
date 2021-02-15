@@ -17,6 +17,7 @@ Modifications include change navbar size, colour, headings and links , changed f
 -->
 <html>
 	<head>
+            <title>Bikes4U.ie</title>
 	      <meta charset="utf-8" />
 	      <meta name="viewport" content="width=device-width, initial-scale=1" />
 	      <link rel="stylesheet" href="/FYPCian/css/main.css" />
@@ -34,7 +35,8 @@ Modifications include change navbar size, colour, headings and links , changed f
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
-                  
+             
+                     
 <!-- sending inputted data to the create servlet to send to database  *** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo *** -->
          <form  action="create" method="POST">
                   

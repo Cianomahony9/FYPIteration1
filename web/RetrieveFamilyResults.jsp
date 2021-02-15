@@ -47,6 +47,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 
 <html>
 	<head>
+            <title>Bikes4U.ie</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/FYPCian/css/main.css" />
@@ -68,7 +69,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
              <!-- Table -->
 <div class="table-wrapper">
 	<table>
-        <center><h3>Open Orders</h3></center> 
+        <center><h3>Customer Profiles</h3></center> 
 	<thead>
 	<tr>
 	<th>Customer First Name</th>
@@ -90,10 +91,10 @@ String sql = "SELECT * FROM "+familyname1+"";
 resultSet=statement.executeQuery(sql);
 while(resultSet.next()){
             
-String name =resultSet.getString("name");
+String name = resultSet.getString("name");
                 
 String familyname = resultSet.getString("familyname");
-                                                                                   // variable for results
+                                                                                   // variable for results to be sent to search bike servlet
 String insideleg = resultSet.getString("insideleg");
               
 String armlength = resultSet.getString("armlength");
@@ -127,7 +128,7 @@ out.print("<input type ='hidden' name='armlength' value ='"+armlength+"'>");
 
 out.print("<td><input type='submit' value='Search Bike'></td>");
 
-out.close();
+ out.print("</form>");
        
 }
 }catch (Exception e ){

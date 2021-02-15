@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -144,7 +145,13 @@ public class createOrder extends HttpServlet {
                    
                   out.print("</table>");
                 out.print("<center>");
+                
+                // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open orderconfirmation.jsp
+                 
+                 // send serlvet work to the JSP page
             
+                RequestDispatcher rd =request.getRequestDispatcher("OrderConfirmation.jsp");
+                  rd.include(request, response);
               
               }
               }  catch (SQLException ex) {

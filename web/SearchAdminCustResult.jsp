@@ -46,6 +46,7 @@ code for database connection and output sourced and modified from https://www.yo
 
 <html>
 	<head>
+            <title>Bikes4U.ie</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/FYPCian/css/main.css" />
@@ -68,7 +69,7 @@ code for database connection and output sourced and modified from https://www.yo
       <!-- Table -->
     <div class="table-wrapper">
 	<table>
-        <center><h3>Open Orders</h3></center> 
+        <center><h3>Customer Details</h3></center> 
 		<thead>
 		<tr>
 		    <th>Customer First Name</th>

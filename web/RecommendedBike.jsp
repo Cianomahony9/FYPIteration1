@@ -1,6 +1,6 @@
 <%-- 
-    Document   : SearchOrder
-    Created on : 07-Dec-2020, 11:37:36
+    Document   : RecommendedBike
+    Created on : 07-Feb-2021, 15:02:33
     Author     : Cian
 --%>
 
@@ -11,8 +11,7 @@ Theory by TEMPLATED
 templated.co @templatedco
 Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 
-Modifications include changing navabar size and colour, inserted own titles and links, changed footer copyright
-
+Modification includes: changing of navbar size and colour, inserting own titles and links, inserted own form search function, changed footer copyright
 -->
 <html>
 	<head>
@@ -35,32 +34,9 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
-                  
-        <!-- data sent to servlet to search db -->
-         <form action="searchOrder"method="POST">
-            
-             <table width="400px" Border="1">
-                 <tr>
-                        <td colspan="2"><center><h1>Search Order</h1></center></td> 
-                    </tr>
-                    
-                    <tr>
-                        <td>Enter Your Order Number</td>
-                        <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
-                     </tr>
-           
-                    <td><center><input type="Submit" value="search"/></center></td>
-            </table>
-        </form>
-    <!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-                                            <!-- Border to split search and Order Display -->
-                                            
-					</div>
-				</div>
-			</footer>
+                
+              
+  
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>
@@ -70,6 +46,3 @@ Modifications include changing navabar size and colour, inserted own titles and 
 
 	</body>
 </html>
-
-
-

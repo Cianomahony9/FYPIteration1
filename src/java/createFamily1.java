@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -62,8 +63,19 @@ public class createFamily1 extends HttpServlet {
             
             stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
             //End
-         out.println("<h1>Family Created For "+familyname1+"</h1>");
-         out.print("<a href=\"/FYPCian/InsertFamily.jsp\">Insert Profile To Family</a>");
+      //   out.println("<h1>Family Created For "+familyname1+"</h1>");
+        // out.print("<a href=\"/FYPCian/InsertFamily.jsp\">Insert Profile To Family</a>");
+            
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+            
+           out.println("<script type=\"text/javascript\">");
+            out.println("alert('Family Profile Created for "+familyname1+"');");
+            out.println("</script>");
+            
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open custprofile.jsp
+              
+            RequestDispatcher rd =request.getRequestDispatcher("Family.jsp");
+            rd.include(request, response);
         
         } catch (SQLException ex) {
             Logger.getLogger(createFamily1.class.getName()).log(Level.SEVERE, null, ex);

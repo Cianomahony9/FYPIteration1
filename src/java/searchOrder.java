@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -75,25 +76,53 @@ public class searchOrder extends HttpServlet {
                       
                     String framesize = myRs2.getString("framesize");
                        
-                      
-                       // output list 
+                    
+                    // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/   
+                  
+                 out.print("<form action = 'SearchOrder.jsp'>");
+                 
+                 out.print("<input type ='hidden' name='custfname' value ='"+custfname+"'>");
+                 
+                 out.print("<input type ='hidden' name='custlname' value ='"+custlname+"'>");
+                 
+                 out.print("<input type ='hidden' name='bikename' value ='"+bikename+"'>");
+                 
+                 out.print("<input type ='hidden' name='bikelocation' value ='"+bikelocation+"'>");
+                 
+                 out.print("<input type ='hidden' name='bikeprice' value ='"+bikeprice+"'>");
+                 
+                 out.print("<input type ='hidden' name='framesize' value ='"+framesize+"'>");
+                 
+                 out.print("<input type ='hidden' name='orderdate' value ='"+orderdate+"'>");
+                 
+                 out.print("<input type ='hidden' name='collectiondate' value ='"+collectiondate+"'>");
+                  
+                 
+                 // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open displayorder.jsp
+                 
+                 // send serlvet work to the JSP page
+               RequestDispatcher rd =request.getRequestDispatcher("SearchOrder.jsp");
+            rd.include(request, response);
+                    
+                  // output list 
                        
-                        out.print("<center><body>");
+                     out.print("<center><body>");
                         out.print("<h1>Hello "+custfname+" " +custlname+ ".</h1>");
                         
                         out.print("<h2> Your Order Number is "+ordernumber+".</h2>");
                         
                         
-                        out.print("<h3> You Placed Your Order on "+orderdate+".</h3>");
+                   out.print("<h3> You Placed Your Order on "+orderdate+".</h3>");
                        
-                        out.print("<h3> Your "+bikename+"  will be Ready For Collection on "+collectiondate+" From "+bikelocation+".</h3>");
+                   out.print("<h3> Your "+bikename+"  will be Ready For Collection on "+collectiondate+" From "+bikelocation+".</h3>");
                         
-                        out.print("<h3>The Framesize is "+framesize+"</h3>");
+                   out.print("<h3>The Framesize is "+framesize+"</h3>");
                       
-                        out.print("<h3>The Total Price is €"+bikeprice+"</h3>");
+                   out.print("<h3>The Total Price is €"+bikeprice+"</h3>");
                         
-                     out.print(" <tr><th><a href=\"/FYPCian/index.html\">Return To Home</a></th></tr>");
-                        out.print("</body></center>");
+                   out.print(" <tr><th><a href=\"/FYPCian/index.html\">Return To Home</a></th></tr>");
+                   out.print(" <tr><th><a href=\"/FYPCian/SearchOrder.jsp\">New Search</a></th></tr>");
+                       out.print("</body></center>");
                       
                    
                 }

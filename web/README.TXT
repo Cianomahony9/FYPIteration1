@@ -154,3 +154,36 @@ N/a
 Bootstrap
 licence within file Boostrap Licence
 
+https://templated.co/theory
+
+Stack Overflow
+
+CC BY-SA 4.0 license 
+
+Message alert code https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+
+Opening new page with servlet work sent to it https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+
+
+
+Youtube
+
+Rose India Tutorials
+
+database connection in jsp page https://www.youtube.com/watch?v=ToIQFP55s7Q
+
+
+3.Modified Third Parties
+
+Stack Overflow - https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+Modifications: changed to out.print fucntion, inserted own message to alert
+
+Stack Overflow - https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+Modifications: change path of page to open
+
+Youtube - https://www.youtube.com/watch?v=ToIQFP55s7Q
+Modifications: inserted own database path,inserted own getparamter variables, inserted own table column names, inserted own variable outputs
+
+Theory Bootstrap - https://templated.co/theory
+Modifications:  changing of navbar colour and size, inserted own headings and links, inserted own cover photo, changed size of cover photo, changed colour of banner, inerted own functions to body (search create) changed copyright footer to own website.
+

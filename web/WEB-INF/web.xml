@@ -17,10 +17,6 @@
         <servlet-class>searchBike</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>retrieveFamily</servlet-name>
-        <servlet-class>retrieveFamily</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>createOrder</servlet-name>
         <servlet-class>createOrder</servlet-class>
     </servlet>
@@ -43,10 +39,6 @@
     <servlet-mapping>
         <servlet-name>searchBike</servlet-name>
         <url-pattern>/searchBike</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>retrieveFamily</servlet-name>
-        <url-pattern>/retrieveFamily</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>createOrder</servlet-name>

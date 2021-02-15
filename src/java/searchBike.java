@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -93,48 +94,48 @@ public class searchBike extends HttpServlet {
                 //Print Table
                 //output results
                  out.print("<center><table width=25% border=1><center>");
-                 out.print("<center><h1>Recommended Bike For:"+name+" "+familyname+"</h1></center>");
-
-                 out.print("<center");
-                 out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
                  
+                 out.print("<center><h1>Recommended Bike For: "+name+" "+familyname+"</h1></center>");
+
+                 out.print("<tr><th><t1>Bike Name</t1> <td>"+bikename+"</td> </th></tr>");
                  
                  out.print("<tr><th><t1>Bike Type</t1> <td>"+type+"</td> </th></tr>");
                  
-                 
                  out.print("<tr><th><t1>Framesize</t1> <td>"+framesize+"</td> </th></tr>");
               
-                 
-                  out.print("<tr><th><t1>Saddle to HandleBar length</t1>  <td>"+saddletohandle+"</td> </th></tr>");
+                 out.print("<tr><th><t1>Saddle to HandleBar length</t1>  <td>"+saddletohandle+"</td> </th></tr>");
                 
-                 
                  out.print("<tr><th><t1>Price</t1> <td>€"+price+"</td> </th></tr>");
-                 
                  
                  out.print("<tr><th><t1>Location</t1> <td>"+location+"</td> </th></tr>");
                  
-               
-                 // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
-                 //hidden values to send to order jsp
+                 out.print("</center></table>");
+                  
+                 // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open recommendedbike.jsp
+                 // send serlvet work to display on the JSP page
+                   RequestDispatcher rd =request.getRequestDispatcher("RecommendedBike.jsp");
+                  rd.include(request, response);
                  
-                  out.print("<form action = 'Order.jsp'>");
+                 // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
+                 //when create order clicked hidden values to send to order jsp
+                out.print("<form action = 'Order.jsp'>");
                  out.print("<input type ='hidden' name='name' value ='"+name+"'>");
                  
-                  out.print("<input type ='hidden' name='familyname' value ='"+familyname+"'>");
+                 out.print("<input type ='hidden' name='familyname' value ='"+familyname+"'>");
                  
-                  out.print("<input type ='hidden' name='framesize' value ='"+framesize+"'>");
+                 out.print("<input type ='hidden' name='framesize' value ='"+framesize+"'>");
                   
                  out.print("<input type ='hidden' name='bikename' value ='"+bikename+"'>");
                  
                  out.print("<input type ='hidden' name='price' value ='"+price+"'>");
                  
-                  out.print("<input type ='hidden' name='type' value ='"+type+"'>");
+                 out.print("<input type ='hidden' name='type' value ='"+type+"'>");
                  
-                  out.print("<input type ='hidden' name='location' value ='"+location+"'>");
+                 out.print("<input type ='hidden' name='location' value ='"+location+"'>");
                   
-                  out.print("<td><input type='submit' value='Create Order'></td>");
-                   out.close();
-                 
+                 out.print("<td><input type='submit' value='Create Order'></td>");
+                  
+                out.print("</form>");
                 out.print("</table>");
                 out.print("<center>");
                
