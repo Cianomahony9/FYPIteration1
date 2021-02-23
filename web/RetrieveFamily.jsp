@@ -27,13 +27,15 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="index.html" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
+						<a href="HomePage.jsp">Home</a>
 						<a href="SearchOrder.jsp">Search Order</a>
 						<a href="BikeShops.jsp">View Bike Shops</a>
+                                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                         <h1>Logged in as ${custlogin.fname} </h1>
 				</div>
 			</header>
                   
@@ -49,6 +51,12 @@ Modification includes: changing of navbar size and colour, inserting own titles 
                         <td>Enter Family Name</td>
                         <td><input type="text" name="familyname1" placeholder="Family Name"></td>
                      </tr>
+                     
+                     <tr>
+                        <td>Enter Family Telephone Number</td>
+                        <td><input type="text" name="telephone" placeholder="Family Telephone"></td>
+                       
+                    </tr>
            
                     <td><center><input type="Submit" value="search"/></center></td>
                

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : BikeShops
-    Created on : 23-Jan-2021, 14:42:31
+    Document   : LandingPageBikeShops
+    Created on : 19-Feb-2021, 11:34:39
     Author     : Cian
 --%>
 
@@ -24,15 +24,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 <!-- Header -->
 <header id="header">
 	<div class="inner">
-		<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+		<a href="LandingPage.jsp" class="logo">Bikes4U.ie</a>
 			<nav id="nav">
-				<a href="HomePage.jsp">Home</a>
-				<a href="SearchOrder.jsp">Search Order</a>
-				<a href="BikeShops.jsp">View Bike Shops</a>
-                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
+				<a href="LandingPage.jsp">Home</a>
+				<a href="login.jsp">Search Order</a>
+				<a href="LandingPageBikeShops.jsp">View Bike Shops</a>
 			</nav>
 				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                 <h1>Logged in as ${custlogin.fname} </h1>
 	</div>
 </header>
 <!-- Section Three Bike Shops -->
@@ -51,7 +49,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
    <center><h3>Halfords</h3></center>
 </header>
 	<footer>
-	<a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+	<a href="login.jsp" class="button special">Create Order</a>
 	</footer>
 		</article>
 		
@@ -64,7 +62,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 	<h3>The Edge Cycles</h3>
 </header>
        <footer>
-       <a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+       <a href="login.jsp" class="button special">Create Order</a>
 	</footer>
 		</article>
             
@@ -77,7 +75,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 	<h3>Capwell Cycles</h3>
 </header>
 	<footer>
-	<a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+	<a href="login.jsp" class="button special">Create Order</a>
 	</footer>
 		</article>
             
@@ -90,7 +88,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
          <h3>Giant Superstores</h3>
 </header>
         <footer>
-	<a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+	<a href="login.jsp" class="button special">Create Order</a>
 	</footer>
 		</article>
 	   </div>

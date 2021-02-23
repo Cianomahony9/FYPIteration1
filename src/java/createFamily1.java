@@ -61,7 +61,7 @@ public class createFamily1 extends HttpServlet {
             
              //create statement swtiched and varialbe gathered inserted to get table name 
             
-            stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4), PRIMARY KEY(user_id));");
+            stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4),telephone int(10), PRIMARY KEY(user_id));");
             //End
       //   out.println("<h1>Family Created For "+familyname1+"</h1>");
         // out.print("<a href=\"/FYPCian/InsertFamily.jsp\">Insert Profile To Family</a>");

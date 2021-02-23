@@ -16,6 +16,7 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 
 -->
 
+
 <html>
 	<head>
             <title>Bikes4U.ie</title>
@@ -28,13 +29,16 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="index.html" class="logo">Bikes4U.ie</a>
+					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="SearchOrder.jsp">Search Order</a>
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="AdminPage.jsp">Home</a>
+						<a href="SearchAdminOrder.jsp">Search Order</a>
+						<a href="SearchAdminCust.jsp">View Customer Records</a>
+                                                <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                         <h1>Logged in For ${adminlogin.store} </h1>
 				</div>
 			</header>
                 
@@ -50,6 +54,12 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
                     <tr>
                         <td>Enter Customer Family Name</td>
                         <td><input type="text" name="customername" placeholder="Family Name"></td>
+                       
+                    </tr>
+                    
+                     <tr>
+                        <td>Enter Customer Family Telephone Number</td>
+                        <td><input type="text" name="telephone" placeholder="Family Telephone"></td>
                        
                     </tr>
            
@@ -68,6 +78,7 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 							&copy; Bikes4U.ie.
 						</div>
 						<!-- end modify -->
+                                                <a href="AdminLogin.jsp">Log Out</a>
 					</div>
 				</div>
 			</footer>

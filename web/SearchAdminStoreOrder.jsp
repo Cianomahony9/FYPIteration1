@@ -21,6 +21,7 @@ code for database connection and output sourced and modified from https://www.yo
 -->
 
 <!-- Begin Modify code -->
+
 <%
     //database connection
     String driverName = "com.mysql.jdbc.Driver";
@@ -48,7 +49,7 @@ code for database connection and output sourced and modified from https://www.yo
 	<head>
 		<%-- begin modify code --%>
                 <title>Bikes4U.ie</title>
-		<meta charset="utf-8" />
+             <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/FYPCian/css/main.css" />
 	</head>
@@ -57,13 +58,17 @@ code for database connection and output sourced and modified from https://www.yo
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Bikes4U.ie</a>
+					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
+                                       
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="SearchOrder.jsp">Search Order</a>
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="AdminPage.jsp">Home</a>
+						<a href="SearchAdminOrder.jsp">Search Order</a>
+						<a href="SearchAdminCust.jsp">View Customer Records</a>
+                                                <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                       <h1>Logged in For ${adminlogin.store} </h1>
 				</div>
 			</header>
         <!-- Table -->
@@ -103,7 +108,7 @@ code for database connection and output sourced and modified from https://www.yo
 	<td><%=resultSet.getString("custfname")%> </td>
         <td><%=resultSet.getString("custlname")%> </td>
         <td><%=resultSet.getString("bikename")%> </td>
-        <td><%=resultSet.getString("bikeprice") %> </td>
+        <td>€<%=resultSet.getString("bikeprice") %> </td>
        </tr>
     </tbody>
 <%
@@ -123,6 +128,7 @@ code for database connection and output sourced and modified from https://www.yo
 		&copy; Bikes4U.ie.
 	</div>
 <!-- end modify -->
+<a href="AdminLogin.jsp">Log Out</a>
      </div>
     </div>
 </footer>

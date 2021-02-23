@@ -20,6 +20,8 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
 -->
 <!-- Begin Modify code -->
+
+
 <%
     // connection to databaase 
     String driverName = "com.mysql.jdbc.Driver";
@@ -54,13 +56,16 @@ code for database connection and output sourced and modified from https://www.yo
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Bikes4U.ie</a>
+					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="SearchOrder.jsp">Search Order</a>
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="AdminPage.jsp">Home</a>
+						<a href="SearchAdminOrder.jsp">Search Order</a>
+						<a href="SearchAdminCust.jsp">View Customer Records</a>
+                                                <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                        <h1>Logged in For ${adminlogin.store} </h1>
 				</div>
 			</header>
                 
@@ -120,6 +125,7 @@ code for database connection and output sourced and modified from https://www.yo
 			<div class="copyright">
 				&copy; Bikes4U.ie.
 			</div>
+                            <a href="AdminLogin.jsp">Log Out</a>
 			</div>
 		</div>
 	</footer>

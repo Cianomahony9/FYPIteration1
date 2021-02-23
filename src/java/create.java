@@ -83,7 +83,7 @@ public class create extends HttpServlet {
             // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open custprofile.jsp
                  
                 
-            RequestDispatcher rd =request.getRequestDispatcher("CustProfile.jsp");
+            RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
        
             

@@ -26,13 +26,7 @@ Modifications include change navbar size, colour, headings and links , changed f
          <!-- Header -->
 		<header id="header"> <!-- Begin Modify code -->
 			<div class="inner">
-			<a href="index.html" class="logo">Bikes4U.ie</a>
-					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="SearchOrder.jsp">Search Order</a>
-						<a href="BikeShops.jsp">View Bike Shops</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			<a href="#" class="logo">Bikes4U.ie</a>
 				</div>
 			</header>
              

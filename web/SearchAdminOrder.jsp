@@ -21,6 +21,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
 code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
 -->
 <!-- Begin Modify code -->
+
 <%
     // database connection
     String driverName = "com.mysql.jdbc.Driver";
@@ -52,20 +53,24 @@ code for database connection and output sourced and modified from https://www.yo
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Bikes4U.ie</a>
+					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
+                                        
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="SearchOrder.jsp">Search Order</a>
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="AdminPage.jsp">Home</a>
+						<a href="SearchAdminOrder.jsp">Search Order</a>
+						<a href="SearchAdminCust.jsp">View Customer Records</a>
+                                                <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
+                                        <h1>Logged in For ${adminlogin.store} </h1>
+                                         </div>
 			</header>
                 
              
-<!-- search servlet connection -->
+<!-- search servlet connection send to SearchAdminStoreOrder.jsp -->
        <center>
-   <form action="StoreOrderSearch.jsp"method="POST"> 
+   <form action="SearchAdminStoreOrder.jsp"method="POST"> 
              <table width="400px" Border="1">
                  <tr>
                         <td colspan="2"><center><h1>Search Store Open Orders</h1></center></td> 
@@ -73,7 +78,7 @@ code for database connection and output sourced and modified from https://www.yo
                     
                     <tr>
                         <td>Enter Store Name</td>
-                        <td><input type="text" name="orderstorename" placeholder="Store Name"></td>
+                        <td><input type="text" name="orderstorename" placeholder="Store Name" value ="${adminlogin.store}"></td>
                        
                     </tr>
            
@@ -86,7 +91,7 @@ code for database connection and output sourced and modified from https://www.yo
         <!-- Table -->
 	<div class="table-wrapper">
 	<table>
-            <center><h3>Open Orders</h3></center> 
+            <center><h3>Orders Created on Bikes4U.ie</h3></center> 
 		<thead>
 		<tr>
 		<th>Order Number</th>
@@ -119,7 +124,7 @@ code for database connection and output sourced and modified from https://www.yo
 	    <td><%=resultSet.getString("custfname")%> </td>
             <td><%=resultSet.getString("custlname")%> </td>
             <td><%=resultSet.getString("bikename")%> </td>
-            <td><%=resultSet.getString("bikeprice") %> </td>
+            <td>€<%=resultSet.getString("bikeprice") %> </td>
         </tr>
     </tbody>
 <%
@@ -139,6 +144,7 @@ code for database connection and output sourced and modified from https://www.yo
 		&copy; Bikes4U.ie.
         </div>
 <!-- end modify -->
+<a href="AdminLogin.jsp">Log Out</a>
         </div>
     </div>
 </footer>

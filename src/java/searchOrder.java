@@ -120,7 +120,7 @@ public class searchOrder extends HttpServlet {
                       
                    out.print("<h3>The Total Price is €"+bikeprice+"</h3>");
                         
-                   out.print(" <tr><th><a href=\"/FYPCian/index.html\">Return To Home</a></th></tr>");
+                   out.print(" <tr><th><a href=\"/FYPCian/HomePage.jsp\">Return To Home</a></th></tr>");
                    out.print(" <tr><th><a href=\"/FYPCian/SearchOrder.jsp\">New Search</a></th></tr>");
                        out.print("</body></center>");
                       

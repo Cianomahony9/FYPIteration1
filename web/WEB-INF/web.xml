@@ -24,6 +24,22 @@
         <servlet-name>searchOrder</servlet-name>
         <servlet-class>searchOrder</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CustLoginServ</servlet-name>
+        <servlet-class>Login.CustLoginServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminLoginServ</servlet-name>
+        <servlet-class>Login.AdminLoginServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustLogoutServ</servlet-name>
+        <servlet-class>Login.CustLogoutServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminLogoutServ</servlet-name>
+        <servlet-class>Login.AdminLogoutServ</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>create</servlet-name>
         <url-pattern>/create</url-pattern>
@@ -47,6 +63,22 @@
     <servlet-mapping>
         <servlet-name>searchOrder</servlet-name>
         <url-pattern>/searchOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustLoginServ</servlet-name>
+        <url-pattern>/CustLoginServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServ</servlet-name>
+        <url-pattern>/AdminLoginServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustLogoutServ</servlet-name>
+        <url-pattern>/CustLogoutServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLogoutServ</servlet-name>
+        <url-pattern>/AdminLogoutServ</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

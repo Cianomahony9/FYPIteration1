@@ -136,7 +136,6 @@ public class searchBike extends HttpServlet {
                  out.print("<td><input type='submit' value='Create Order'></td>");
                   
                 out.print("</form>");
-                out.print("</table>");
                 out.print("<center>");
                
                 //end of modify 

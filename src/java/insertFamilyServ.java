@@ -65,13 +65,15 @@ public class insertFamilyServ extends HttpServlet {
             
             String armlength = request.getParameter("armlength");
             
+            int telephone = Integer.parseInt(request.getParameter("telephone"));  //code acqired and modified from stack overflow  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
+            
             //database connection method 
             DbConInsertFam db = new DbConInsertFam();
             Connection coninsertfam = db.getConInsertFam();
             
             //sql statement to input into database
             Statement stmt = coninsertfam.createStatement();
-              stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"')");
+              stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength,telephone) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"','"+telephone+"')");
           //  out.println("<h1>Profile For "+name+" Inserted into "+familyname1+"</h1>");
           //  out.print("<a href=\"/FYPCian/RetrieveFamily.jsp\">Search Bike For Family</a>");
               

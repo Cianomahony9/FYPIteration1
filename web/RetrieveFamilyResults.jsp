@@ -30,6 +30,9 @@ Modification includes: changing of navbar size and colour, inserting own titles 
     
     // data taken from jsp page
     String familyname1 = request.getParameter("familyname1");
+    
+    int telephone = Integer.parseInt(request.getParameter("telephone"));
+    
    
     
    try{
@@ -57,13 +60,15 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
+						<a href="HomePage.jsp">Home</a>
 						<a href="SearchOrder.jsp">Search Order</a>
 						<a href="BikeShops.jsp">View Bike Shops</a>
+                                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                         <h1>Logged in as ${custlogin.fname} </h1>
 				</div>
 			</header>
              <!-- Table -->
@@ -82,11 +87,11 @@ Modification includes: changing of navbar size and colour, inserting own titles 
         </tr>
 	</thead>
 <% 
-// calling data from data base
+// calling data from database 
 try{
 connection = DriverManager.getConnection(connectionUrl, userId, password);
 statement= connection.createStatement();
-String sql = "SELECT * FROM "+familyname1+"";
+String sql = "SELECT * FROM "+familyname1+" WHERE telephone = "+telephone+"";
        
 resultSet=statement.executeQuery(sql);
 while(resultSet.next()){
