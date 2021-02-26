@@ -41,7 +41,9 @@ Modifications include changing of navbar colour and size, inserted own headings 
                  </tr>
                     
             </table>
+            <center> 
         <input type ="submit" value="Login"/>
+        </center>
         
         </form>
     </body>

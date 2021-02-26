@@ -31,7 +31,7 @@ Modifications : changed header colour and size,changed titles and colours , chan
                 
 		<nav id="nav">
                     
-                   <!-- https://coderanch.com/t/607226/java/Pass-parameters-jsp-page-jsp -->
+                  
 			<a href="AdminPage.jsp">Home</a>
 			<a href="SearchAdminOrder.jsp">Search Order</a>
 			<a href="SearchAdminCust.jsp">View Customer Records</a>

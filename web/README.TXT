@@ -195,3 +195,18 @@ Iteration 4
 the Student declares that except where duly acknowledged, this project is entirely his/her own work
 
 Cian O'Mahony 117436194
+
+1.Code Generation Tools 
+N/a
+
+2.Third Party Components 
+
+Code Java tutorials https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+
+Licence at https://www.codejava.net/terms
+
+
+3.Modified Third Parties
+
+code java - https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+Modifications - placed database connection seperate java class for connection, inserted own SQL statements to pull specific data, inserted own variables and links to other pages, inserted own values to pull from database, inserted own getter and setter variables, inserted own variables to send to other pages and servlets , inserted own session variables to be displayed, inserted own result sets for data coming from db  

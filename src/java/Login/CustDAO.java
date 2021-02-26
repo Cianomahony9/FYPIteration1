@@ -31,7 +31,7 @@ public class CustDAO {
        
        // sql statement to check email and password against database
         String sql = "SELECT * FROM profile where email = ? and password = ?";
-        PreparedStatement statement =concustlogin.prepareStatement(sql);
+        PreparedStatement statement = concustlogin.prepareStatement(sql);
         statement.setString(1,email);
         statement.setString(2,password);
         
@@ -40,6 +40,8 @@ public class CustDAO {
         // setting fname as variabe
         CustLogin custlogin = null;
         
+        
+        // creating variable for db values
         if(rs.next()){
             custlogin = new CustLogin();
             custlogin.setFname(rs.getString("fname"));
