@@ -44,7 +44,7 @@ public class AdminLogoutServ extends HttpServlet {
         if(session !=null){
             session.removeAttribute("adminlogin");
            //sending user back to login page
-             RequestDispatcher rd =request.getRequestDispatcher("AdminLogin.jsp");
+             RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
         }
     

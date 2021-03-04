@@ -22,6 +22,12 @@ public class CustLogin implements Serializable {
     private String email;
     private String password;
     private String fname;
+    private String lname;
+    private Integer telephone;
+    private String address;
+    private String eircode;
+    private String county;
+    
     
     //getter
     public String getEmail(){
@@ -47,6 +53,47 @@ public class CustLogin implements Serializable {
     public void setFname(String fname){
         this.fname = fname;
    }
+    //getter
+    public String getLname(){
+        return lname;
+    }
+    //setter
+    public void setLname(String lname){
+        this.lname = lname;
+   }
+     //getter
+    public String getAddress(){
+        return address;
+    }
+     //getter
+    public String getEircode(){
+        return eircode;
+    }
+    //setter
+    public void setEircode(String eircode){
+        this.eircode = eircode;
+   }
+     //getter
+    public String getCounty(){
+        return county;
+    }
+    //setter
+    public void setCounty(String county){
+        this.county = county;
+   }
+    //setter
+    public void setAddress(String address){
+        this.address = address;
+   }
+     //getter
+    public Integer getTelephone(){
+        return telephone;
+    }
+    //setter
+    public void setTelephone(int telephone){
+        this.telephone = telephone;
+   }
+    
     
 }
 

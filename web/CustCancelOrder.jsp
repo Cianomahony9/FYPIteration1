@@ -1,6 +1,6 @@
 <%-- 
-    Document   : SearchOrder
-    Created on : 07-Dec-2020, 11:37:36
+    Document   : CustCancelOrder
+    Created on : 02-Mar-2021, 13:43:33
     Author     : Cian
 --%>
 
@@ -37,25 +37,27 @@ Modifications include changing navabar size and colour, inserted own titles and 
                                          <h1>Logged in as ${custlogin.fname} </h1>
 				</div>
 			</header>
-                  
-        <!-- data sent to servlet to search db -->
-         <form action="searchOrder"method="POST">
+                                
+           <form action="cancelOrder"method="POST">
             
-             <table width="400px" Border="1">
+                                     <table width="400px" Border="1">
                  <tr>
-                        <td colspan="2"><center><h1>Search Order</h1></center></td> 
+                        <td colspan="2"><center><h1>Cancel Order</h1></center></td> 
                     </tr>
                     
                     <tr>
                         <td>Enter Your Order Number</td>
                         <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
                      </tr>
-           
-                    <td><center><input type="Submit" value="search"/></center></td>
-                    <td><center><a href="/FYPCian/CustCancelOrder.jsp" class="button special">Cancel Order </a></center></td>
-            </table>
+                                    
+                                    
+                     <td> <center><input type="Submit" value="Cancel Order"/> </center> </td>
+                                     </table>
+          
         </form>
-    <!-- Footer -->
+                                
+                                
+                   <!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
 					<div class="flex">
@@ -73,6 +75,4 @@ Modifications include changing navabar size and colour, inserted own titles and 
 
 	</body>
 </html>
-
-
 

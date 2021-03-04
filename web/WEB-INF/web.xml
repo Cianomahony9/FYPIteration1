@@ -40,6 +40,18 @@
         <servlet-name>AdminLogoutServ</servlet-name>
         <servlet-class>Login.AdminLogoutServ</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>cancelOrder</servlet-name>
+        <servlet-class>cancelOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updateprofile</servlet-name>
+        <servlet-class>updateprofile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updaterecord</servlet-name>
+        <servlet-class>updaterecord</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>create</servlet-name>
         <url-pattern>/create</url-pattern>
@@ -79,6 +91,18 @@
     <servlet-mapping>
         <servlet-name>AdminLogoutServ</servlet-name>
         <url-pattern>/AdminLogoutServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cancelOrder</servlet-name>
+        <url-pattern>/cancelOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updateprofile</servlet-name>
+        <url-pattern>/updateprofile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updaterecord</servlet-name>
+        <url-pattern>/updaterecord</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

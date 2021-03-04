@@ -67,7 +67,7 @@ public class searchBike extends HttpServlet {
             
              ////edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
             
-             //**code below was supported by classmate Joe Murphy walked me through problem output statement link above give **
+           
             //Start of modify
             //sql to output data 
              Statement stmt = consearch.createStatement();
@@ -137,7 +137,7 @@ public class searchBike extends HttpServlet {
                   
                 out.print("</form>");
                 out.print("<center>");
-               
+                
                 //end of modify 
              }
                  

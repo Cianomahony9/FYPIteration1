@@ -45,6 +45,12 @@ public class CustDAO {
         if(rs.next()){
             custlogin = new CustLogin();
             custlogin.setFname(rs.getString("fname"));
+            custlogin.setLname(rs.getString("lname"));
+            custlogin.setTelephone(rs.getInt("telephone"));
+            custlogin.setAddress(rs.getString("address"));
+            custlogin.setEircode(rs.getString("eircode"));
+            custlogin.setCounty(rs.getString("county"));
+            
             custlogin.setEmail(email);
         }
         

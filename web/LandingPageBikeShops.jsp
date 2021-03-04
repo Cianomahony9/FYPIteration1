@@ -46,11 +46,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
                                 <img src="Images/halfordslogo.jpg" alt="halfordslogo" />
 			</div>
 <header>
-   <center><h3>Halfords</h3></center>
+   <center><h3>Halfords</h3>
+   <p> Carrera and Boardman Bikes available</p>
+   </center>
 </header>
-	<footer>
+                    <footer> <center>
 	<a href="login.jsp" class="button special">Create Order</a>
-	</footer>
+                        </center></footer>
 		</article>
 		
                 <article>
@@ -59,11 +61,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 				<img src="Images/theedgelogo.png" alt="theedgelogo" />
 			</div>
 <header>
-	<h3>The Edge Cycles</h3>
+    <center><h3>The Edge Cycles</h3>
+         <p> Cube and ORBEA Bikes available</p>
+    </center>
 </header>
-       <footer>
+                    <footer> <center>
        <a href="login.jsp" class="button special">Create Order</a>
-	</footer>
+                        </center></footer>
 		</article>
             
                 <article>
@@ -72,11 +76,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 				<img src="Images/capwellcycles.png" alt="capwelllog" />
 			</div>
 <header>
-	<h3>Capwell Cycles</h3>
+    <center><h3>Capwell Cycles</h3>
+    <p> Trek bikes available</p>
+    </center>
 </header>
-	<footer>
+                    <footer> <center>
 	<a href="login.jsp" class="button special">Create Order</a>
-	</footer>
+	</center></footer>
 		</article>
             
                 <article>
@@ -85,11 +91,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 				<img src="Images/corkgiant.png" alt="Pic 01" />
 			</div>
 <header>
-         <h3>Giant Superstores</h3>
+    <center>  <h3>Giant Superstores</h3> 
+    <p>Giant Bikes available </p>
+    </center>
 </header>
-        <footer>
+                    <footer> <center>
 	<a href="login.jsp" class="button special">Create Order</a>
-	</footer>
+                        </center></footer>
 		</article>
 	   </div>
 	</div>

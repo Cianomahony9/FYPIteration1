@@ -18,29 +18,35 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 
 Modifications include changing navabar size and colour, inserted own titles and links, inserted link to own database, changed footer copyright
 
-code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
+
 -->
 <!-- Begin Modify code -->
-
-<%
+ 
+ <%
+     // code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
+     
+     // code removed to ensure that stores cannot view other stores orders 
+     
+     
     // database connection
-    String driverName = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/order?useSSL=false";
-    String userId ="root";
-    String password ="OmahonyCian@98";
+  //  String driverName = "com.mysql.jdbc.Driver";
+  //  String connectionUrl = "jdbc:mysql://localhost:3306/order?useSSL=false";
+ //   String userId ="root";
+ //   String password ="OmahonyCian@98";
+ //   String orderstorename = request.getParameter("${adminlogin.store}") ;
     
-    try{
-   Class.forName(driverName);
-    }catch (ClassNotFoundException e){
-        e.printStackTrace();
-    }
+ //   try{
+ //  Class.forName(driverName);
+ //    }catch (ClassNotFoundException e){
+ //       e.printStackTrace();
+  //  }
     
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet resultSet = null;
+  //  Connection connection = null;
+ //   Statement statement = null;
+ //   ResultSet resultSet = null;
     
     %>
-    
+  
 <html>
 	<head>
             <title>Bikes4U.ie</title>
@@ -77,8 +83,8 @@ code for database connection and output sourced and modified from https://www.yo
                     </tr>
                     
                     <tr>
-                        <td>Enter Store Name</td>
-                        <td><input type="text" name="orderstorename" placeholder="Store Name" value ="${adminlogin.store}"></td>
+                        <td>Store Name</td>
+                        <td><input  name="orderstorename" value =${adminlogin.store} readonly ></td>
                        
                     </tr>
            
@@ -88,7 +94,7 @@ code for database connection and output sourced and modified from https://www.yo
         </form>
     </center>
     
-        <!-- Table -->
+        <!-- Table 
 	<div class="table-wrapper">
 	<table>
             <center><h3>Orders Created on Bikes4U.ie</h3></center> 
@@ -103,35 +109,39 @@ code for database connection and output sourced and modified from https://www.yo
                 <th>Bike Price</th>
                 </tr>
 		</thead>
+        -->
 <%
+ 
     //sql statement to search db
-    try{
-    connection = DriverManager.getConnection(connectionUrl, userId, password);
-    statement= connection.createStatement();
-    String sql = "SELECT * FROM orderdetails ";
+  //  try{
+  //  connection = DriverManager.getConnection(connectionUrl, userId, password);
+  //  statement= connection.createStatement();
+ //   String sql = "SELECT * FROM orderdetails WHERE bikelocation ='"+orderstorename+"'";
         
-    resultSet=statement.executeQuery(sql);
-    while(resultSet.next()){
+ //   resultSet=statement.executeQuery(sql);
+ //   while(resultSet.next()){
             
 %>
     
     <tbody>  <!--Outputting data -->
 	<tr>
          <!-- output results -->
-            <td><%=resultSet.getInt("ordernumber")%> </td>
-	    <td><%=resultSet.getString("orderdate") %> </td>
-            <td><%=resultSet.getString("collectiondate") %> </td>
-	    <td><%=resultSet.getString("custfname")%> </td>
-            <td><%=resultSet.getString("custlname")%> </td>
-            <td><%=resultSet.getString("bikename")%> </td>
-            <td>€<%=resultSet.getString("bikeprice") %> </td>
+         <!--
+            <td><%//=resultSet.getInt("ordernumber")%> </td>
+	    <td><%//=resultSet.getString("orderdate") %> </td>
+            <td><%//=resultSet.getString("collectiondate") %> </td>
+	    <td><%//=resultSet.getString("custfname")%> </td>
+            <td><%//=resultSet.getString("custlname")%> </td>
+            <td><%//=resultSet.getString("bikename")%> </td>
+            <td>€<%//=resultSet.getString("bikeprice") %> </td>
+         -->
         </tr>
     </tbody>
 <%
-    }
-    }catch (Exception e ){
-           e.printStackTrace();
-    }
+   // }
+  //  }catch (Exception e ){
+  //         e.printStackTrace();
+  //  }
 %>
        </table>
         </div>

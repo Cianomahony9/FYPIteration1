@@ -51,11 +51,11 @@ Modifications include changing of navbar colour and size, inserted own headings 
 		<div class="flex flex-3">
                     <article>
 				<header>
-					<h3> </h3>
+					<h3>View Account</h3>
 				</header>
-					<p> </p>
+					<p>View account details and make edits </p>
 				<footer>
-					<!-- <a href="#" class="button special"></a> -->
+					 <a href="/FYPCian/ViewCustAccount.jsp" class="button special">View Account</a> 
 				</footer>
 			</article>
 			
