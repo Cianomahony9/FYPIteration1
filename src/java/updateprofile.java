@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  *
  * @author Cian
@@ -38,7 +39,7 @@ public class updateprofile extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            
+            // pulling variables from viewcustaccount.jsp
            String custfname = request.getParameter("custfname");
            String custlname = request.getParameter("custlname");
          
@@ -49,19 +50,20 @@ public class updateprofile extends HttpServlet {
             
             int custtelephone = Integer.parseInt(request.getParameter("custtelephone"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
             
-            
+            // connection to database
              DbConUpdateProfile db = new DbConUpdateProfile();
             Connection conupdateprofile = db.getConUpdateProfile();
            
-            
+            // code for sql statement to update acquired and modified from https://stackoverflow.com/questions/46441696/how-to-update-mysql-database-value-from-java-netbeans and https://www.youtube.com/watch?v=akW6bzoRcZo
           Statement stmt = conupdateprofile.createStatement();
            stmt.executeUpdate("UPDATE profile SET email = '"+custemail+"' , address = '"+custaddress+"' , eircode = '"+custeircode+"' , county = '"+custcounty+"'  " + "WHERE telephone = '"+custtelephone+"' AND fname = '"+custfname+"' AND lname = '"+custlname+"'  ");
             
-            
+            // output message stating profile has been updated 
             out.println("<script type=\"text/javascript\">");
             out.println("alert('Profile for "+custfname+" "+custlname+" Updated');");
             out.println("</script>");
             
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
             
             RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
@@ -69,6 +71,7 @@ public class updateprofile extends HttpServlet {
            
         } catch (SQLException ex) {
             Logger.getLogger(updateprofile.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }
 

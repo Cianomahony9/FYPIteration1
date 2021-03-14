@@ -209,4 +209,43 @@ Licence at https://www.codejava.net/terms
 3.Modified Third Parties
 
 code java - https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
-Modifications - placed database connection seperate java class for connection, inserted own SQL statements to pull specific data, inserted own variables and links to other pages, inserted own values to pull from database, inserted own getter and setter variables, inserted own variables to send to other pages and servlets , inserted own session variables to be displayed, inserted own result sets for data coming from db  
+Modifications - placed database connection seperate java class for connection, inserted own SQL statements to pull specific data, inserted own variables and links to other pages, inserted own values to pull from database, inserted own getter and setter variables, inserted own variables to send to other pages and servlets , inserted own session variables to be displayed, inserted own result sets for data coming from db 
+
+
+
+
+Iteration 5
+the Student declares that except where duly acknowledged, this project is entirely his/her own work
+
+Cian O'Mahony 117436194
+
+1.Code Generation Tools 
+N/a
+
+2.Third Party Components  
+
+Stack Overflow
+CC BY-SA 4.0 license
+ 
+update databse sql statement https://stackoverflow.com/questions/46441696/how-to-update-mysql-database-value-from-java-netbeans
+
+
+Alvin Alexander Tutorials
+Deleting record from data base https://alvinalexander.com/java/java-mysql-delete-query-example/
+Terms and conditions at https://alvinalexander.com/terms/
+
+Youtube
+
+CodeBun- https://www.youtube.com/watch?v=akW6bzoRcZo
+
+3.Modified Third Parties
+
+CodeBun- https://www.youtube.com/watch?v=akW6bzoRcZo - 
+Modifications: form templates to pass values to servlet, inserted own textboxes and labels, inserted own path to servlet, inserted own sql statement to pull from DB
+
+Alvin Alexander Tutorials - https://alvinalexander.com/java/java-mysql-delete-query-example/
+Modifications: inserted own tables to be deleted from in SQL statement
+
+
+Stack Overflow - https://stackoverflow.com/questions/46441696/how-to-update-mysql-database-value-from-java-netbeans
+Modifications: Inserted own tables to be updated in SQL statement 

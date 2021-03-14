@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -52,6 +53,7 @@ private static final long serialVersionUID = 1L;
             rd.include(request, response);
                //sent back to login page if wrong
             }else {
+               
                  response.sendRedirect("login.jsp");
             }
             
@@ -59,6 +61,7 @@ private static final long serialVersionUID = 1L;
             Logger.getLogger(CustLoginServ.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(CustLoginServ.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
        
                 

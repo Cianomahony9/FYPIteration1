@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Cian
  * 
  * 
- * code acquired and modifed from https://alvinalexander.com/java/java-mysql-delete-query-example/
+ * 
  */
 public class cancelOrder extends HttpServlet {
 
@@ -33,25 +33,28 @@ public class cancelOrder extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             
-            
+            // pulling order number variable from custcancelorder.jsp
             int ordernumber = Integer.parseInt(request.getParameter("ordernumber"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
             
+            
+            // connection to database base
             DbConCancelOrder db = new DbConCancelOrder();
             Connection condeleteorder = db.getConDeleteOrder();
             
             
+            //code acquired and modifed from https://alvinalexander.com/java/java-mysql-delete-query-example/
+            // sql statement to delete record where order number = to number inputted to custcancelorder.jsp
             String query ="DELETE FROM orderdetails WHERE ordernumber ="+ordernumber;
             PreparedStatement preparedStmt = condeleteorder.prepareStatement(query);
-            
-        
-            
             preparedStmt.execute();
-            
+           
+           
+            // alert to announce order has been deleted
              out.println("<script type=\"text/javascript\">");
-            out.println("alert('Order "+ordernumber+" Cancelled');");
+            out.println("alert('Order "+ordernumber+" Cancelled. €10 Cancellation Fee Debited');");
             out.println("</script>");
             
-            
+            // redirect back to custcacelorder.jsp after deletetion
             RequestDispatcher rd =request.getRequestDispatcher("CustCancelOrder.jsp");
             rd.include(request, response);
             

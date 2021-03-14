@@ -23,7 +23,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 	<body>
 		<!-- Banner -->
      <section id="banner">
-	<h1>Administration Login</h1>
+	<h1>Employee / Administration Login</h1>
      </section>
                 <!-- code acquired and modifed from https://www.youtube.com/watch?v=UBOZgNxsiwA -->
         <form action ="AdminLoginServ" method ="post">
@@ -32,7 +32,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
               
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email"/></td>
+                    <td><input type="email" name="email"/></td>
                  </tr>
                  
                  <tr>

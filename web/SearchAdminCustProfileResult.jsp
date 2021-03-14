@@ -124,9 +124,8 @@ code for database connection and output sourced and modified from https://www.yo
 			<div class="flex">
 			<div class="copyright">
 				&copy; Bikes4U.ie.
-			</div>
-                            <a href="AdminLogin.jsp">Log Out</a>
-			</div>
+                        </div>
+                        </div>
 		</div>
 	</footer>
 

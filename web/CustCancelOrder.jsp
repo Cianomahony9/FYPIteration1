@@ -52,10 +52,11 @@ Modifications include changing navabar size and colour, inserted own titles and 
                                     
                                     
                      <td> <center><input type="Submit" value="Cancel Order"/> </center> </td>
+                      
                                      </table>
           
         </form>
-                                
+        <center>    <p>* A €10 Cancellation Fee Will be Deducted from the Given Debit/Credit Card </p>       </center>
                                 
                    <!-- Footer -->
 			<footer id="footer">

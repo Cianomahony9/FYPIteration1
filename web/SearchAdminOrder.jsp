@@ -21,31 +21,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
 
 -->
 <!-- Begin Modify code -->
- 
- <%
-     // code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
-     
-     // code removed to ensure that stores cannot view other stores orders 
-     
-     
-    // database connection
-  //  String driverName = "com.mysql.jdbc.Driver";
-  //  String connectionUrl = "jdbc:mysql://localhost:3306/order?useSSL=false";
- //   String userId ="root";
- //   String password ="OmahonyCian@98";
- //   String orderstorename = request.getParameter("${adminlogin.store}") ;
-    
- //   try{
- //  Class.forName(driverName);
- //    }catch (ClassNotFoundException e){
- //       e.printStackTrace();
-  //  }
-    
-  //  Connection connection = null;
- //   Statement statement = null;
- //   ResultSet resultSet = null;
-    
-    %>
+
   
 <html>
 	<head>
@@ -93,59 +69,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
              </table>
         </form>
     </center>
-    
-        <!-- Table 
-	<div class="table-wrapper">
-	<table>
-            <center><h3>Orders Created on Bikes4U.ie</h3></center> 
-		<thead>
-		<tr>
-		<th>Order Number</th>
-		<th>Order Date</th>
-		<th>Collection Date</th>
-                <th>Customer First Name</th>
-                <th>Customer Second Name</th>
-		<th>Bike Name</th>
-                <th>Bike Price</th>
-                </tr>
-		</thead>
-        -->
-<%
- 
-    //sql statement to search db
-  //  try{
-  //  connection = DriverManager.getConnection(connectionUrl, userId, password);
-  //  statement= connection.createStatement();
- //   String sql = "SELECT * FROM orderdetails WHERE bikelocation ='"+orderstorename+"'";
-        
- //   resultSet=statement.executeQuery(sql);
- //   while(resultSet.next()){
-            
-%>
-    
-    <tbody>  <!--Outputting data -->
-	<tr>
-         <!-- output results -->
-         <!--
-            <td><%//=resultSet.getInt("ordernumber")%> </td>
-	    <td><%//=resultSet.getString("orderdate") %> </td>
-            <td><%//=resultSet.getString("collectiondate") %> </td>
-	    <td><%//=resultSet.getString("custfname")%> </td>
-            <td><%//=resultSet.getString("custlname")%> </td>
-            <td><%//=resultSet.getString("bikename")%> </td>
-            <td>€<%//=resultSet.getString("bikeprice") %> </td>
-         -->
-        </tr>
-    </tbody>
-<%
-   // }
-  //  }catch (Exception e ){
-  //         e.printStackTrace();
-  //  }
-%>
-       </table>
-        </div>
-    
+     
    <!-- Footer -->
 <footer id="footer">
     <div class="inner">
@@ -154,7 +78,6 @@ Modifications include changing navabar size and colour, inserted own titles and 
 		&copy; Bikes4U.ie.
         </div>
 <!-- end modify -->
-<a href="AdminLogin.jsp">Log Out</a>
         </div>
     </div>
 </footer>

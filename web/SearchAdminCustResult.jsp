@@ -129,7 +129,6 @@ code for database connection and output sourced and modified from https://www.yo
 		&copy; Bikes4U.ie.
 	</div>
 	<!-- end modify -->
-        <a href="AdminLogin.jsp">Log Out</a>
         </div>
             
 	</div>

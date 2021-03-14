@@ -32,7 +32,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
             <table style ="with: 50%">
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email"/></td>
+                    <td><input type="email" name="email"/></td>
                  </tr>
                  
                  <tr>
@@ -43,7 +43,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
             <center>
         <input type ="submit" value="Login"/>
         
-        <a href="/FYPCian/AdminLogin.jsp" class="button special">Admin Login</a>
+        <a href="/FYPCian/AdminLogin.jsp" class="button special">Admin/Employee Login</a>
         
         <a href="/FYPCian/CustProfile.jsp" class="button special">Register</a>
         

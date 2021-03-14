@@ -57,17 +57,16 @@ Modifications include changing navabar size and colour, inserted own titles and 
                      <table width="400px" Border="1">
                      <tr colspan="2"><center><h1>Edit Account Details</h1></center></tr> 
                     
-                     <!--    <td> First Name <input type="text" name="fname" ></td> -->
-                      <!--   <td> Last Name <input type="text" name="lname" ></td> -->
-                         <td> Email Address <input type="text" name="email" ></td>
-                        <!-- <td> Telephone Number <input type="text" name="telephone" ></td> -->
+                    
+                         <td> Email Address <input type="email" name="email" ></td>
+                    
                          <td> Address <input type="text" name="address" ></td>
                          <td> Eircode <input type="text" name="eircode" ></td>
                          <td> County <input type="text" name="county" ></td>
                      
             </table>
-                    <center><input type="Submit" value="Insert Edit"/>
-                      <!--  <a href="EditProfile.jsp" class="button special">Edit Records</a> -->
+                    <center><input type="Submit" value="Update Account Details"/>
+                     
                     </center>
          </form>
                        
@@ -78,7 +77,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
                             <input type ='hidden' name='custtelephone' value = ${custlogin.telephone}>
                             <input type ='hidden' name='custlname' value = ${custlogin.lname}>
                             
-                            <input type='Submit' value='Edit Records'/>
+                            <input type='Submit' value='Edit Profile'/>
                             
                             
                         </form>          

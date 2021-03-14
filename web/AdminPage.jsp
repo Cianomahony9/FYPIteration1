@@ -46,7 +46,7 @@ Modifications : changed header colour and size,changed titles and colours , chan
 
 <!-- Welcome Banner -->
 	<section id="banner">
-		<h1>Welcome to Bikes4U.ie</h1>
+		<h1>Bikes4U.ie Employee / Administrator Portal</h1>
         </section>
 
 <!-- Section One -->

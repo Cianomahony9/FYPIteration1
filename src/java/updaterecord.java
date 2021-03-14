@@ -53,13 +53,16 @@ public class updaterecord extends HttpServlet {
            DbConUpdateRecords db = new DbConUpdateRecords();
             Connection conupdaterecord = db.getConUpdateRecord();
            
+            // code for sql statement to update acquired and modified from https://stackoverflow.com/questions/46441696/how-to-update-mysql-database-value-from-java-netbeans and https://www.youtube.com/watch?v=akW6bzoRcZo
+            
             Statement stmt = conupdaterecord.createStatement();
            stmt.executeUpdate("UPDATE "+ custlname +" SET height = '"+height+"' , weight = '"+weight+"' , insideleg = '"+insideleglength+"' , armlength = '"+armlength+"'  " + "WHERE telephone = '"+custtelephone+"' AND name = '"+custfname+"' AND familyname = '"+custlname+"'  ");
             
             out.println("<script type=\"text/javascript\">");
-            out.println("alert('Record for "+custfname+" "+custlname+" Updated');");
+            out.println("alert('Profile for "+custfname+" "+custlname+" Updated');");
             out.println("</script>");
             
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
             
             RequestDispatcher rd =request.getRequestDispatcher("ViewCustAccount.jsp");
             rd.include(request, response);

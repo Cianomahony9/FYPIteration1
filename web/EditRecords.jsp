@@ -75,7 +75,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
     try{
     connection = DriverManager.getConnection(connectionUrl, userId, password);
     statement= connection.createStatement();
-    String sql = "SELECT * FROM "+custlname+" WHERE telephone = "+custtelephone+" ";
+    String sql = "SELECT * FROM "+custlname+" WHERE name = '"+custfname+"'  AND telephone = '"+custtelephone+"' ";
        
     resultSet=statement.executeQuery(sql);
     while(resultSet.next()){
@@ -102,11 +102,15 @@ Modifications include changing navabar size and colour, inserted own titles and 
                      <tr colspan="2"><center><h1>Edit Dimension Records</h1></center></tr> 
                     
                  
-                         <td> Height <input type="text" name="height" ></td>
-                         <td> Weight <input type="text" name="weight" ></td>
-                         <td> Inside Leg Length <input type="text" name="insideleg" ></td>
-                         <td> Arm Length<input type="text" name="armlength" ></td>
+                         <td> Height <input type="text" maxlength="8" name="height" placeholder="Height" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         
+                         <td> Weight <input type="text"  maxlength="5" name="weight" placeholder="Weight" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         
+                         <td> Inside Leg Length <input type="text" maxlength="4" name="insideleg" placeholder="Inside Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         
+                         <td> Arm Length<input type="text" maxlength="4" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                      
+                         
             </table>
                        <center><input type="Submit" value="Insert Edit"/>
                     </center>
