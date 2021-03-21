@@ -63,12 +63,18 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="HomePage.jsp">Home</a>
+                                                
 						<a href="SearchOrder.jsp">Search Order</a>
+                                                
 						<a href="BikeShops.jsp">View Bike Shops</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                         <h1>Logged in as ${custlogin.fname} </h1>
+                                        
+                                         <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                                          <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
              <!-- Table -->
@@ -131,7 +137,7 @@ out.print("<input type ='hidden' name='insideleg' value ='"+insideleg+"'>");
 
 out.print("<input type ='hidden' name='armlength' value ='"+armlength+"'>");
 
-out.print("<td><input type='submit' value='Search Bike'></td>");
+out.print("<td><center><input type='submit' value='Search Bike'></center></td>");
 
  out.print("</form>");
        

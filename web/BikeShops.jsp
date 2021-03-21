@@ -27,23 +27,33 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 		<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 			<nav id="nav">
 				<a href="HomePage.jsp">Home</a>
+                                
 				<a href="SearchOrder.jsp">Search Order</a>
+                                
 				<a href="BikeShops.jsp">View Bike Shops</a>
-                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
+                                
+                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        
+                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a> <!--Logout of session -->
 			</nav>
 				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                 <h1>Logged in as ${custlogin.fname} </h1>
+                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        
+                                <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 	</div>
 </header>
 <!-- Section Three Bike Shops -->
+<!-- Outline bike shops on website  -->
 <section id="three" class="wrapper">
 	<div class="inner">
 		<header class="align-center">
 			<h2>Bike Shops</h2>
 		</header>
 	<div class="flex flex-2">
+           
+            <!--Halfords -->
 		<article>
-			<div class="image fit">
+			<div class="image fit"> 
 				<!--image sourced from https://www.halfordscompany.com/media/2847/halfords-logo.jpg -->
                                 <img src="Images/halfordslogo.jpg" alt="halfordslogo" />
 			</div>
@@ -53,10 +63,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
    </center>
 </header>
                     <footer><center>
-	<a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+	<a href="RetrieveFamily.jsp" >
+            <input type ="button" value="Create Order"/></a>
 	</center></footer>
 		</article>
             
+            
+            <!--The Edge Cycles -->
                 <article>
 			<div class="image fit">
                                 <!-- image sourced from https://www.theedge-sports.com/images/modules/promo_units/1468401253-80923200.png -->
@@ -68,10 +81,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer><center>
-       <a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+       <a href="RetrieveFamily.jsp" >
+           <input type ="button" value="Create Order"/>  </a>
                         </center></footer>
 		</article>
             
+           
+            <!--Capwell Cycles -->
                 <article>
 			<div class="image fit">
                                 <!--Image sourced from https://www.one4all.ie/media/catalog/product/cache/28e0f5d829bc51649b711879f64cc299/c/a/capwellcycles.png -->
@@ -83,10 +99,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+	<a href="RetrieveFamily.jsp" >
+            <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
             
+           
+            <!--Giant Ballincollig -->
                 <article>
 			<div class="image fit">
                                 <!-- image sourced from https://www.one4all.ie/media/catalog/product/cache/28e0f5d829bc51649b711879f64cc299/c/o/corkgiant.png-->
@@ -98,9 +117,12 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="RetrieveFamily.jsp" class="button special">Create Order</a>
+	<a href="RetrieveFamily.jsp" >
+            <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
+            
+            
 	   </div>
 	</div>
 </section>

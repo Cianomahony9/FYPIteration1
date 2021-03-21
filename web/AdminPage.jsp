@@ -27,17 +27,22 @@ Modifications : changed header colour and size,changed titles and colours , chan
  <header id="header">
 	<div class="inner">
 		<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
-                <h1>Logged in For ${adminlogin.store} </h1>
                 
+                <!-- links to different functions/pages -->
 		<nav id="nav">
-                    
-                  
-			<a href="AdminPage.jsp">Home</a>
-			<a href="SearchAdminOrder.jsp">Search Order</a>
-			<a href="SearchAdminCust.jsp">View Customer Records</a>
-                        <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
-                        <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
+                        <a href="AdminPage.jsp">Home</a>
                         
+			<a href="SearchAdminOrder.jsp">Search Order</a>
+                        
+			<a href="SearchAdminCust.jsp">View Customer Records</a>
+                        
+                        <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                        
+                        <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>  <!--Logout of session -->
+                        
+                         <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        <h1>Logged in For ${adminlogin.store} </h1>
                         
 		</nav>
 		<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
@@ -50,6 +55,7 @@ Modifications : changed header colour and size,changed titles and colours , chan
         </section>
 
 <!-- Section One -->
+<!-- Admin/employee is redirected to these pages to carry out given functions -->
 	<section id="one" class="wrapper">
 		<div class="inner">
 			<div class="flex flex-3">
@@ -58,23 +64,26 @@ Modifications : changed header colour and size,changed titles and colours , chan
 				<h3>View Open Orders</h3>
 				</header>
 				<footer>
-				<a href="SearchAdminOrder.jsp" class="button special">View Open Orders</a>
+				<a href="SearchAdminOrder.jsp" >
+                                    <input type ="button" value="View Open Orders"/> </a>
 				</footer>
 			</article>
 			<article>
 				<header>
-				<h3>View Customer Records</h3>
+				<h3>View Customer Profiles</h3>
 				</header>
 				<footer>
-				<a href="SearchAdminCust.jsp" class="button special">View Customer Records</a>
+				<a href="SearchAdminCust.jsp"> 
+                                <input type ="button" value="View Customer Profiles "/></a>
 				</footer>
 			</article>
 			<article>
 			        <header>
-			        <h3>Search Customer Profiles </h3>
+			        <h3>View Customer Accounts</h3>
 			        </header>
 			        <footer>
-			        <a href="SearchAdminCustProfiles.jsp" class="button special">View Profiles </a>
+			        <a href="SearchAdminCustProfiles.jsp" >  
+                                    <input type ="button" value="View Accounts"/></a>
 			        </footer>
 			</article> 
                         </div>

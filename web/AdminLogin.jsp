@@ -11,7 +11,7 @@ Theory by TEMPLATED
 templated.co @templatedco
 Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 
-Modifications include changing of navbar colour and size, inserted own headings and links, inserted own cover photo, changed size of cover photo, changed colour of banner, inerted own functions to body (search create) changed copyright footer to own website 
+Modifications include changing of navbar colour and size, inserted own headings and links, inserted own cover photo, changed size of cover photo, changed colour of banner, inserted own functions to body (search create) changed copyright footer to own website 
 -->
 <html>
     <head>  <!-- Begin Modify Code -->
@@ -29,7 +29,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
         <form action ="AdminLoginServ" method ="post">
             <table style ="with: 100%">
                 
-              
+              <!-- Admin/employee inserts email and password for given store to access admin/employee side of  website  -->
                 <tr>
                     <td>Email</td>
                     <td><input type="email" name="email"/></td>
@@ -42,7 +42,8 @@ Modifications include changing of navbar colour and size, inserted own headings 
                     
             </table>
             <center> 
-        <input type ="submit" value="Login"/>
+                <!-- sent to adminlogin servlet -->
+        <input type ="submit" value="Admin/Employee Login" />
         </center>
         
         </form>

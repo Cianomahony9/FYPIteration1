@@ -51,7 +51,8 @@ Modifications include: changing of navbar size and colour, titles and links, ins
    </center>
 </header>
                     <footer> <center>
-	<a href="login.jsp" class="button special">Create Order</a>
+	<a href="login.jsp">
+            <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
 		
@@ -66,7 +67,8 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-       <a href="login.jsp" class="button special">Create Order</a>
+       <a href="login.jsp">
+           <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
             
@@ -81,7 +83,8 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="login.jsp" class="button special">Create Order</a>
+	<a href="login.jsp" >
+            <input type ="button" value="Create Order"/></a>
 	</center></footer>
 		</article>
             
@@ -96,7 +99,8 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="login.jsp" class="button special">Create Order</a>
+	<a href="login.jsp" >
+            <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
 	   </div>

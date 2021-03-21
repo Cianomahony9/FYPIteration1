@@ -39,12 +39,19 @@ Modifications include changing navabar size and colour, inserted own titles and 
                                         
 					<nav id="nav">
 						<a href="AdminPage.jsp">Home</a>
+                                                
 						<a href="SearchAdminOrder.jsp">Search Order</a>
+                                                
 						<a href="SearchAdminCust.jsp">View Customer Records</a>
+                                                
                                                 <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                        
+                                         <!--logout and displaying name on page code acquired and modified from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                         <h1>Logged in For ${adminlogin.store} </h1>
                                          </div>
 			</header>
@@ -63,10 +70,10 @@ Modifications include changing navabar size and colour, inserted own titles and 
                         <td><input  name="orderstorename" value =${adminlogin.store} readonly ></td>
                        
                     </tr>
-           
-                    <td><center><input type="Submit" value="search"/></center></td>
+           </table>
+                    <center><input type="Submit" value="search"/></center>
                
-             </table>
+            
         </form>
     </center>
      

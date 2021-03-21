@@ -29,12 +29,17 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="HomePage.jsp">Home</a>
+                                                
 						<a href="SearchOrder.jsp">Search Order</a>
+                                                
 						<a href="BikeShops.jsp">View Bike Shops</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                         <h1>Logged in as ${custlogin.fname} </h1>
+                                         <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                                          <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
                   
@@ -45,15 +50,24 @@ Modifications include changing navabar size and colour, inserted own titles and 
                  <tr>
                         <td colspan="2"><center><h1>Search Order</h1></center></td> 
                     </tr>
-                    
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="fname" value = ${custlogin.fname} readonly></td>
+                     </tr>
+                     <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname" value = ${custlogin.lname} readonly></td>
+                     </tr>
                     <tr>
                         <td>Enter Your Order Number</td>
                         <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
                      </tr>
            
-                    <td><center><input type="Submit" value="search"/></center></td>
-                    <td><center><a href="/FYPCian/CustCancelOrder.jsp" class="button special">Cancel Order </a></center></td>
             </table>
+             <center><input type="Submit" value="search"/>
+                 
+             <a href="/FYPCian/CustCancelOrder.jsp" >
+                 <input type="Button" value="Cancel Order"/></a></center>
         </form>
     <!-- Footer -->
 			<footer id="footer">
@@ -64,6 +78,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					</div>
 				</div>
 			</footer>
+    
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>

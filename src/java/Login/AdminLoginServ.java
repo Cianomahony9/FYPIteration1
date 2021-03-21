@@ -30,10 +30,11 @@ public class AdminLoginServ extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
+        // bringing inputted text from login page to check against db
         String email = request.getParameter("email");
         String password = request.getParameter("password");
        
-        
+        // connection to db
        AdminDAO adminDAO = new AdminDAO();
 
          try{
@@ -48,6 +49,7 @@ public class AdminLoginServ extends HttpServlet {
             rd.include(request, response);
                //sent back to login page if wrong
             }else {
+                //if login is unsuccessful user is redirected to login page
                  response.sendRedirect("AdminLogin.jsp");
             }
              } catch (ClassNotFoundException ex) {

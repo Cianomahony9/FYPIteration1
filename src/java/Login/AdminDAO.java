@@ -32,9 +32,9 @@ public class AdminDAO {
         
         ResultSet rs = statement.executeQuery();
         
-        // setting fname as variabe
+        // setting storename as variabe
         AdminLogin adminlogin = null;
-        
+        //storename pulled on all pages
         if(rs.next()){
             adminlogin = new AdminLogin();
             adminlogin.setStore(rs.getString("store"));

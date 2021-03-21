@@ -32,12 +32,19 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="AdminPage.jsp">Home</a>
+                                                
 						<a href="SearchAdminOrder.jsp">Search Order</a>
+                                                
 						<a href="SearchAdminCust.jsp">View Customer Records</a>
+                                                
                                                 <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                        
+                                         <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                          <h1>Logged in For ${adminlogin.store} </h1>
 				</div>
 			</header>
@@ -48,7 +55,7 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
         <form action="SearchAdminCustResult.jsp"method="POST">
              <table width="400px" Border="1">
                  <tr>
-                        <td colspan="2"><center><h1>Search Customer</h1></center></td> 
+                        <td colspan="2"><center><h1>Search Customer Profile</h1></center></td> 
                     </tr>
                     
                     <tr>
@@ -62,10 +69,10 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
                         <td><input type="text" name="telephone" placeholder="Family Telephone"></td>
                        
                     </tr>
-           
-                    <td><center><input type="Submit" value="search"/></center></td>
+            </table>
+            <center><input type="Submit" value="Search Customer Profile"/></center>
               
-             </table>
+            
         </form>
     </center>
     

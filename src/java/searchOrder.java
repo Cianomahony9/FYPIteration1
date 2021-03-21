@@ -26,23 +26,18 @@ import javax.servlet.http.HttpServletResponse;
 //Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
 public class searchOrder extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-           
+          
             // Begin Modify code
             //pulling data from searchOrder jsp
+            
+            String fname = request.getParameter("fname");
+            
+            String lname = request.getParameter("lname");
+                    
             int ordernumber = Integer.parseInt(request.getParameter("ordernumber"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
              
             // databse connection method 
@@ -53,11 +48,11 @@ public class searchOrder extends HttpServlet {
             
            // resultset  code modifed from here and used alongside below link https://stackoverflow.com/questions/24229442/print-the-data-in-resultset-along-with-columnnames 
             
-             ////edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
+             //edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
             
             // sql statement to output search 
             Statement stmt = conordersearch.createStatement();
-                ResultSet myRs2 = stmt.executeQuery("SELECT * FROM orderdetails WHERE ordernumber ="+ordernumber);
+                ResultSet myRs2 = stmt.executeQuery("SELECT * FROM orderdetails WHERE ordernumber = '"+ordernumber+"' AND custfname = '"+fname+"' AND custlname = '"+lname+"' ");
             
                 while (myRs2.next() ){
                     String orderdate = myRs2.getString("orderdate");
@@ -76,27 +71,7 @@ public class searchOrder extends HttpServlet {
                       
                     String framesize = myRs2.getString("framesize");
                        
-                    
-                    // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/   
-                  
-                 out.print("<form action = 'SearchOrder.jsp'>");
                  
-                 out.print("<input type ='hidden' name='custfname' value ='"+custfname+"'>");
-                 
-                 out.print("<input type ='hidden' name='custlname' value ='"+custlname+"'>");
-                 
-                 out.print("<input type ='hidden' name='bikename' value ='"+bikename+"'>");
-                 
-                 out.print("<input type ='hidden' name='bikelocation' value ='"+bikelocation+"'>");
-                 
-                 out.print("<input type ='hidden' name='bikeprice' value ='"+bikeprice+"'>");
-                 
-                 out.print("<input type ='hidden' name='framesize' value ='"+framesize+"'>");
-                 
-                 out.print("<input type ='hidden' name='orderdate' value ='"+orderdate+"'>");
-                 
-                 out.print("<input type ='hidden' name='collectiondate' value ='"+collectiondate+"'>");
-                  
                  
                  // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open displayorder.jsp
                  
@@ -104,12 +79,13 @@ public class searchOrder extends HttpServlet {
                RequestDispatcher rd =request.getRequestDispatcher("SearchOrder.jsp");
             rd.include(request, response);
                     
-                  // output list 
+                  // output order search
                        
                      out.print("<center><body>");
-                        out.print("<h1>Hello "+custfname+" " +custlname+ ".</h1>");
+                     
+                     out.print("<h1>Hello "+custfname+" " +custlname+ ".</h1>");
                         
-                        out.print("<h2> Your Order Number is "+ordernumber+".</h2>");
+                   out.print("<h3> Your Order Number is "+ordernumber+".</h3>");
                         
                         
                    out.print("<h3> You Placed Your Order on "+orderdate+".</h3>");
@@ -128,10 +104,10 @@ public class searchOrder extends HttpServlet {
                 }
             } catch (SQLException ex) {
             Logger.getLogger(searchOrder.class.getName()).log(Level.SEVERE, null, ex);
-        }
+             }
         //end of modify
             
-      
+        
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

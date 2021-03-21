@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Cian
  * 
- *  Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
+ *  
  */
 
 public class createFamily1 extends HttpServlet {
@@ -40,7 +40,7 @@ public class createFamily1 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+         
             
            // code acquired and modified from Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             
@@ -59,12 +59,11 @@ public class createFamily1 extends HttpServlet {
             
             Statement stmt = concreatefam.createStatement();
             
-             //create statement swtiched and varialbe gathered inserted to get table name 
+             //create statement to create family profile table and varialbe above (familyname1) gathered inserted to get table name , columns added to table on create 
             
             stmt.executeUpdate("CREATE TABLE " + familyname1 + "(user_id int NOT NULL AUTO_INCREMENT, name varchar(35),familyname varchar(35), gender varchar(6), height varchar(8), weight varchar(5), insideleg varchar(4), armlength varchar(4),telephone int(10), PRIMARY KEY(user_id));");
-            //End
-      //   out.println("<h1>Family Created For "+familyname1+"</h1>");
-        // out.print("<a href=\"/FYPCian/InsertFamily.jsp\">Insert Profile To Family</a>");
+            
+     
             
             // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
             

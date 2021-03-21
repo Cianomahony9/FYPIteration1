@@ -36,16 +36,19 @@ Modifications include changing of navbar colour and size, inserted own headings 
                  </tr>
                  
                  <tr>
-                    <td>Password</td>
+                     <td>Password</td>
                     <td><input type="password" name="password"/></td>
                  </tr>
             </table>
             <center>
         <input type ="submit" value="Login"/>
         
-        <a href="/FYPCian/AdminLogin.jsp" class="button special">Admin/Employee Login</a>
+        <a href="/FYPCian/AdminLogin.jsp">
+        <input type ="button" value="Admin/Employee Login"/>
+        </a>
         
-        <a href="/FYPCian/CustProfile.jsp" class="button special">Register</a>
+        <a href="/FYPCian/CustProfile.jsp">
+         <input type ="button" value="Register"/></a>
         
         </center>
         </form>

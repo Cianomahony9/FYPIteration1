@@ -29,20 +29,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class createOrder extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            
            
             // Begin Modify code
               // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
@@ -141,14 +132,15 @@ public class createOrder extends HttpServlet {
               
                out.print("<tr><th><t1>Collection Date</t1> <td>"+ dateFormat.format(colldate1)+"</td> </th></tr>");
                  
-                  out.print(" <tr><th><a href=\"/FYPCian/index.html\">Return To Home</a></th></tr>");
+               
+                  out.print("<tr><th><a href=\"/FYPCian/HomePage.jsp\"><input type='button' value='Return To Home'></th></tr>");
                    
                   out.print("</table>");
                 out.print("<center>");
                 
                 // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open orderconfirmation.jsp
                  
-                 // send serlvet work to the JSP page
+                 // send serlvet work to display on orderconfirmation.jsp JSP page
             
                 RequestDispatcher rd =request.getRequestDispatcher("OrderConfirmation.jsp");
                   rd.include(request, response);

@@ -29,14 +29,24 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="HomePage.jsp">Home</a>
+                                                
 						<a href="SearchOrder.jsp">Search Order</a>
+                                                
 						<a href="BikeShops.jsp">View Bike Shops</a>
-                                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        
+                                                <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a> <!--Logout of session -->
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                         <h1>Logged in as ${custlogin.fname} </h1>
+                                        
+                                         <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        
+                                         <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a> <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
+                                <!--Customer enters order number to be cancelled -->
+                                <!-- form input Modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
                                 
            <form action="cancelOrder"method="POST">
             
@@ -50,23 +60,29 @@ Modifications include changing navabar size and colour, inserted own titles and 
                         <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
                      </tr>
                                     
-                                    
+                                    <!--Sent to cancelOrder servlet -->
                      <td> <center><input type="Submit" value="Cancel Order"/> </center> </td>
                       
                                      </table>
           
         </form>
-        <center>    <p>* A €10 Cancellation Fee Will be Deducted from the Given Debit/Credit Card </p>       </center>
+                                <!--Note to customer that placing order online and collection will result in discount in order to reduce cancellations -->
+        <center>    <p>* A €10 Coupon Will be Deducted from Orders Created on Bikes4U.ie and Collected in Store.</p></center>
                                 
                    <!-- Footer -->
 			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-                                            <!-- Border to split search and Order Display -->
-                                            
-					</div>
-				</div>
-			</footer>
+		<div class="inner">
+		<div class="flex">
+		<div class="copyright">
+			&copy; Bikes4U.ie.
+                </div>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			</ul>
+		</div> <!-- end modify -->
+                 </div>
+	</footer>
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>

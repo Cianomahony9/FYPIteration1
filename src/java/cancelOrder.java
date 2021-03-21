@@ -51,7 +51,7 @@ public class cancelOrder extends HttpServlet {
            
             // alert to announce order has been deleted
              out.println("<script type=\"text/javascript\">");
-            out.println("alert('Order "+ordernumber+" Cancelled. €10 Cancellation Fee Debited');");
+            out.println("alert('Order "+ordernumber+" Cancelled.');");
             out.println("</script>");
             
             // redirect back to custcacelorder.jsp after deletetion

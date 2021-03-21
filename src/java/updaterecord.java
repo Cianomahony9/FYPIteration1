@@ -24,32 +24,31 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class updaterecord extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
            
+            //begin modify
+            // variables to be searched for in db in order to edit below variables(height, weight,insideleglength,armlength)
               String custfname = request.getParameter("custfname");
+              
            String custlname = request.getParameter("custlname");
+           
            int custtelephone = Integer.parseInt(request.getParameter("custtelephone"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
             
            
-           
+           // variables to be changed
            String height = request.getParameter("height");
+           
            String weight = request.getParameter("weight");
+           
            String insideleglength = request.getParameter("insideleg");
+           
            String armlength = request.getParameter("armlength");
            
-           
+           //connection to db
            DbConUpdateRecords db = new DbConUpdateRecords();
             Connection conupdaterecord = db.getConUpdateRecord();
            
@@ -58,6 +57,8 @@ public class updaterecord extends HttpServlet {
             Statement stmt = conupdaterecord.createStatement();
            stmt.executeUpdate("UPDATE "+ custlname +" SET height = '"+height+"' , weight = '"+weight+"' , insideleg = '"+insideleglength+"' , armlength = '"+armlength+"'  " + "WHERE telephone = '"+custtelephone+"' AND name = '"+custfname+"' AND familyname = '"+custlname+"'  ");
             
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+            // display message when successfuly inserted data to db
             out.println("<script type=\"text/javascript\">");
             out.println("alert('Profile for "+custfname+" "+custlname+" Updated');");
             out.println("</script>");
@@ -71,7 +72,7 @@ public class updaterecord extends HttpServlet {
             
         } catch (SQLException ex) {
             Logger.getLogger(updaterecord.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } //end modify
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

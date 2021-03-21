@@ -29,12 +29,17 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="HomePage.jsp">Home</a>
+                                                
 						<a href="SearchOrder.jsp">Search Order</a>
+                                                
 						<a href="BikeShops.jsp">View Bike Shops</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                         <h1>Logged in as ${custlogin.fname} </h1>
+                                         <!--logout and displaying name on page code acquired and modified from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                                          <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
                                 
@@ -42,6 +47,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
             <form action="updateprofile"method="POST">
              <table width="400px" Border="1">
                  <tr>
+                     <!-- display current details -->
                         <tr colspan="2"><center><h1> Current Account Details</h1></center></tr> 
           
                         <td> First Name <input type="text" name="custfname" value = ${custlogin.fname} readonly></td>
@@ -53,7 +59,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
                         <td>County<input type="text" name="custcounty" value = ${custlogin.county} readonly></td>
                      
                       </table>
-                        
+                        <!-- inputs to be updated -->
                      <table width="400px" Border="1">
                      <tr colspan="2"><center><h1>Edit Account Details</h1></center></tr> 
                     
@@ -61,15 +67,19 @@ Modifications include changing navabar size and colour, inserted own titles and 
                          <td> Email Address <input type="email" name="email" ></td>
                     
                          <td> Address <input type="text" name="address" ></td>
+                         
                          <td> Eircode <input type="text" name="eircode" ></td>
+                         
                          <td> County <input type="text" name="county" ></td>
                      
             </table>
-                    <center><input type="Submit" value="Update Account Details"/>
+                    <center><input type="Submit" value="Update Account Details" />
                      
                     </center>
          </form>
-                       
+                        
+                        
+                       <!--  code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  -->
                        <!-- carry details to view cust records --> 
                         
                         <form action="EditRecords.jsp"method="POST">
@@ -77,20 +87,25 @@ Modifications include changing navabar size and colour, inserted own titles and 
                             <input type ='hidden' name='custtelephone' value = ${custlogin.telephone}>
                             <input type ='hidden' name='custlname' value = ${custlogin.lname}>
                             
-                            <input type='Submit' value='Edit Profile'/>
+                            <center>  <input type='Submit' value='Edit Profile' /> </center>
                             
                             
                         </form>          
                                 
-                   <!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-                                            <!-- Border to split search and Order Display -->
-                                            
-					</div>
-				</div>
-			</footer>
+                 <!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+		<div class="flex">
+		<div class="copyright">
+			&copy; Bikes4U.ie.
+                </div>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			</ul>
+		</div> <!-- end modify -->
+                 </div>
+	</footer>
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>

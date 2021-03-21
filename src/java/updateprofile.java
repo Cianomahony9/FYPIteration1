@@ -25,27 +25,24 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class updateprofile extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+ 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
+            //begin Modify
             // pulling variables from viewcustaccount.jsp
            String custfname = request.getParameter("custfname");
+           
            String custlname = request.getParameter("custlname");
          
            String custemail = request.getParameter("email");
+           
            String custaddress = request.getParameter("address");
+           
             String custeircode = request.getParameter("eircode");
+            
             String custcounty = request.getParameter("county");
             
             int custtelephone = Integer.parseInt(request.getParameter("custtelephone"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
@@ -59,6 +56,8 @@ public class updateprofile extends HttpServlet {
            stmt.executeUpdate("UPDATE profile SET email = '"+custemail+"' , address = '"+custaddress+"' , eircode = '"+custeircode+"' , county = '"+custcounty+"'  " + "WHERE telephone = '"+custtelephone+"' AND fname = '"+custfname+"' AND lname = '"+custlname+"'  ");
             
             // output message stating profile has been updated 
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+            // display message when successfuly inserted data to db
             out.println("<script type=\"text/javascript\">");
             out.println("alert('Profile for "+custfname+" "+custlname+" Updated');");
             out.println("</script>");
@@ -71,7 +70,7 @@ public class updateprofile extends HttpServlet {
            
         } catch (SQLException ex) {
             Logger.getLogger(updateprofile.class.getName()).log(Level.SEVERE, null, ex);
-            
+            //end Modify
         }
     }
 

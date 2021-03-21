@@ -17,6 +17,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 
 Modifications include changing navabar size and colour, inserted own titles and links, changed footer copyright
 
+code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
 -->
 
 
@@ -62,12 +63,19 @@ Modifications include changing navabar size and colour, inserted own titles and 
 					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="HomePage.jsp">Home</a>
+                                                
 						<a href="SearchOrder.jsp">Search Order</a>
+                                                
 						<a href="BikeShops.jsp">View Bike Shops</a>
+                                                
+                                                 <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                        
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-                                         <h1>Logged in as ${custlogin.fname} </h1>
+                                        
+                                         <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                                        <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
  <% 

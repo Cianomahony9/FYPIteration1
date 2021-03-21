@@ -42,6 +42,7 @@ public class CustDAO {
         
         
         // creating variable for db values
+        // these variables are then pulled in the customer account section
         if(rs.next()){
             custlogin = new CustLogin();
             custlogin.setFname(rs.getString("fname"));

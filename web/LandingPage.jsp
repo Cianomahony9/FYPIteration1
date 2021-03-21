@@ -26,8 +26,10 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<a href="LandingPage.jsp" class="logo">Bikes4U.ie</a>
 					<nav id="nav">
 						<a href="LandingPage.jsp">Home</a>
+                                                
 						<a href="login.jsp">Search Order</a>
-						<a href="LandingPageBikeShops.jsp">View Bike Shops</a>
+                                                
+						<a href="LandingPageBikeShops.jsp">View Bike Shops</a> 
                                                
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
@@ -51,7 +53,8 @@ Modifications include changing of navbar colour and size, inserted own headings 
 				</header>
 					<p>Create an account with us to log in and get started on your bike sizing journey.</p>
 				<footer>
-					<a href="login.jsp" class="button special">Create Profile</a>
+					<a href="login.jsp">
+                                            <input type ="button" value="Create Profile"/></a>
 				</footer>
 			</article>
                     
@@ -59,9 +62,10 @@ Modifications include changing of navbar colour and size, inserted own headings 
 				<header>
 					<h3>Create Family Profile</h3>
 				</header>
-					<p>Enter bike specific details for you and your family to start your bike sizing journey</p>
+					<p>Enter bike specific details for you and your family to start your bike sizing journey.</p>
 				<footer>
-					<a href="login.jsp" class="button special">Create Family Profile</a>
+					<a href="login.jsp" >
+                                            <input type ="button" value="Create Family Profile"/></a>
 				</footer>
 			</article>
                     
@@ -69,9 +73,10 @@ Modifications include changing of navbar colour and size, inserted own headings 
 				<header>
 					<h3>Insert Person to Family</h3>
 				</header>
-					<p>Add family members to family profile .</p>
+					<p>Add family members and account details to family profile.</p>
 				<footer>
-					<a href="login.jsp" class="button special">Insert to Family</a>
+					<a href="login.jsp">
+                                            <input type ="button" value="Insert to Family"/></a>
 				</footer>
 			</article>
                 </div>
@@ -85,9 +90,10 @@ Modifications include changing of navbar colour and size, inserted own headings 
 				<header>
 					<h3>Create Order</h3>
 				</header>
-					<p>Create a bike order.</p>
+					<p>Create a bike order with our four participating stores.</p>
 				<footer>
-					<a href="login.jsp" class="button special">Create Order</a>
+					<a href="login.jsp">
+                                            <input type ="button" value="Create Order"/></a>
 				</footer>
 			</article>
                     
@@ -95,9 +101,10 @@ Modifications include changing of navbar colour and size, inserted own headings 
 				<header>
 					<h3>View the Bike Shop Members</h3>
 				</header>
-					<p>View the bike shops that are part of our sizing journey</p>
+					<p>View the bike shops that are part of our sizing journey.</p>
 				<footer>
-					<a href="login.jsp" class="button special">View Bike Shops</a>
+					<a href="login.jsp" >
+                                            <input type ="button" value="View Bike Shops"/></a>
 				</footer>
 			</article>
                     
@@ -107,7 +114,8 @@ Modifications include changing of navbar colour and size, inserted own headings 
 				</header>
 					<p>Search for you bike order details with your order number.</p>
 				<footer>
-					<a href="login.jsp" class="button special">Search Bike Order</a>
+					<a href="login.jsp">
+                                            <input type ="button" value="Search Bike Order"/></a>
 				</footer>
 			</article>
                     </div>

@@ -7,7 +7,6 @@
 import Database.DbConInsertFam;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -29,23 +28,12 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class insertFamilyServ extends HttpServlet {
 
-    
-    
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            
+      
            // Begin Modify code
             
             
@@ -73,12 +61,11 @@ public class insertFamilyServ extends HttpServlet {
             
             //sql statement to input into database
             Statement stmt = coninsertfam.createStatement();
+            // insert family profiles to family table created
               stmt.executeUpdate("INSERT INTO " + familyname1 + "(name,familyname,gender,height,weight,insideleg,armlength,telephone) values('"+name+"','"+familyname1+"','"+gender+"','"+height+"','"+weight+"','"+insideleg+"','"+armlength+"','"+telephone+"')");
-          //  out.println("<h1>Profile For "+name+" Inserted into "+familyname1+"</h1>");
-          //  out.print("<a href=\"/FYPCian/RetrieveFamily.jsp\">Search Bike For Family</a>");
               
                // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
-            
+            // display message when successfuly inserted data to db
        
           out.println("<script type=\"text/javascript\">");
             out.println("alert('Inserted Profile for "+name+" to Family "+familyname1+"');");

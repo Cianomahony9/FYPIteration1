@@ -8,9 +8,10 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
+     
 /* Reset */
 
-	html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, footer, header, hgroup, menu, nav, section {
+	html, body, div, span, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, footer, header, hgroup, menu, nav, section {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -254,7 +255,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #9a9a9a;
+		color: #000000;
 		font-family: "Raleway", Arial, Helvetica, sans-serif;
 		font-size: 13pt;
 		font-weight: 300;
@@ -324,7 +325,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #5385c1;
+		color: #0000CD;
 		font-weight: 300;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
@@ -528,7 +529,7 @@
 		}
 
 	header p {
-		color: #bbb;
+		color: #000000;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -654,7 +655,7 @@
 	}
 
 	label {
-		color: #555;
+		color: #000000;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 600;
@@ -698,7 +699,7 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #5385c1;
+			border-color: #000000;
 			box-shadow: 0 0 0 1px #5385c1;
 		}
 
@@ -745,82 +746,7 @@
 	textarea {
 		padding: 0.75em 1em;
 	}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		display: block;
-		float: left;
-		margin-right: -2em;
-		opacity: 0;
-		width: 1em;
-		z-index: -1;
-	}
-
-		input[type="checkbox"] + label,
-		input[type="radio"] + label {
-			text-decoration: none;
-			color: #9a9a9a;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
-			padding-left: 2.4em;
-			padding-right: 0.75em;
-			position: relative;
-		}
-
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-			}
-
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
-				background: rgba(144, 144, 144, 0.075);
-				border-radius: 0;
-				border: solid 1px #dbdbdb;
-				content: '';
-				display: inline-block;
-				height: 1.65em;
-				left: 0;
-				line-height: 1.58125em;
-				position: absolute;
-				text-align: center;
-				top: 0;
-				width: 1.65em;
-			}
-
-		input[type="checkbox"]:checked + label:before,
-		input[type="radio"]:checked + label:before {
-			background: #5a5a5a;
-			border-color: #5a5a5a;
-			color: #ffffff;
-			content: '\f00c';
-		}
-
-		input[type="checkbox"]:focus + label:before,
-		input[type="radio"]:focus + label:before {
-			border-color: #5385c1;
-			box-shadow: 0 0 0 1px #5385c1;
-		}
-
-	input[type="checkbox"] + label:before {
-		border-radius: 0;
-	}
-
-	input[type="radio"] + label:before {
-		border-radius: 100%;
-	}
-
+        
 	::-webkit-input-placeholder {
 		color: #bbb !important;
 		opacity: 1.0;
@@ -1576,11 +1502,12 @@
 		text-align: center;
 		border-top: 0em solid #000066;
 	}
+        
 
 		#banner h1 {
 			font-size: 3.5em;
 			font-weight: 100;
-			color: #006fff;
+			color: #FFFFFF;
 			line-height: 3em;
 			margin: 0 0 0.5em 0;
 			padding: 0;

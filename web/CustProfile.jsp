@@ -70,7 +70,7 @@ Modifications include change navbar size, colour, headings and links , changed f
                         
                           <tr>
                         
-                        <td><input type="text" name="email" placeholder = "Email Address" ></td>
+                        <td><input type="email" name="email" placeholder = "Email Address" ></td>
                         </tr>
                         
                           <tr>
@@ -82,7 +82,7 @@ Modifications include change navbar size, colour, headings and links , changed f
                             <td>
                         <center><input type="Submit" value="Create Profile"></center></td>
                            <td>
-                          <%--  <center><a href="/FYPCian/Family.jsp">Create Family Profile</a></center>  --%>
+                         
                             </td> 
                         </tr>
                 </table>

@@ -27,17 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class searchBike extends HttpServlet {
 
-    
-    
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -56,7 +46,7 @@ public class searchBike extends HttpServlet {
             
             String familyname = request.getParameter("familyname");
             
-             //end of modify 
+             
      // connection to database method
             
             DbConSearch db = new DbConSearch();
@@ -68,12 +58,12 @@ public class searchBike extends HttpServlet {
              ////edits to above  result code acquired and modified from stackoverflow   https://stackoverflow.com/questions/33664078/java-jdbc-result-set-error-but-why?fbclid=IwAR2sGLy1pcaumBHPZzqOQPaM2BMZbNuHcnn85N9VC-MQ3jpCEwQcuf_IiTo  
             
            
-            //Start of modify
-            //sql to output data 
+           
+            //sql to output data where values are less then or eqaul to insideleg and armlength values
              Statement stmt = consearch.createStatement();
              ResultSet myRs = stmt.executeQuery("SELECT * FROM bikes WHERE framesize <='"+insideleg+"'AND saddletohandle <='"+armlength+"'");   // problems solved from stack overflow  https://stackoverflow.com/questions/9192781/having-a-mysql-error-unknown-column-where-clause
             
-           
+           // declaring results as variables to be passed on to next page
              while(myRs.next()){
                 String bikename = myRs.getString("bikename");
                 
@@ -90,7 +80,7 @@ public class searchBike extends HttpServlet {
                 //Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo 
                 
                  //code for table acquired and modifed from  https://www.c-sharpcorner.com/UploadFile/fd0172/how-to-fetch-records-from-database-using-servlet-in-java/
-                //start of modify 
+                
                 //Print Table
                 //output results
                  out.print("<center><table width=25% border=1><center>");
@@ -144,7 +134,7 @@ public class searchBike extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(searchBike.class.getName()).log(Level.SEVERE, null, ex);
             
-            //end of modify 
+            
         }
     }
 

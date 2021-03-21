@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 1L;
         String email = request.getParameter("email");
         String password = request.getParameter("password");
        
-        
+        //connection to db
         CustDAO custDAO = new CustDAO();
         
         //checking email and password against db statement
@@ -53,7 +53,7 @@ private static final long serialVersionUID = 1L;
             rd.include(request, response);
                //sent back to login page if wrong
             }else {
-               
+               //if login is unsuccessful user is redirected to login page
                  response.sendRedirect("login.jsp");
             }
             
