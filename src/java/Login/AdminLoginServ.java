@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Cian
+ * @author Cian O'Mahony 117436194
  */
 
 public class AdminLoginServ extends HttpServlet {

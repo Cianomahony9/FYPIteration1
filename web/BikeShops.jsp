@@ -1,7 +1,7 @@
 <%-- 
     Document   : BikeShops
     Created on : 23-Jan-2021, 14:42:31
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

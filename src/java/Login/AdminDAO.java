@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Cian
+ * @author Cian O'Mahony 117436194
  */
 public class AdminDAO {
     // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql

@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Cian
+ * @author Cian O'Mahony 117436194
  */
 public class createOrder extends HttpServlet {
 
@@ -131,11 +131,12 @@ public class createOrder extends HttpServlet {
               out.print("<tr><th><t1>Order Date</t1> <td>"+ dateFormat.format(orderdate1)+"</td> </th></tr>");
               
                out.print("<tr><th><t1>Collection Date</t1> <td>"+ dateFormat.format(colldate1)+"</td> </th></tr>");
-                 
                
+          
                   out.print("<tr><th><a href=\"/FYPCian/HomePage.jsp\"><input type='button' value='Return To Home'></th></tr>");
                    
                   out.print("</table>");
+                   out.print("* Saddle Height and Handlebars Ajustments Will be Carried out by Sales Assistants on Collection.");
                 out.print("<center>");
                 
                 // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open orderconfirmation.jsp

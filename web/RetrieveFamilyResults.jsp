@@ -1,7 +1,7 @@
 <%-- 
     Document   : RetrieveFamilyResults
     Created on : 29-Jan-2021, 15:09:50
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page import="java.sql.DriverManager"%>
@@ -88,7 +88,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 	<th>Gender</th>
 	<th>Height</th>
         <th>Weight</th>
-	<th>Inside Leg Length</th>
+	<th>Leg Length</th>
 	<th>Arm Length</th>
         </tr>
 	</thead>

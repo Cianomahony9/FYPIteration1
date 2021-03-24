@@ -1,7 +1,7 @@
 <%-- 
     Document   : SearchAdminCustProfileResult
     Created on : 02-Feb-2021, 13:52:42
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page import="java.sql.DriverManager"%>

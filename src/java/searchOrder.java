@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Cian
+ * @author Cian O'Mahony 117436194
  */
 //Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
 public class searchOrder extends HttpServlet {
@@ -34,7 +34,7 @@ public class searchOrder extends HttpServlet {
             // Begin Modify code
             //pulling data from searchOrder jsp
             
-            String fname = request.getParameter("fname");
+            
             
             String lname = request.getParameter("lname");
                     
@@ -52,7 +52,7 @@ public class searchOrder extends HttpServlet {
             
             // sql statement to output search 
             Statement stmt = conordersearch.createStatement();
-                ResultSet myRs2 = stmt.executeQuery("SELECT * FROM orderdetails WHERE ordernumber = '"+ordernumber+"' AND custfname = '"+fname+"' AND custlname = '"+lname+"' ");
+                ResultSet myRs2 = stmt.executeQuery("SELECT * FROM orderdetails WHERE ordernumber = '"+ordernumber+"'  AND custlname = '"+lname+"' ");
             
                 while (myRs2.next() ){
                     String orderdate = myRs2.getString("orderdate");
@@ -76,8 +76,8 @@ public class searchOrder extends HttpServlet {
                  // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp open displayorder.jsp
                  
                  // send serlvet work to the JSP page
-               RequestDispatcher rd =request.getRequestDispatcher("SearchOrder.jsp");
-            rd.include(request, response);
+               RequestDispatcher rd =request.getRequestDispatcher("ViewOrder.jsp");
+               rd.include(request, response);
                     
                   // output order search
                        

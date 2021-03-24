@@ -1,7 +1,7 @@
 <%-- 
     Document   : EditRecords
     Created on : 01-Mar-2021, 19:20:34
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page import="java.sql.DriverManager"%>
@@ -102,7 +102,7 @@ code for database connection and output sourced and modified from https://www.yo
                         <td>Gender<input type="text" name="custgender" value = <%=resultSet.getString("gender")%> readonly></td>
                         <td>Height<input type="text" name="custheight" value = <%=resultSet.getString("height")%> readonly></td>
                         <td>Weight<input type="text" name="custaddress" value = <%=resultSet.getString("weight")%> readonly></td>
-                        <td>Inside Leg Length<input type="text" name="custinsideleg" value = <%=resultSet.getString("Insideleg")%> readonly></td>
+                        <td>Leg Length<input type="text" name="custinsideleg" value = <%=resultSet.getString("Insideleg")%> readonly></td>
                         <td>Arm Length<input type="text" name="custarmlength" value = <%=resultSet.getString("armlength")%> readonly></td>
                         <td>telephone<input type="text" name="custtelephone" value =<%=resultSet.getInt("telephone")%>  readonly></td>
                       </table>
@@ -114,7 +114,7 @@ code for database connection and output sourced and modified from https://www.yo
                          
                          <td> Weight <input type="text"  maxlength="5" name="weight" placeholder="Weight" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Inside Leg Length <input type="text" maxlength="4" name="insideleg" placeholder="Inside Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Leg Length <input type="text" maxlength="4" name="insideleg" placeholder="Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
                          <td> Arm Length<input type="text" maxlength="4" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                      

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : SearchOrder
-    Created on : 07-Dec-2020, 11:37:36
+    Document   : ViewOrder
+    Created on : 23-Mar-2021, 21:13:41
     Author     : Cian O'Mahony 117436194
 --%>
 
@@ -11,8 +11,7 @@ Theory by TEMPLATED
 templated.co @templatedco
 Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 
-Modifications include changing navabar size and colour, inserted own titles and links, changed footer copyright
-
+Modification includes: changing of navbar size and colour, inserting own titles and links, inserted own form search function, changed footer copyright
 -->
 <html>
 	<head>
@@ -38,44 +37,14 @@ Modifications include changing navabar size and colour, inserted own titles and 
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                                        
                                          <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
-                                          <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
+                                         <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
-                  
-        <!-- data sent to servlet to search db -->
-         <form action="searchOrder"method="POST">
-            
-             <table width="400px" Border="1">
-                 <tr>
-                        <td colspan="2"><center><h1>Search Order</h1></center></td> 
-                    </tr>
-                    
-                     <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" name="lname" value = ${custlogin.lname} readonly></td> <!-- https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
-                     </tr>
-                    <tr>
-                        <td>Enter Your Order Number</td>
-                        <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
-                     </tr>
-           
-            </table>
-             <center><input type="Submit" value="search"/>
-                 
-             <a href="/FYPCian/CustCancelOrder.jsp" >
-                 <input type="Button" value="Cancel Order"/></a></center>
-        </form>
-    <!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-                                            <!-- Border to split search and Order Display -->
-                                            
-					</div>
-				</div>
-			</footer>
-    
+                
+              
+  
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>
@@ -85,6 +54,3 @@ Modifications include changing navabar size and colour, inserted own titles and 
 
 	</body>
 </html>
-
-
-

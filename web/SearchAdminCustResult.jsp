@@ -1,7 +1,7 @@
 <%-- 
     Document   : SearchAdminCustResult
     Created on : 28-Jan-2021, 13:48:59
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page import="java.sql.DriverManager"%>
@@ -92,7 +92,7 @@ code for database connection and output sourced and modified from https://www.yo
 		    <th>Gender</th>
 		    <th>Height</th>
                     <th>Weight</th>
-		    <th>Inside Leg Length</th>
+		    <th>Leg Length</th>
 		    <th>Arm Length</th>
                 </tr>
                 </thead>

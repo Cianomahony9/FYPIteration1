@@ -1,7 +1,7 @@
 <%-- 
     Document   : RetrieveFamily
     Created on : 23-Nov-2020, 19:28:07
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 *** Form Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 --%>
 
@@ -45,14 +45,14 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 				</div>
 			</header>
                   
-        <!-- search input sent to servlet to take from database -->
+        <!-- search input sent to servlet to pull cust profile from database -->
           <form action="RetrieveFamilyResults.jsp"method="POST">
              
              <table width="400px" Border="1">
                  <tr>
                         <td colspan="2"><center><h1>Search Family</h1></center></td> 
                     </tr>
-                    
+                    <!-- session variable code acquired and modified from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                     <tr>
                         <td>Enter Family Name</td>
                         <td><input type="text" name="familyname1" value = ${custlogin.lname} readonly></td>

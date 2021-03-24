@@ -1,7 +1,7 @@
 <%-- 
     Document   : SearchAdminOrder
     Created on : 20-Jan-2021, 15:01:53
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>

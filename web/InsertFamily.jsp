@@ -1,7 +1,7 @@
 <%-- 
     Document   : InsertFamily
     Created on : 24-Nov-2020, 15:19:55
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 *** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 --%>
 
@@ -71,7 +71,7 @@ Modifications include changing navbar size and colour, inserting own titles and 
                         </tr>
                         
                           <tr>
-                        <td><input type="text" name="insideleg" placeholder="Inside Leg Length"></td>
+                        <td><input type="text" name="insideleg" placeholder="Leg Length"></td>
                         </tr>
                         
                           <tr>

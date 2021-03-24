@@ -1,7 +1,7 @@
 <%-- 
     Document   : LandingPage
     Created on : 19-Feb-2021, 11:22:52
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

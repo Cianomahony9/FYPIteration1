@@ -1,7 +1,7 @@
 <%-- 
     Document   : ViewAccount
     Created on : 22-Feb-2021, 22:16:26
-    Author     : Cian
+    Author     : Cian O'Mahony 117436194
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

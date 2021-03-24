@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Cian
+ * @author Cian O'Mahony 117436194
  */
 
 public class CustDAO {

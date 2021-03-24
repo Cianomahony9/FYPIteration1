@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Cian
+ * @author Cian O'Mahony 117436194
  */
 public class DbConUpdateRecords {
      
