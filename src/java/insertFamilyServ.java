@@ -33,9 +33,8 @@ public class insertFamilyServ extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-      
-           // Begin Modify code
-            
+               // Begin Modify code
+          
             
             // declaring variables from InsertFamily jsp to be inputted to db 
             

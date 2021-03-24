@@ -58,6 +58,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
                 
              
 <!-- search servlet connection send to SearchAdminStoreOrder.jsp -->
+ <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
        <center>
    <form action="SearchAdminStoreOrder.jsp"method="POST"> 
              <table width="400px" Border="1">

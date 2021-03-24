@@ -32,12 +32,12 @@ public class searchBike extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-         
+          // Begin Modify code
            
             // hidden value from retrieve family servlet 
               
                // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/ 
-             // Begin Modify code
+             
             String insideleg = request.getParameter("insideleg");
             
             String armlength= request.getParameter("armlength");

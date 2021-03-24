@@ -50,6 +50,7 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 			</header>
     <center>
            <!-- data taken and sent to jsp page to search database -->
+            <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
         <form action="SearchAdminCustProfileResult.jsp"method="POST">
              <table width="400px" Border="1">
                  <tr>

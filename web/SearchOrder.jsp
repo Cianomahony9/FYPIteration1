@@ -44,6 +44,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
 			</header>
                   
         <!-- data sent to servlet to search db -->
+        <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
          <form action="searchOrder"method="POST">
             
              <table width="400px" Border="1">

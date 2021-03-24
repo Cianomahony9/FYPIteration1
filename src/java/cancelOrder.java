@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Cian O'Mahony 117436194
  * 
  * 
- * 
+ * Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
  */
 public class cancelOrder extends HttpServlet {
 
@@ -31,7 +31,7 @@ public class cancelOrder extends HttpServlet {
             throws ServletException, IOException {
      response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+            //begin modify
             
             // pulling order number variable from custcancelorder.jsp
             int ordernumber = Integer.parseInt(request.getParameter("ordernumber"));   // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
@@ -50,10 +50,13 @@ public class cancelOrder extends HttpServlet {
            
            
             // alert to announce order has been deleted
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
+            
              out.println("<script type=\"text/javascript\">");
             out.println("alert('Order "+ordernumber+" Cancelled.');");
             out.println("</script>");
             
+            // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
             // redirect back to custcacelorder.jsp after deletetion
             RequestDispatcher rd =request.getRequestDispatcher("CustCancelOrder.jsp");
             rd.include(request, response);

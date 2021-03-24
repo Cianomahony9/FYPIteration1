@@ -25,7 +25,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
      <section id="banner">
 	<h1>Employee / Administration Login</h1>
      </section>
-                <!-- code acquired and modifed from https://www.youtube.com/watch?v=UBOZgNxsiwA -->
+                <!-- code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
         <form action ="AdminLoginServ" method ="post">
             <table style ="with: 100%">
                 

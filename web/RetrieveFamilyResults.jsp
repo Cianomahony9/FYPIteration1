@@ -24,14 +24,14 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 <% 
     //connection to db
     String driverName = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/customer?useSSL=false";
+    String connectionUrl = "jdbc:mysql://localhost:3306/customer?useSSL=false"; //"useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
     String userId ="root";
     String password ="OmahonyCian@98";
     
-    // data taken from jsp page
+    // data taken from retrievefamily jsp page
     String familyname1 = request.getParameter("familyname1");
     
-    int telephone = Integer.parseInt(request.getParameter("telephone"));
+    int telephone = Integer.parseInt(request.getParameter("telephone")); // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
     
    
     
@@ -77,7 +77,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
                                           <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
-             <!-- Table -->
+             <!-- Table code acquired and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q -->
 <div class="table-wrapper">
 	<table>
         <center><h3>Customer Profiles</h3></center> 
@@ -93,12 +93,14 @@ Modification includes: changing of navbar size and colour, inserting own titles 
         </tr>
 	</thead>
 <% 
-// calling data from database 
+// calling data from database and making connection
+// selecting all rows where familyname and telephone number are same as those entered
 try{
 connection = DriverManager.getConnection(connectionUrl, userId, password);
 statement= connection.createStatement();
 String sql = "SELECT * FROM "+familyname1+" WHERE telephone = "+telephone+"";
        
+// defining results as varaibles 
 resultSet=statement.executeQuery(sql);
 while(resultSet.next()){
             

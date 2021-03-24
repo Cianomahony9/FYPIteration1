@@ -25,10 +25,11 @@ code for database connection and output sourced and modified from https://www.yo
 <%
     //database connection
     String driverName = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/order?useSSL=false";
+    String connectionUrl = "jdbc:mysql://localhost:3306/order?useSSL=false"; //"useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
     String userId ="root";
     String password ="OmahonyCian@98";
     
+    //pulling data from searchadminorder jsp
     String orderstorename = request.getParameter("orderstorename");
     
     
@@ -78,7 +79,8 @@ code for database connection and output sourced and modified from https://www.yo
                                        <h1>Logged in For ${adminlogin.store} </h1>
 				</div>
 			</header>
-        <!-- Table -->
+      
+      <!-- Table code acquired and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q -->
 	<div class="table-wrapper">
 	<table>
            <center><h3>Open Orders for <%= orderstorename%></h3></center> 
@@ -94,12 +96,13 @@ code for database connection and output sourced and modified from https://www.yo
                 </tr>
 	    </thead>
 <%
-    //slq statement to search database
+    //slq statement to search database for orderstorename
+   // start connection
     try{
     connection = DriverManager.getConnection(connectionUrl, userId, password);
     statement= connection.createStatement();
         
-      
+      //declaring results as varaibles 
     resultSet=statement.executeQuery("SELECT * FROM orderdetails WHERE bikelocation ='"+orderstorename+"'");
           
     while(resultSet.next()){

@@ -23,9 +23,10 @@ public class CustDAO {
     
     // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
     
+    //begin Modify
     public  CustLogin checkLogin(String email, String password) throws ClassNotFoundException, SQLException {
       
-      // connect to db  
+      // connect to db  https://www.youtube.com/watch?v=akW6bzoRcZo
        DbConCustLogin db = new DbConCustLogin();
        Connection concustlogin = db.getCustLoginCon();
        
@@ -42,7 +43,7 @@ public class CustDAO {
         
         
         // creating variable for db values
-        // these variables are then pulled in the customer account section
+        // these variables are held in session management variable and is accessable throughotut website
         if(rs.next()){
             custlogin = new CustLogin();
             custlogin.setFname(rs.getString("fname"));
@@ -58,6 +59,7 @@ public class CustDAO {
         concustlogin.close();
         
         return custlogin;
+        //end modify
     }
 }
   

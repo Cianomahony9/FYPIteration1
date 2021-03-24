@@ -27,24 +27,16 @@ import javax.servlet.http.HttpServletResponse;
 
 public class createFamily1 extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-         
+       try (PrintWriter out = response.getWriter()) {
+         // Begin Modify code
             
            // code acquired and modified from Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             
-            // Begin Modify code
+            
             // take variable from  family jsp and create table name 
             String familyname1 =request.getParameter("familyname1");
             

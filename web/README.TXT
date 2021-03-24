@@ -249,3 +249,21 @@ Modifications: inserted own tables to be deleted from in SQL statement
 
 Stack Overflow - https://stackoverflow.com/questions/46441696/how-to-update-mysql-database-value-from-java-netbeans
 Modifications: Inserted own tables to be updated in SQL statement 
+
+Iteration 6 
+the Student declares that except where duly acknowledged, this project is entirely his/her own work
+
+Cian O'Mahony 117436194
+
+1.Code Generation Tools 
+N/a
+
+2.Third Party Components 
+Code Java tutorials https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+
+W3Schools https://www.w3schools.com/colors/colors_picker.asp used to pick css colour codes 
+
+3.Modified Third Parties
+
+code java - https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+Modifications: using own session management variables and display them throughout application to make customer experience better(no need to continously insert name and telephone number)

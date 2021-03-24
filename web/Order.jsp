@@ -50,7 +50,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
       
         <% 
             
-            
+            //*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
 //pulling data from servlet
 String name = request.getParameter("name");

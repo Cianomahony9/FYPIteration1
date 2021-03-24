@@ -31,6 +31,7 @@ public class updateprofile extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
+            //modified from https://www.youtube.com/watch?v=akW6bzoRcZo
             //begin Modify
             // pulling variables from viewcustaccount.jsp
            String custfname = request.getParameter("custfname");

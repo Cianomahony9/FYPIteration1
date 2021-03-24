@@ -46,6 +46,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 			</header>
                   
         <!-- search input sent to servlet to pull cust profile from database -->
+         <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
           <form action="RetrieveFamilyResults.jsp"method="POST">
              
              <table width="400px" Border="1">

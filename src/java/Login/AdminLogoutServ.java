@@ -19,6 +19,7 @@ import javax.servlet.http.HttpSession;
  */
 
  // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+//begin Modify
 public class AdminLogoutServ extends HttpServlet {
  private static final long serialVersionUTD = 1L;
   
@@ -40,14 +41,14 @@ public class AdminLogoutServ extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        HttpSession session = request.getSession(false);
-        //closing the session 
+        //closing the session  removes session variables
         if(session !=null){
             session.removeAttribute("adminlogin");
            //sending user back to login page
              RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
         }
-    
+    //end modify
     }
 
     

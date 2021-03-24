@@ -43,13 +43,14 @@ Modifications include changing navabar size and colour, inserted own titles and 
 				</div>
 			</header>
                                 
-                                
+                                 <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
             <form action="updateprofile"method="POST">
              <table width="400px" Border="1">
                  <tr>
                      <!-- display current details -->
                         <tr colspan="2"><center><h1> Current Account Details</h1></center></tr> 
-          
+          <!-- session variable code acquired and modified from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                                               
                         <td> First Name <input type="text" name="custfname" value = ${custlogin.fname} readonly></td>
                         <td>Last Name<input type="text" name="custlname" value = ${custlogin.lname} readonly></td>
                         <td>Email Address<input type="text" name="custemail" value = ${custlogin.email} readonly></td>

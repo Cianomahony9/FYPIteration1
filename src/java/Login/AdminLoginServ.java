@@ -22,10 +22,12 @@ import javax.servlet.http.HttpSession;
  * @author Cian O'Mahony 117436194
  */
 
+ // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
 public class AdminLoginServ extends HttpServlet {
+    //begin modify
        private static final long serialVersionUID = 1L;
    
-        // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+        
 @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -34,7 +36,7 @@ public class AdminLoginServ extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
        
-        // connection to db
+        // connection to db and run SQL statement 
        AdminDAO adminDAO = new AdminDAO();
 
          try{
@@ -57,7 +59,7 @@ public class AdminLoginServ extends HttpServlet {
            } catch (SQLException ex) {
                Logger.getLogger(AdminLoginServ.class.getName()).log(Level.SEVERE, null, ex);
            }
-
+//end modify
 
        
     }

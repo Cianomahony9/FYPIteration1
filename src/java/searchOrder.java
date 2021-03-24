@@ -53,7 +53,7 @@ public class searchOrder extends HttpServlet {
             // sql statement to output search 
             Statement stmt = conordersearch.createStatement();
                 ResultSet myRs2 = stmt.executeQuery("SELECT * FROM orderdetails WHERE ordernumber = '"+ordernumber+"'  AND custlname = '"+lname+"' ");
-            
+            //declaring results as variables
                 while (myRs2.next() ){
                     String orderdate = myRs2.getString("orderdate");
                     

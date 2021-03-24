@@ -43,10 +43,11 @@ Modifications include changing of navbar colour and size, inserted own headings 
             <center>
         <input type ="submit" value="Login"/>
         
+        <!--link to admin login -->
         <a href="/FYPCian/AdminLogin.jsp">
         <input type ="button" value="Admin/Employee Login"/>
         </a>
-        
+        <!--link to customer register -->
         <a href="/FYPCian/CustProfile.jsp">
          <input type ="button" value="Register"/></a>
         

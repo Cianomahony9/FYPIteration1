@@ -24,22 +24,14 @@ import javax.servlet.http.HttpServletResponse;
 * Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo
 */
 public class create extends HttpServlet {
-/**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-          
+          //begin modify
             
-            // Begin Modify code
+            
             // take data from custProfile jsp page 
            
             String fname = request.getParameter("fname");
@@ -63,16 +55,10 @@ public class create extends HttpServlet {
             DbCon db = new DbCon();
             Connection con = db.getCon();
             
-            
-            
-            
-            
-            
             // sql statement to insert data above
              Statement stmt = con.createStatement();
             stmt.executeUpdate("INSERT INTO profile (fname,lname,telephone,address,eircode,email,county,password) values('"+fname+"','"+lname+"','"+telephone+"','"+address+"','"+eircode+"','"+email+"','"+county+"','"+password+"')");
-          // out.println("<h1>Profile Created for "+fname+"</h1>");
-            //out.print("<a href=\"/FYPCian/index.html\">Home</a>");
+          
             
             // modified from https://stackoverflow.com/questions/24176684/how-to-show-alert-in-a-jsp-from-a-servlet-and-then-redirect-to-another-jsp
             

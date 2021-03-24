@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSession;
  */
 // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
 
-
+//begin Modify
 public class CustLoginServ extends HttpServlet {
 private static final long serialVersionUID = 1L;
    
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 1L;
         String email = request.getParameter("email");
         String password = request.getParameter("password");
        
-        //connection to db
+        //connection to db + run SQL statement
         CustDAO custDAO = new CustDAO();
         
         //checking email and password against db statement
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 1L;
             
         }
        
-                
+                //end modify
         
         
     }

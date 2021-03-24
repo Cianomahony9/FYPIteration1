@@ -43,7 +43,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 				</div>
 			</header>
                 
-                
+                <!--Servlet work from createorder servlet displayed on this page  -->
                 
                 
                 

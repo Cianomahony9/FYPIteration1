@@ -25,13 +25,14 @@ Modifications include changing of navbar colour and size, inserted own headings 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> 
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!--Link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!--Link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!--Link to search order page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a> <!--Link to bikeshop page -->
+                                                
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                       
@@ -61,7 +62,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<h3>Create Family Profile</h3>
 				</header>
 					<p>Enter bike specific details for you and your family to start your bike sizing journey.</p>
-				<footer>
+				<footer> <!--Link to create family page -->
 					<a href="/FYPCian/Family.jsp">
                                             <input type ="button" value="Create Family Profile"/></a>
 				</footer>
@@ -72,7 +73,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<h3>Insert Person to Family</h3>
 				</header>
 					<p>Add family members and account details to family profile.</p>
-				<footer>
+				<footer><!--Link to insert to family page -->
 					<a href="/FYPCian/InsertFamily.jsp">
                                             <input type ="button" value="Insert to Family"/></a>
 				</footer>
@@ -83,7 +84,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<h3>Create Order</h3>
 				</header>
 					<p>Create a bike order with our four participating stores.</p>
-				<footer>
+				<footer><!--Link to search family page , start of create order-->
 					<a href="/FYPCian/RetrieveFamily.jsp">
                                             <input type ="button" value="Create Order"/></a>
 				</footer>
@@ -102,7 +103,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<h3>View Account</h3>
 				</header>
 					<p>View account details and made make edits to profiles and accounts.</p>
-				<footer>
+				<footer> <!--Link to view account page-->
 					 <a href="/FYPCian/ViewCustAccount.jsp" > 
                                              <input type ="button" value="View Account"/></a> 
 				</footer>
@@ -113,7 +114,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<h3>View the Bike Shop Members</h3>
 				</header>
 					<p>View the bike shops that are part of our sizing journey.</p>
-				<footer>
+				<footer> <!--Link to view bike shops page -->
 					<a href="/FYPCian/BikeShops.jsp">
                                             <input type ="button" value="View Bike Shops"/></a>
 				</footer>
@@ -124,7 +125,7 @@ Modifications include changing of navbar colour and size, inserted own headings 
 					<h3>Search Bike Order</h3>
 				</header>
 					<p>Search for you bike order details with your order number.</p>
-				<footer>
+				<footer> <!--Link to search/delete order page -->
 					<a href="/FYPCian/SearchOrder.jsp">
                                             <input type ="button" value="Search Bike Order"/></a>
 				</footer>

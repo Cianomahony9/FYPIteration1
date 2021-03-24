@@ -42,7 +42,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
                                          <a href="ViewCustAccount.jsp">Logged in as ${custlogin.fname}</a>  <!-- Custs name is displayed from db - When clicked user is redirected to account details page -->
 				</div>
 			</header>
-                
+                <!-- Searchbike servlet work displayed in this page-->
               
   
 

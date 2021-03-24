@@ -15,7 +15,10 @@ import java.io.Serializable;
  */
 
 // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql 
+
+//begin Modify
 public class CustLogin implements Serializable {
+    
     
     // declaring variables 
     private static final long serialVersionUTD = 1L;
@@ -94,6 +97,6 @@ public class CustLogin implements Serializable {
         this.telephone = telephone;
    }
     
-    
+    //end modify
 }
 

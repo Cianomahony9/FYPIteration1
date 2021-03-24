@@ -25,11 +25,11 @@ code for database connection and output sourced and modified from https://www.yo
 <%
     // connection to databaase 
     String driverName = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/customer?useSSL=false";
+    String connectionUrl = "jdbc:mysql://localhost:3306/customer?useSSL=false"; //"useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
     String userId ="root";
     String password ="OmahonyCian@98";
     
-    // pulling data from jsp page
+    // pulling data from searchadmincust jsp page
     String customername = request.getParameter("customername");
     
     int telephone = Integer.parseInt(request.getParameter("telephone"));  //code acqired and modified from stack overflow  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
@@ -81,7 +81,8 @@ code for database connection and output sourced and modified from https://www.yo
 				</div>
 			</header>
                 
-      <!-- Table -->
+     
+      <!-- Table code acquired and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q -->
     <div class="table-wrapper">
 	<table>
         <center><h3>Customer Details</h3></center> 
@@ -97,12 +98,13 @@ code for database connection and output sourced and modified from https://www.yo
                 </tr>
                 </thead>
 <% 
-    // sql statement to search database
+    // sql statement to search database for customername and telephone
+// start connection
     try{
     connection = DriverManager.getConnection(connectionUrl, userId, password);
     statement= connection.createStatement();
     String sql = "SELECT * FROM "+customername+" Where telephone = "+telephone+"";
-       
+       //declare results as variables
     resultSet=statement.executeQuery(sql);
     while(resultSet.next()){
             

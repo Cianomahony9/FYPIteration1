@@ -2,7 +2,6 @@
     Document   : InsertFamily
     Created on : 24-Nov-2020, 15:19:55
     Author     : Cian O'Mahony 117436194
-*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -45,6 +44,9 @@ Modifications include changing navbar size and colour, inserting own titles and 
 			</header>
     
                 <!--sending inputted data to servlet and database -->
+                <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
+         
+         
         <form  action="insertFamilyServ" method="POST">
                   
                 <table width="400px" Border="1">

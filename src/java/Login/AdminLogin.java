@@ -12,6 +12,7 @@ import java.io.Serializable;
  * @author Cian O'Mahony 117436194
  */
  // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
+//begin modify
 public class AdminLogin implements Serializable {
     // getters and setters page
     
@@ -45,3 +46,4 @@ public class AdminLogin implements Serializable {
         this.store = store;
          }
 }
+//end modify

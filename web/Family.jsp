@@ -3,7 +3,6 @@
     Created on : 24-Nov-2020, 14:15:57
     Author     : Cian O'Mahony 117436194
 
-*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -47,6 +46,8 @@ Modifications include changing navbar size and colour, inserting own titles and 
 			</header>
                   
  <!-- sending inputted name to servlet to create table -->
+ <!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
+         
          <form action="createFamily1" method="POST">
               
                 <table width="400px" Border="1"> 

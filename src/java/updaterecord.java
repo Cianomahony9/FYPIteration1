@@ -29,7 +29,7 @@ public class updaterecord extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           
+        //modified from   https://www.youtube.com/watch?v=akW6bzoRcZo
             //begin modify
             // variables to be searched for in db in order to edit below variables(height, weight,insideleglength,armlength)
               String custfname = request.getParameter("custfname");

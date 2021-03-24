@@ -28,7 +28,7 @@ code for database connection and output sourced and modified from https://www.yo
     String userId ="root";
     String password ="OmahonyCian@98";
     
-    // pulling data from jsp page
+    // pulling data from view cust account jsp page
     String custfname = request.getParameter("custfname");
     
     int custtelephone = Integer.parseInt(request.getParameter("custtelephone"));  //code acqired and modified from stack overflow  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
@@ -80,21 +80,23 @@ code for database connection and output sourced and modified from https://www.yo
 			</header>
  <% 
     // sql statement to search database
+ // start connection with db
+ //using cust details from viewcustaccount.jsp the custs bike specfic details are outputted from db
     try{
     connection = DriverManager.getConnection(connectionUrl, userId, password);
     statement= connection.createStatement();
     String sql = "SELECT * FROM "+custlname+" WHERE name = '"+custfname+"'  AND telephone = '"+custtelephone+"' ";
-       
+       //declaring outputted values as variabes
     resultSet=statement.executeQuery(sql);
     while(resultSet.next()){
             
 %>                              
        
 
-
+<!-- form layout acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo -->
 <form action="updaterecord"method="POST">
                 <table width="400px" Border="1">
-                 <tr>
+                 <tr> <!--Current details of cust are displayed from db -->
                         <tr colspan="2"><center><h1> Current Record Details</h1></center></tr> 
           
                         <td>First Name<input type="text" name="custfname" value = <%=resultSet.getString("name")%> readonly></td>
@@ -106,7 +108,10 @@ code for database connection and output sourced and modified from https://www.yo
                         <td>Arm Length<input type="text" name="custarmlength" value = <%=resultSet.getString("armlength")%> readonly></td>
                         <td>telephone<input type="text" name="custtelephone" value =<%=resultSet.getInt("telephone")%>  readonly></td>
                       </table>
+                      
+                      <!-- details to be edited are inserted here and sent to update record servlet which updates db -->
                 <table width="400px" Border="1">
+                    
                      <tr colspan="2"><center><h1>Edit Dimension Records</h1></center></tr> 
                     
                  
@@ -117,8 +122,6 @@ code for database connection and output sourced and modified from https://www.yo
                          <td> Leg Length <input type="text" maxlength="4" name="insideleg" placeholder="Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
                          <td> Arm Length<input type="text" maxlength="4" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
-                     
-                         
             </table>
                        <center><input type="Submit" value="Insert Edit"/>
                     </center>
@@ -131,15 +134,20 @@ code for database connection and output sourced and modified from https://www.yo
             e.printStackTrace();
     }
 %>
-                   <!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-                                            <!-- Border to split search and Order Display -->
-                                            
-					</div>
-				</div>
-			</footer>
+                    <!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+		<div class="flex">
+		<div class="copyright">
+			&copy; Bikes4U.ie.
+                </div>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			</ul>
+		</div> <!-- end modify -->
+                 </div>
+	</footer>
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>

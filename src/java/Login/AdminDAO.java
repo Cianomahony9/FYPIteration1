@@ -15,12 +15,13 @@ import java.sql.SQLException;
  *
  * @author Cian O'Mahony 117436194
  */
+
 public class AdminDAO {
     // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
-    
+    //begin modify
     public  AdminLogin checkLogin(String email, String password) throws ClassNotFoundException, SQLException {
       
-      // connect to db  
+      // connect to db   https://www.youtube.com/watch?v=akW6bzoRcZo
        DbConAdminLogin db = new DbConAdminLogin();
        Connection conadminlogin = db.getAdminLoginCon();
        
@@ -44,5 +45,6 @@ public class AdminDAO {
         conadminlogin.close();
         
         return adminlogin;
+        //end modify
     }
 }

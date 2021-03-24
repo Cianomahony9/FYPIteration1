@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 // code acquired and modifed from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql
 
 public class CustLogoutServ extends HttpServlet {
+    //begin Modify
     private static final long serialVersionUTD = 1L;
     
 
@@ -28,29 +29,18 @@ public class CustLogoutServ extends HttpServlet {
         super();
     }
    
-    
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(false);
-        //closing the session 
+        //closing the session removes sesion variables
         if(session !=null){
             session.removeAttribute("custlogin");
            //sending user back to login page
              RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
         }
-        
+        //end modify
     }
 }
 

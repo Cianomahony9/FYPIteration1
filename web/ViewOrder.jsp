@@ -44,7 +44,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 			</header>
                 
               
-  
+  <!-- output from searchOrder servlet displayed here
 
 		<!-- Scripts -->
 			<script src="/FYPCian/js/jquery.min.js"></script>

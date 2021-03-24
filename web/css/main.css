@@ -255,7 +255,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #000000;
+		color: #000000; /* https://www.w3schools.com/colors/colors_picker.asp */
 		font-family: "Raleway", Arial, Helvetica, sans-serif;
 		font-size: 13pt;
 		font-weight: 300;
@@ -325,7 +325,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #0000CD;
+		color: #0000CD;  /*https://www.w3schools.com/colors/colors_picker.asp */
 		font-weight: 300;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
@@ -1302,7 +1302,7 @@
 		}
 
 		#header .logo {
-			color: #0066ff;
+			color: #0066ff;  /* https://www.w3schools.com/colors/colors_picker.asp */
 			display: inline-block;
 			font-weight: 600;
 			height: inherit;
@@ -1507,7 +1507,7 @@
 		#banner h1 {
 			font-size: 3.5em;
 			font-weight: 100;
-			color: #FFFFFF;
+			color: #FFFFFF; /* https://www.w3schools.com/colors/colors_picker.asp */
 			line-height: 3em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
