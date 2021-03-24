@@ -118,10 +118,10 @@ String armlength = resultSet.getString("armlength");
 	<td><%=resultSet.getString("name")%> </td>
 	<td><%=resultSet.getString("familyname")%> </td>
         <td><%=resultSet.getString("gender")%> </td>
-	<td><%=resultSet.getString("height")%> </td>
-	<td><%=resultSet.getString("weight")%> </td>
-        <td><%=resultSet.getString("Insideleg")%> </td>
-        <td><%=resultSet.getString("armlength")%> </td>
+	<td><%=resultSet.getString("height")%>cm </td>
+	<td><%=resultSet.getString("weight")%>kg </td>
+        <td><%=resultSet.getString("Insideleg")%>cm</td>
+        <td><%=resultSet.getString("armlength")%>cm</td>
         </tr>
    </tbody>
     

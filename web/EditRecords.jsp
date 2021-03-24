@@ -102,10 +102,10 @@ code for database connection and output sourced and modified from https://www.yo
                         <td>First Name<input type="text" name="custfname" value = <%=resultSet.getString("name")%> readonly></td>
                         <td>Last Name<input type="text" name="custlname" value = <%=resultSet.getString("familyname")%>  readonly></td>
                         <td>Gender<input type="text" name="custgender" value = <%=resultSet.getString("gender")%> readonly></td>
-                        <td>Height<input type="text" name="custheight" value = <%=resultSet.getString("height")%> readonly></td>
-                        <td>Weight<input type="text" name="custaddress" value = <%=resultSet.getString("weight")%> readonly></td>
-                        <td>Leg Length<input type="text" name="custinsideleg" value = <%=resultSet.getString("Insideleg")%> readonly></td>
-                        <td>Arm Length<input type="text" name="custarmlength" value = <%=resultSet.getString("armlength")%> readonly></td>
+                        <td>Height<input type="text" name="custheight" value = <%=resultSet.getString("height") + "cm"%> readonly></td>
+                        <td>Weight<input type="text" name="custaddress" value = <%=resultSet.getString("weight") + "kg"%> readonly></td>
+                        <td>Leg Length<input type="text" name="custinsideleg" value = <%=resultSet.getString("Insideleg") + "cm"%> readonly></td>
+                        <td>Arm Length<input type="text" name="custarmlength" value = <%=resultSet.getString("armlength") + "cm"%> readonly></td>
                         <td>telephone<input type="text" name="custtelephone" value =<%=resultSet.getInt("telephone")%>  readonly></td>
                       </table>
                       
@@ -115,13 +115,13 @@ code for database connection and output sourced and modified from https://www.yo
                      <tr colspan="2"><center><h1>Edit Dimension Records</h1></center></tr> 
                     
                  
-                         <td> Height <input type="text" maxlength="8" name="height" placeholder="Height" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Height (cm) <input type="text" maxlength="8" name="height" placeholder="Height" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Weight <input type="text"  maxlength="5" name="weight" placeholder="Weight" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Weight (kg) <input type="text"  maxlength="5" name="weight" placeholder="Weight" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Leg Length <input type="text" maxlength="4" name="insideleg" placeholder="Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Leg Length (cm)<input type="text" maxlength="4" name="insideleg" placeholder="Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Arm Length<input type="text" maxlength="4" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Arm Length (cm) <input type="text" maxlength="4" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
             </table>
                        <center><input type="Submit" value="Insert Edit"/>
                     </center>

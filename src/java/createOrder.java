@@ -120,7 +120,7 @@ public class createOrder extends HttpServlet {
                  out.print("<tr><th><t1>Bike Type</t1> <td>"+type+"</td> </th></tr>");
                  
                  
-                 out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"</td> </th></tr>");
+                 out.print("<tr><th><t1>Frame Size</t1> <td>"+framesize+"cm</td> </th></tr>");
                  
                  out.print("<tr><th><t1>Price</t1> <td>€"+price+"</td> </th></tr>");
                  

@@ -92,7 +92,7 @@ public class searchOrder extends HttpServlet {
                        
                    out.print("<h3> Your "+bikename+"  will be Ready For Collection on "+collectiondate+" From "+bikelocation+".</h3>");
                         
-                   out.print("<h3>The Framesize is "+framesize+"</h3>");
+                   out.print("<h3>The Framesize is "+framesize+"cm</h3>");
                       
                    out.print("<h3>The Total Price is €"+bikeprice+"</h3>");
                         
