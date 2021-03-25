@@ -130,7 +130,7 @@ public class searchBike extends HttpServlet {
                 
                 //end of modify 
              }
-                 
+                  // catch exceptions
         } catch (SQLException ex) {
             Logger.getLogger(searchBike.class.getName()).log(Level.SEVERE, null, ex);
             

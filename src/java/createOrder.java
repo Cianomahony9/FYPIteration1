@@ -147,6 +147,7 @@ public class createOrder extends HttpServlet {
                   rd.include(request, response);
               
               }
+               // catch exceptions
               }  catch (SQLException ex) {
             Logger.getLogger(createOrder.class.getName()).log(Level.SEVERE, null, ex);
             //end of modify

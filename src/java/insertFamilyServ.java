@@ -75,7 +75,7 @@ public class insertFamilyServ extends HttpServlet {
             RequestDispatcher rd =request.getRequestDispatcher("InsertFamily.jsp");
             rd.include(request, response);
         
-        
+         // catch exceptions
         } catch (SQLException ex) {
             Logger.getLogger(insertFamilyServ.class.getName()).log(Level.SEVERE, null, ex);
             //end modify 

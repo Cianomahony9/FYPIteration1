@@ -24,13 +24,13 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 <!-- Header -->
 <header id="header">
 	<div class="inner">
-		<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+		<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!--link to home page -->
 			<nav id="nav">
-				<a href="HomePage.jsp">Home</a>
+				<a href="HomePage.jsp">Home</a> <!-- link to home page -->
                                 
-				<a href="SearchOrder.jsp">Search Order</a>
+				<a href="SearchOrder.jsp">Search Order</a> <!-- link to search orders page-->
                                 
-				<a href="BikeShops.jsp">View Bike Shops</a>
+				<a href="BikeShops.jsp">View Bike Shops</a><!-- link to view bike shops page--> 
                                 
                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                         
@@ -63,7 +63,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
    </center>
 </header>
                     <footer><center>
-	<a href="RetrieveFamily.jsp" >
+	<a href="RetrieveFamily.jsp" > <!-- link to retrieve family page to start order process-->
             <input type ="button" value="Create Order"/></a>
 	</center></footer>
 		</article>
@@ -81,7 +81,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer><center>
-       <a href="RetrieveFamily.jsp" >
+       <a href="RetrieveFamily.jsp" > <!-- link to retrieve family page to start order process-->
            <input type ="button" value="Create Order"/>  </a>
                         </center></footer>
 		</article>
@@ -99,7 +99,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="RetrieveFamily.jsp" >
+	<a href="RetrieveFamily.jsp" > <!-- link to retrieve family page to start order process-->
             <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
@@ -117,7 +117,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="RetrieveFamily.jsp" >
+	<a href="RetrieveFamily.jsp" > <!-- link to retrieve family page to start order process-->
             <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>

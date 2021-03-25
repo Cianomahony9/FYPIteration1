@@ -32,7 +32,7 @@ code for database connection and output sourced and modified from https://www.yo
     //pulling data from searchadminorder jsp
     String orderstorename = request.getParameter("orderstorename");
     
-    
+     // prepare connection to db
     try{
    Class.forName(driverName);
     }catch (ClassNotFoundException e){
@@ -59,16 +59,16 @@ code for database connection and output sourced and modified from https://www.yo
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a> <!-- link to admin home page -->
                                        
 					<nav id="nav">
-						<a href="AdminPage.jsp">Home</a>
+						<a href="AdminPage.jsp">Home</a> <!-- link to admin home page -->
                                                 
-						<a href="SearchAdminOrder.jsp">Search Order</a>
+						<a href="SearchAdminOrder.jsp">Search Order</a> <!-- link to search admin orders page -->
                                                 
-						<a href="SearchAdminCust.jsp">View Customer Records</a>
+						<a href="SearchAdminCust.jsp">View Customer Profiles</a> <!-- link to admin search customer profiles page -->
                                                 
-                                                <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                <a href="SearchAdminCustProfiles.jsp">View Customer Accounts</a> <!-- link to admin search customer accounts page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>
@@ -111,6 +111,7 @@ code for database connection and output sourced and modified from https://www.yo
     
     <tbody>
 	<tr>
+             <!-- Table code acquired and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q -->
         <!--output search results -->
         <td><%=resultSet.getInt("ordernumber")%> </td>
 	<td><%=resultSet.getString("orderdate") %> </td>
@@ -123,6 +124,7 @@ code for database connection and output sourced and modified from https://www.yo
     </tbody>
 <%
     }
+    // catch exceptions
     }catch (Exception e ){
          e.printStackTrace();
     }

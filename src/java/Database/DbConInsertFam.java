@@ -31,9 +31,9 @@ public class DbConInsertFam {
         try {
             Class.forName("com.mysql.jdbc.Driver");   //db path 
            coninsertfam =  DriverManager.getConnection("jdbc:mysql://localhost:3306/customer?useSSL=false","root","OmahonyCian@98");   //   "useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DbConInsertFam.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        }
+        // catch exceptions
+        catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DbConInsertFam.class.getName()).log(Level.SEVERE, null, ex);
         }
     

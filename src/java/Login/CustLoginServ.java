@@ -56,15 +56,14 @@ private static final long serialVersionUID = 1L;
                //if login is unsuccessful user is redirected to login page
                  response.sendRedirect("login.jsp");
             }
-            
-        } catch (ClassNotFoundException ex) {
+            // catch exceptions
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(CustLoginServ.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(CustLoginServ.class.getName()).log(Level.SEVERE, null, ex);
-            
         }
+    //end modify
+    
        
-                //end modify
+                
         
         
     }

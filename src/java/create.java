@@ -70,7 +70,7 @@ public class create extends HttpServlet {
             RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
        
-            
+             // catch exceptions
     }   catch (SQLException ex) {
             Logger.getLogger(create.class.getName()).log(Level.SEVERE, null, ex);
             //end of modify

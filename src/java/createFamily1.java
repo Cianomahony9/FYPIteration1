@@ -68,6 +68,7 @@ public class createFamily1 extends HttpServlet {
             RequestDispatcher rd =request.getRequestDispatcher("Family.jsp");
             rd.include(request, response);
         
+             // catch exceptions
         } catch (SQLException ex) {
             Logger.getLogger(createFamily1.class.getName()).log(Level.SEVERE, null, ex);
         }

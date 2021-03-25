@@ -34,7 +34,7 @@ Modification includes: changing of navbar size and colour, inserting own titles 
     int telephone = Integer.parseInt(request.getParameter("telephone")); // https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
     
    
-    
+     // prepare connection to db
    try{
    Class.forName(driverName);
     }catch (ClassNotFoundException e){
@@ -60,13 +60,13 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!-- link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!-- link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!-- link to search order page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a> <!-- link to bike shops page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
@@ -114,6 +114,7 @@ String armlength = resultSet.getString("armlength");
 %>
     <tbody>
 	<tr>
+             <!-- Table code acquired and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q -->
         <!-- Displaying these results -->
 	<td><%=resultSet.getString("name")%> </td>
 	<td><%=resultSet.getString("familyname")%> </td>
@@ -144,6 +145,7 @@ out.print("<td><center><input type='submit' value='Search Bike'></center></td>")
  out.print("</form>");
        
 }
+// catch exceptions
 }catch (Exception e ){
     e.printStackTrace();
 }

@@ -69,7 +69,7 @@ public class updaterecord extends HttpServlet {
             rd.include(request, response);
             
             
-            
+            // catch exceptions
         } catch (SQLException ex) {
             Logger.getLogger(updaterecord.class.getName()).log(Level.SEVERE, null, ex);
         } //end modify

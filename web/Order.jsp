@@ -28,13 +28,13 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!-- link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!-- link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!-- link to search order page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a> <!-- link to bike shop page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
@@ -50,7 +50,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
       
         <% 
             
-            //*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
+    //*** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo ***
 // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
 //pulling data from servlet
 String name = request.getParameter("name");
@@ -76,10 +76,10 @@ DateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
 Calendar calcollect = Calendar.getInstance();
 Calendar calorder  = Calendar.getInstance();
                 
-calorder.add(Calendar.DATE,+0);
+calorder.add(Calendar.DATE,+0); //order date
 Date orderdate = calorder.getTime();
                           
-calcollect.add(Calendar.DATE, +5);
+calcollect.add(Calendar.DATE, +5); //collection date 5 days later
 Date colldate1 = calcollect.getTime();
                           
                             
@@ -128,7 +128,7 @@ out.print("<tr><th><t1>CVC</t1> <td><input type=text maxlength=3 ></td> </th></t
                   
                 
 // code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  
-// hidden values sending data to servlet
+// hidden values sending data to create order servlet
 out.print("<form action = 'createOrder'>");
 
 out.print("<input type ='hidden' name='name' value ='"+name+"'>");

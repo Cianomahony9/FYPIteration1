@@ -25,13 +25,13 @@ Modification includes: changing of navbar size and colour, inserting own titles 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!-- link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!-- link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!-- link to search orders page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a> <!-- link to bike shops  page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>

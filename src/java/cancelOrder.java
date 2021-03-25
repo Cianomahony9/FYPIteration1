@@ -61,7 +61,7 @@ public class cancelOrder extends HttpServlet {
             RequestDispatcher rd =request.getRequestDispatcher("CustCancelOrder.jsp");
             rd.include(request, response);
             
-            
+            // catch exceptions
         } catch (SQLException ex) {
             Logger.getLogger(cancelOrder.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -24,11 +24,11 @@ Modifications include: changing of navbar size and colour, titles and links, ins
 <!-- Header -->
 <header id="header">
 	<div class="inner">
-		<a href="LandingPage.jsp" class="logo">Bikes4U.ie</a>
+		<a href="LandingPage.jsp" class="logo">Bikes4U.ie</a> <!-- link to landing page -->
 			<nav id="nav">
-				<a href="LandingPage.jsp">Home</a>
-				<a href="login.jsp">Search Order</a>
-				<a href="LandingPageBikeShops.jsp">View Bike Shops</a>
+				<a href="LandingPage.jsp">Home</a> <!-- link to landing page -->
+				<a href="login.jsp">Search Order</a> <!-- link to login page -->
+				<a href="LandingPageBikeShops.jsp">View Bike Shops</a> <!-- link to bike landing page -->
 			</nav>
 				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 	</div>
@@ -51,7 +51,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
    </center>
 </header>
                     <footer> <center>
-	<a href="login.jsp">
+	<a href="login.jsp"> <!-- link to login page -->
             <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
@@ -67,7 +67,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-       <a href="login.jsp">
+       <a href="login.jsp"> <!-- link to login page -->
            <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>
@@ -83,7 +83,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="login.jsp" >
+	<a href="login.jsp" > <!-- link to login page -->
             <input type ="button" value="Create Order"/></a>
 	</center></footer>
 		</article>
@@ -99,7 +99,7 @@ Modifications include: changing of navbar size and colour, titles and links, ins
     </center>
 </header>
                     <footer> <center>
-	<a href="login.jsp" >
+	<a href="login.jsp" > <!-- link to login page -->
             <input type ="button" value="Create Order"/></a>
                         </center></footer>
 		</article>

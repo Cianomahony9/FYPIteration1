@@ -102,6 +102,7 @@ public class searchOrder extends HttpServlet {
                       
                    
                 }
+                // catch exceptions
             } catch (SQLException ex) {
             Logger.getLogger(searchOrder.class.getName()).log(Level.SEVERE, null, ex);
              }

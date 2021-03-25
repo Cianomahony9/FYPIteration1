@@ -29,9 +29,9 @@ public class DbConOrderSearch {
         try{
             Class.forName("com.mysql.jdbc.Driver"); //db path 
             conordersearch = DriverManager.getConnection("jdbc:mysql://localhost:3306/order?useSSL=false","root","OmahonyCian@98");  //   "useSSL=false" causing problem @ driver Keystone issue fixed from Stack overflow https://stackoverflow.com/questions/57112139/keystore-was-tampered-with-or-password-was-incorrect-still-not-working
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(DbConOrderSearch.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } 
+        // catch exceptions
+        catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DbConOrderSearch.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conordersearch;

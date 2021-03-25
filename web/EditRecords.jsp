@@ -17,7 +17,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 
 Modifications include changing navabar size and colour, inserted own titles and links, changed footer copyright
 
-code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q
+** code for database connection and output sourced and modified from https://www.youtube.com/watch?v=ToIQFP55s7Q **
 -->
 
 
@@ -34,7 +34,7 @@ code for database connection and output sourced and modified from https://www.yo
     int custtelephone = Integer.parseInt(request.getParameter("custtelephone"));  //code acqired and modified from stack overflow  https://stackoverflow.com/questions/9570963/passing-int-as-parameter-from-jsp-to-servlet
     
     String custlname = request.getParameter("custlname");
-    
+    // prepare connection to db
     try{
    Class.forName(driverName);
     }catch (ClassNotFoundException e){
@@ -60,13 +60,13 @@ code for database connection and output sourced and modified from https://www.yo
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!--link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!--link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!--link to search order page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a> <!--link to view bike shops page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                         
@@ -98,7 +98,7 @@ code for database connection and output sourced and modified from https://www.yo
                 <table width="400px" Border="1">
                  <tr> <!--Current details of cust are displayed from db -->
                         <tr colspan="2"><center><h1> Current Record Details</h1></center></tr> 
-          
+          <!--readonly ensures details cannot be edited -->
                         <td>First Name<input type="text" name="custfname" value = <%=resultSet.getString("name")%> readonly></td>
                         <td>Last Name<input type="text" name="custlname" value = <%=resultSet.getString("familyname")%>  readonly></td>
                         <td>Gender<input type="text" name="custgender" value = <%=resultSet.getString("gender")%> readonly></td>
@@ -115,13 +115,13 @@ code for database connection and output sourced and modified from https://www.yo
                      <tr colspan="2"><center><h1>Edit Dimension Records</h1></center></tr> 
                     
                  
-                         <td> Height (cm) <input type="text" maxlength="8" name="height" placeholder="Height" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Height (cm) <input type="text" maxlength="6" name="height" placeholder="Height" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Weight (kg) <input type="text"  maxlength="5" name="weight" placeholder="Weight" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Weight (kg) <input type="text"  maxlength="3" name="weight" placeholder="Weight" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Leg Length (cm)<input type="text" maxlength="4" name="insideleg" placeholder="Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Leg Length (cm)<input type="text" maxlength="2" name="insideleg" placeholder="Leg Length" ></td> <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                          
-                         <td> Arm Length (cm) <input type="text" maxlength="4" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                         <td> Arm Length (cm) <input type="text" maxlength="2" name="armlength" placeholder="Arm Length" ></td><%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
             </table>
                        <center><input type="Submit" value="Insert Edit"/>
                     </center>
@@ -129,7 +129,7 @@ code for database connection and output sourced and modified from https://www.yo
                 
                 
 <%
-    }
+    } // catch exceptions
     }catch (Exception e ){
             e.printStackTrace();
     }

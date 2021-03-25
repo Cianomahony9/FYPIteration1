@@ -68,7 +68,7 @@ public class updateprofile extends HttpServlet {
             RequestDispatcher rd =request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
            
-           
+            // catch exceptions
         } catch (SQLException ex) {
             Logger.getLogger(updateprofile.class.getName()).log(Level.SEVERE, null, ex);
             //end Modify

@@ -33,7 +33,7 @@ Modifications include change navbar size, colour, headings and links , changed f
                      
 <!-- sending inputted data to the create servlet to send to database  *** Code acquired and modified from https://www.youtube.com/watch?v=akW6bzoRcZo *** -->
          <form  action="create" method="POST">
-                  
+                   <!--Customer enters details to create account -->
                 <table width="400px" Border="1">
                     
                     <tr>

@@ -26,13 +26,13 @@ Modifications include changing navabar size and colour, inserted own titles and 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!-- link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!-- link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!-- link to search order page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a> <!-- link to view bike shops page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
@@ -54,8 +54,8 @@ Modifications include changing navabar size and colour, inserted own titles and 
                     
                      <tr>
                         <td>Last Name</td>
-                        <td><input type="text" name="lname" value = ${custlogin.lname} readonly></td> <!-- https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
-                     </tr>
+                        <td><input type="text" name="lname" value = ${custlogin.lname} readonly></td>  <!-- session variable code acquired and modified from https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
+                   
                     <tr>
                         <td>Enter Your Order Number</td>
                         <td><input type="text" name="ordernumber" placeholder="Order Number"></td>
@@ -64,7 +64,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
             </table>
              <center><input type="Submit" value="search"/>
                  
-             <a href="/FYPCian/CustCancelOrder.jsp" >
+             <a href="/FYPCian/CustCancelOrder.jsp" > <!-- link to cancel orders page -->
                  <input type="Button" value="Cancel Order"/></a></center>
         </form>
     <!-- Footer -->

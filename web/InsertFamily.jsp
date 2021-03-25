@@ -25,13 +25,13 @@ Modifications include changing navbar size and colour, inserting own titles and 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!--Link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a>  <!--Link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
+						<a href="SearchOrder.jsp">Search Order</a>  <!--Link to search orders page -->
                                                 
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="BikeShops.jsp">View Bike Shops</a>  <!--Link to view bike shops page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
@@ -54,7 +54,7 @@ Modifications include changing navbar size and colour, inserting own titles and 
                         <td colspan="2"><center><h1>Add Person To Family</h1></center></td> 
                     </tr>
                 
-                    <tr>
+                    <tr> <!-- displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                         <td><input type="text" name="familyname1" value = ${custlogin.lname} readonly></td>
                     </tr>
                     <tr>
@@ -65,23 +65,24 @@ Modifications include changing navbar size and colour, inserting own titles and 
                         <td><input type="text" name="gender" maxlength="7" placeholder="Gender"></td>   <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                     <tr>
-                        <td><input type="text" name="height" maxlength="8" placeholder="Height"></td>   <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp-servlet --%>
+                        <td><input type="text" name="height" maxlength="6" placeholder="Height"></td>   <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp-servlet --%>
                         </tr>
                         
                         <tr>
-                        <td><input type="text" name="weight"  maxlength="5" placeholder="Weight"></td>   <%--  max lenght condition acquired and modified from https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                        <td><input type="text" name="weight"  maxlength="3" placeholder="Weight"></td>   <%--  max lenght condition acquired and modified from https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                         
                           <tr>
-                        <td><input type="text" name="insideleg" placeholder="Leg Length"></td>
+                        <td><input type="text" name="insideleg" maxlength="2" placeholder="Leg Length"></td>
                         </tr>
                         
                           <tr>
-                        <td><input type="text" name="armlength" maxlength="4" placeholder="Arm Length"></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
+                        <td><input type="text" name="armlength" maxlength="2" placeholder="Arm Length"></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>
                        
                         <tr>
                              <tr>
+                        <!-- displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                         
                         <td><input type="text" name="telephone"  maxlength="10" value = ${custlogin.telephone} readonly></td>  <%--  max lenght condition acquired and modified from  https://www.w3schools.com/tags/att_input_maxlength.asp  --%>
                         </tr>

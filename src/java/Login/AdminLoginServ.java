@@ -54,12 +54,12 @@ public class AdminLoginServ extends HttpServlet {
                 //if login is unsuccessful user is redirected to login page
                  response.sendRedirect("AdminLogin.jsp");
             }
-             } catch (ClassNotFoundException ex) {
-               Logger.getLogger(AdminLoginServ.class.getName()).log(Level.SEVERE, null, ex);
-           } catch (SQLException ex) {
+            // catch exceptions
+             } catch (ClassNotFoundException | SQLException ex) {
                Logger.getLogger(AdminLoginServ.class.getName()).log(Level.SEVERE, null, ex);
            }
 //end modify
+           
 
        
     }

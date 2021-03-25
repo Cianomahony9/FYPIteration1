@@ -29,15 +29,15 @@ Modifications : Changed boarder colour, inserted own links to navbar and changed
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="AdminPage.jsp" class="logo">Bikes4U.ie</a> <!-- link to admin home page -->
 					<nav id="nav">
-						<a href="AdminPage.jsp">Home</a>
+						<a href="AdminPage.jsp">Home</a> <!-- link to admin home page -->
                                                 
-						<a href="SearchAdminOrder.jsp">Search Order</a>
+						<a href="SearchAdminOrder.jsp">Search Order</a> <!-- link to admin search store orders page -->
                                                 
-						<a href="SearchAdminCust.jsp">View Customer Records</a>
+						<a href="SearchAdminCust.jsp">View Customer Profiles</a> <!-- link to admin search customer profiles page -->
                                                 
-                                                <a href="SearchAdminCustProfiles.jsp">View Customer Profiles</a>
+                                                <a href="SearchAdminCustProfiles.jsp">View Customer Accounts</a> <!-- link to admin search customer accounts page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/AdminLogoutServ"> Logout</a>

@@ -26,13 +26,13 @@ Modifications include changing navabar size and colour, inserted own titles and 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner"> <!-- Begin Modify code -->
-					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a>
+					<a href="HomePage.jsp" class="logo">Bikes4U.ie</a> <!-- link to home page -->
 					<nav id="nav">
-						<a href="HomePage.jsp">Home</a>
+						<a href="HomePage.jsp">Home</a> <!-- link to home page -->
                                                 
-						<a href="SearchOrder.jsp">Search Order</a>
-                                                
-						<a href="BikeShops.jsp">View Bike Shops</a>
+						<a href="SearchOrder.jsp">Search Order</a> <!-- link to search order page -->
+                                                 
+						<a href="BikeShops.jsp">View Bike Shops</a> <!-- link to view bike shops page -->
                                                 
                                                  <!--logout and displaying name on page code acquired and modified from  https://www.codejava.net/coding/how-to-code-login-and-logout-with-java-servlet-jsp-and-mysql -->
                                                 <a href ="<%=request.getContextPath() %>/CustLogoutServ"> Logout</a>
@@ -81,7 +81,7 @@ Modifications include changing navabar size and colour, inserted own titles and 
                         
                         
                        <!--  code for linking hidden values modified and acquired from https://www.geeksforgeeks.org/hidden-form-field-using-annotation-java-servlet/  -->
-                       <!-- carry details to view cust records --> 
+                       <!-- carry details to view customer profile details --> 
                         
                         <form action="EditRecords.jsp"method="POST">
                             <input type ='hidden' name='custfname' value = ${custlogin.fname}>
